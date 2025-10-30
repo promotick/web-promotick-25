@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Promotick - Puntos</title>
+</head>
+
+<body>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="flex items-center justify-between lg:justify-start gap-[40px] h-[80px]">
+        <div class="flex items-center gap-4">
+          <button class="lg:hidden" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <img src="./img/icon/nav.svg" alt="" data-mobile-nav-icon="open">
+            <img src="./img/icon/x.svg" alt="" class="hidden" data-mobile-nav-icon="close">
+          </button>
+          <div class="flex items-center justify-between h-[74px]">
+            <a href="./index.html">
+              <img src="./img/logo.svg" alt="The Future Forward">
+            </a>
+          </div>
+          <div class="fixed top-[80px] left-0 right-0 bg-white z-20 w-full lg:hidden hidden" id="mobile-nav" data-mobile-nav-panel>
+            <div class="flex flex-col py-2">
+              <div class="flex flex-col gap-3">
+                <div class="px-4 py-2 gap-3 flex flex-col items-start">
+                  <p class="text-[24px] font-semibold">Eduardo Naranjo</p>
+                  <div class="flex items-center gap-[10px] bg-[#E6F7FF] h-[32px] px-2 rounded-full min-w-[159px]">
+                    <img src="./img/icon/diamante.svg" alt="">
+                    <span class="text-[#096DD9] font-semibold whitespace-nowrap">Nivel Diamante</span>
+                  </div>
+                  <p class="flex items-center gap-2">
+                    <span>Puntos disponibles:</span>
+                    <span class="font-semibold">20,800</span>
+                  </p>
+                </div>
+              </div>
+              <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+              <div class="flex flex-col overflow-y-auto h-[calc(100dvh-305px)]">
+                <ul class="flex flex-col">
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./index.html">Inicio</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./catalogo.html">Catálogo</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Puntos</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mi meta</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Referidos</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Capacitaciones</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mundial</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Códigos</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Ruleta</a>
+                  </li>
+                </ul>
+                <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+                <div>
+                  <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap flex items-center gap-3" href="">
+                    <img src="./img/icon/audifono.svg" alt="">
+                    <span>¿Necesitas ayuda?</span>
+                  </a>
+                </div>
+                <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+                <ul class="flex flex-col">
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mis datos</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mis direcciones</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mis favoritos</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+              <div>
+                <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap flex items-center gap-3" href="">
+                  <img src="./img/icon/cerrar-sesion.svg" alt="">
+                  <span>Cerrar sesión</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-full flex items-center gap-[27px]">
+          <!-- <div class="border border-[#E1E6EF] h-[48px] w-full hidden lg:flex items-center gap-4 px-3 rounded-[16px]">
+            <img src="./img/icon/search.svg" alt="">
+            <input class="w-full border-none outline-none" type="text" placeholder="¿Qué estás buscando?">
+          </div> -->
+          <div class="h-[28px] w-[1px] bg-[#E1E6EF] hidden lg:block"></div>
+          <div class="w-full lg:flex items-center justify-start gap-4 hidden">
+            <div>
+              <p>Hola, Eduardo Naranjo</p>
+            </div>
+            <div class="hidden lg:flex items-center gap-[10px] bg-[#E6F7FF] h-[32px] px-2 rounded-full min-w-[159px]">
+              <img src="./img/icon/diamante.svg" alt="">
+              <span class="text-[#096DD9] font-semibold whitespace-nowrap">Nivel Diamante</span>
+            </div>
+          </div>
+          <div class="hidden lg:flex items-end flex-col whitespace-nowrap">
+            <span class="text-[12px]">Mis puntos</span>
+            <span class="font-semibold">20,800</span>
+          </div>
+          <div class="flex items-center gap-5">
+            <div>
+              <button data-search-toggle aria-expanded="false" aria-controls="search-panel" class="relative">
+                <img class="min-w-[24px] h-[24px]" src="./img/icon/search-2.svg" alt="" data-search-icon="open">
+                <img class="min-w-[24px] h-[24px] hidden" src="./img/icon/x.svg" alt="" data-search-icon="close">
+              </button>
+              <div class="px-6 py-4 fixed top-0 left-0 right-0 bg-white z-10 top-[80px] w-full border-b border-[#E1E1E1] hidden" id="search-panel" data-search-panel>
+                <div class="border border-[#E1E6EF] h-[56px] w-full flex items-center gap-4 px-3 rounded-[16px] bg-white hover:border-[#172948] transition-all duration-200 max-w-[1170px] mx-auto">
+                  <img src="./img/icon/search.svg" alt="">
+                  <input class="w-full border-none outline-none" type="text" placeholder="¿Qué estás buscando?" data-search-input/>
+                </div>
+              </div>
+            </div>
+            <button class="hidden lg:block">
+              <img class="min-w-[24px] h-[24px]" src="./img/icon/heart.svg" alt="">
+            </button>
+            <div class="relative h-[24px]" data-dropdown>
+              <button data-dropdown-trigger>
+                <img class="min-w-[24px] h-[24px]" src="./img/icon/carrito.svg" alt="">
+                <span class="flex items-center justify-center bg-[#E4022C] w-[21px] h-[21px] rounded-full text-white text-[10px] font-semibold absolute top-[-10px] right-[-10px]">
+                  <span>2</span>
+                </span>
+              </button>
+              <div class="absolute top-full right-0 bg-white flex flex-col gap-4 py-[32px] px-[24px] rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 min-w-[328px] md:min-w-[360px]" data-dropdown-menu>
+                <div class="flex items-center gap-3">
+                  <img class="min-w-[24px] h-[24px]" src="./img/icon/carrito.svg" alt="">
+                  <p class="text-[#3C3B3B] text-[24px] font-semibold">Mi carrito</p>
+                </div>
+                <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+                <div class="flex flex-col gap-4 overflow-y-auto max-h-[260px]">
+                  <div class="flex flex-col gap-4 items-start">
+                    <div class="flex items-center gap-4">
+                      <div class="w-[56px] h-[56px]">
+                        <img class="w-full h-full object-cover" src="./img/iphone.png" alt="">
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <p class="text-[#172948] font-semibold">iPhone 17 Pro</p>
+                        <p class="text-[#172948]">9,080 Puntos</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter data-min-value="1" data-max-value="10">
+                        <button data-quantity-minus>
+                          <img src="./img/icon/remove.svg" alt="">
+                        </button>
+                        <span class="min-w-[76px] text-center" data-quantity-display>1</span>
+                        <button data-quantity-plus>
+                          <img src="./img/icon/add.svg" alt="">
+                        </button>
+                      </div>
+                      <button class="w-10 h-10 flex items-center justify-center border border-[#E1E6EF] rounded-full">
+                        <img src="./img/icon/tacho.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+                  <div class="flex flex-col gap-4 items-start">
+                    <div class="flex items-center gap-4">
+                      <div class="w-[56px] h-[56px]">
+                        <img class="w-full h-full object-cover" src="./img/iphone.png" alt="">
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <p class="text-[#172948] font-semibold">iPhone 17 Pro</p>
+                        <p class="text-[#172948]">9,080 Puntos</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter data-min-value="1" data-max-value="10">
+                        <button data-quantity-minus>
+                          <img src="./img/icon/remove.svg" alt="">
+                        </button>
+                        <span class="min-w-[76px] text-center" data-quantity-display>1</span>
+                        <button data-quantity-plus>
+                          <img src="./img/icon/add.svg" alt="">
+                        </button>
+                      </div>
+                      <button class="w-10 h-10 flex items-center justify-center border border-[#E1E6EF] rounded-full">
+                        <img src="./img/icon/tacho.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+                  <div class="flex flex-col gap-4 items-start">
+                    <div class="flex items-center gap-4">
+                      <div class="w-[56px] h-[56px]">
+                        <img class="w-full h-full object-cover" src="./img/iphone.png" alt="">
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <p class="text-[#172948] font-semibold">iPhone 17 Pro</p>
+                        <p class="text-[#172948]">9,080 Puntos</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter data-min-value="1" data-max-value="10">
+                        <button data-quantity-minus>
+                          <img src="./img/icon/remove.svg" alt="">
+                        </button>
+                        <span class="min-w-[76px] text-center" data-quantity-display>1</span>
+                        <button data-quantity-plus>
+                          <img src="./img/icon/add.svg" alt="">
+                        </button>
+                      </div>
+                      <button class="w-10 h-10 flex items-center justify-center border border-[#E1E6EF] rounded-full">
+                        <img src="./img/icon/tacho.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+                <p class="text-[#3C3B3B] font-semibold">Total: 1000 puntos</p>
+                <div class="flex flex-col gap-4">
+                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full">
+                    <span>Ver mi carrito</span>
+                  </button>
+                  <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full">
+                    <span>Canjear ahora</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative h-[24px] hidden lg:block" data-dropdown>
+              <button data-dropdown-trigger>
+              <img class="min-w-[24px] h-[24px]" src="./img/icon/user.svg" alt="">
+            </button>
+              <div class="absolute top-full right-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 min-w-[280px]" data-dropdown-menu>
+                <div class="px-4 py-2 gap-3 flex flex-col items-start">
+                  <p class="text-[24px] font-semibold">Eduardo Naranjo</p>
+                  <div class="flex items-center gap-[10px] bg-[#E6F7FF] h-[32px] px-2 rounded-full min-w-[159px]">
+                    <img src="./img/icon/diamante.svg" alt="">
+                    <span class="text-[#096DD9] font-semibold whitespace-nowrap">Nivel Diamante</span>
+                  </div>
+                  <p class="flex items-center gap-2">
+                    <span>Puntos disponibles:</span>
+                    <span class="font-semibold">20,800</span>
+                  </p>
+                </div>
+                <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+                <ul class="flex flex-col">
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mis datos</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mis direcciones</a>
+                  </li>
+                </ul>
+                <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+                <ul class="flex flex-col">
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap flex items-center gap-3" href="">
+                      <img src="./img/icon/cerrar-sesion.svg" alt="">
+                      <span>Mis datos</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-[#E4022C] hidden lg:block pt-[80px]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="w-full flex items-center justify-between h-[56px]">
+        <ul class="flex items-center gap-[30px]">
+          <li>
+            <a class="text-white" href="./index.html">Inicio</a>
+          </li>
+          <li>
+            <a class="text-white" href="./catalogo.html">Catálogo</a>
+          </li>
+          <li class="relative" data-dropdown>
+            <span class="flex items-center gap-2 cursor-pointer" data-dropdown-trigger>
+              <span class="text-white">Puntos</span>
+              <img src="./img/icon/arrow-drop-down.svg" alt="" data-dropdown-arrow class="transition-transform duration-200">
+            </span>
+            <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2" data-dropdown-menu>
+              <li class="w-full">
+                <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Historial</a>
+              </li>
+              <li class="w-full">
+                <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Compra de puntos</a>
+              </li>
+              <li class="w-full">
+                <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Transferencia de puntos</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="text-white" href="">Mi meta</a>
+          </li>
+          <li>
+            <a class="text-white" href="">Viajes</a>
+          </li>
+          <li>
+            <a class="text-white" href="">Capacitaciones</a>
+          </li>
+          <li>
+            <a class="text-white" href="">Quiz & Win</a>
+          </li>
+          <li>
+            <a class="text-white" href="">Lucky Code</a>
+          </li>
+          <li>
+            <a class="text-white" href="">Spin & Win</a>
+          </li>
+          <li>
+            <a class="text-white" href="">Mundial</a>
+          </li>
+          <li>
+            <a class="text-white" href="">Referidos</a>
+          </li>
+        </ul>
+        <!-- <a class="text-white flex items-center gap-2" href="">
+          <img src="./img/icon/headphones.svg" alt="">
+          <span>¿Necesitas ayuda?</span>
+        </a> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#FFF9FA] pt-[80px] lg:pt-0">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 pb-[24px] pt-[32px]">
+      <a class="flex items-center gap-2" href="./index.html">
+        <img src="./img/icon/arrow-left-outline.svg" alt="">
+        <span class="text-[#3C3B3B]">Volver</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="bg-[#FFF9FA] pb-[24px]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="bg-white rounded-[16px] p-6 md:p-8 flex items-start flex-col md:flex-row gap-10">
+        <div class="w-full md:top-[100px] md:sticky">
+          <img class="w-full rounded-[24px]" src="./img/phone.jpg" alt="">
+        </div>
+        <div class="w-full flex flex-col justify-start items-start gap-[24px]">
+          <div class="flex flex-col gap-4 w-full">
+            <div class="flex items-center justify-between">
+              <p class="font-bold">APPLE</p>
+              <div class="flex items-center gap-4">
+                <p class="text-[#666666] text-[14px]">COD. 21022883</p>
+                <button>
+                  <img src="./img/icon/heart.svg" alt="">
+                </button>
+              </div>
+            </div>
+            <p class="text-[#3C3B3B] text-[24px] font-bold">iPhone 17 Pro</p>
+            <p class="text-[#231F20] text-[14px] leading-[150%]">El iPhone más poderoso hasta ahora. Espectacular pantalla de 6.3 pulgadas, diseño unibody de aluminio, chip A19 Pro, cámaras traseras de 48 MP y una extraordinaria duración de la batería.</p>
+          </div>
+          <div class="flex items-center gap-4 h-[56px] bg-[#FFF1B8] rounded-[8px] px-4 w-full">
+            <div class="flex items-center gap-3">
+              <img class="hidden lg:block" src="./img/icon/check .svg" alt="">
+              <div class="flex items-center gap-3">
+                <span class="text-[14px] whitespace-nowrap">La oferta termina en</span>
+                <div class="flex items-center gap-1">                
+                  <div class="flex items-center justify-center flex-col gap-1">
+                    <div class="bg-black rounded-[6px] w-[24px] h-[24px] flex items-center justify-center flex-col text-center">
+                      <span class="text-white text-[14px] leading-none">05</span>
+                    </div>
+                    <span class="text-black text-[12px] leading-none">Hrs</span>
+                  </div>
+                  <span class="text-black">:</span>
+                  <div class="flex items-center justify-center flex-col gap-1">
+                    <div class="bg-black rounded-[6px] w-[24px] h-[24px] flex items-center justify-center flex-col text-center">
+                      <span class="text-white text-[14px] leading-none">05</span>
+                    </div>
+                    <span class="text-black text-[12px] leading-none">Min</span>
+                  </div>
+                  <span class="text-black">:</span>
+                  <div class="flex items-center justify-center flex-col gap-1">
+                    <div class="bg-black rounded-[6px] w-[24px] h-[24px] flex items-center justify-center flex-col text-center">
+                      <span class="text-white text-[14px] leading-none">54</span>
+                    </div>
+                    <span class="text-black text-[12px] leading-none">Seg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full hidden lg:flex items-center justify-center">
+              <img class="h-[42px]" src="./img/black-friday.png" alt="">
+            </div>
+          </div>
+          <div class="border border-[#E1E1E1] rounded-[20px] p-[24px] flex flex-col gap-4 w-full">
+            <p class="text-[18px] font-semibold text-[#3C3B3B]">Modelo</p>
+            <div class="flex flex-col md:flex-row items-center gap-4" data-radio-group>
+              <div class="w-full border rounded-[16px] text-center h-[56px] flex items-center justify-center cursor-pointer" data-radio-option data-radio-value="iphone-17-pro" data-selected>
+                <span>Iphone 17 Pro</span>
+              </div>
+              <div class="w-full border rounded-[16px] text-center h-[56px] flex items-center justify-center cursor-pointer" data-radio-option data-radio-value="iphone-17-pro-max">
+                <span>Iphone 17 Pro</span>
+              </div>
+            </div>
+          </div>
+          <div class="border border-[#E1E1E1] rounded-[20px] p-[24px] flex flex-col gap-4 w-full">
+            <p class="text-[18px] font-semibold text-[#3C3B3B]">Capacidad</p>
+            <div class="flex items-center gap-4" data-radio-group>
+              <div class="w-full border rounded-[16px] text-center h-[56px] flex items-center justify-center cursor-pointer" data-radio-option data-radio-value="256gb" data-selected>
+                <span>256 GB</span>
+              </div>
+              <div class="w-full border rounded-[16px] text-center h-[56px] flex items-center justify-center cursor-pointer opacity-50 cursor-not-allowed pointer-events-none" data-radio-option data-radio-value="512gb" data-disabled>
+                <span>512 GB</span>
+              </div>
+              <div class="w-full border rounded-[16px] text-center h-[56px] flex items-center justify-center cursor-pointer" data-radio-option data-radio-value="1tb">
+                <span>1 TB</span>
+              </div>
+            </div>
+          </div>
+          <div class="border border-[#E1E1E1] rounded-[20px] p-[24px] flex flex-col gap-4 w-full">
+            <p class="text-[18px] font-semibold text-[#3C3B3B]">Color - Naranja cósmico</p>
+            <div class="flex items-center gap-1" data-radio-group data-radio-style="swatch">
+              <div class="w-[36px] h-[36px] rounded-full flex items-center justify-center cursor-pointer border-[2px] border-[#E4022C]" data-radio-option data-radio-value="naranja" data-selected>
+                <div class="w-[28px] h-[28px] rounded-full bg-[#F77D35]"></div>
+              </div>
+              <div class="w-[36px] h-[36px] rounded-full flex items-center justify-center cursor-pointer" data-radio-option data-radio-value="blanco">
+                <div class="w-[28px] h-[28px] rounded-full bg-white border border-[#E1E1E1]"></div>
+              </div>
+              <div class="w-[36px] h-[36px] rounded-full flex items-center justify-center cursor-pointer" data-radio-option data-radio-value="negro">
+                <div class="w-[28px] h-[28px] rounded-full bg-black"></div>
+              </div>
+            </div>
+            <p>¡Solo quedan 2 en stock!</p>
+          </div>
+          <div class="border border-[#E1E1E1] rounded-[20px] p-[24px] flex flex-col gap-4 w-full">
+            <p class="text-[18px] font-semibold text-[#3C3B3B]">Cantidad</p>
+            <div class="flex flex-col lg:flex-row lg:items-center gap-[24px]">
+              <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-[56px]" data-quantity-counter="" data-min-value="1" data-max-value="10">
+                <button data-quantity-minus="" class="opacity-25 cursor-not-allowed pointer-events-none" disabled="">
+                  <img src="./img/icon/remove.svg" alt="">
+                </button>
+                <span class="min-w-[76px] w-full lg:w-auto text-center" data-quantity-display="">1</span>
+                <button data-quantity-plus="">
+                  <img src="./img/icon/add.svg" alt="">
+                </button>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="flex flex-col gap-1">
+                  <p class="text-[#E4022C] font-semibold">9,080 Puntos</p>
+                  <p class="text-[#3C3B3B] text-[14px] line-through">12,000 puntos</p>
+                </div>
+                <span class="bg-black rounded-full px-[10px] py-[3px] text-white text-[13px] flex items-center justify-center">
+                  <span>30% OFF</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full px-[24px] w-full md:w-fit" data-micromodal-trigger="modal-add-cart">
+            <span>Agregar al carrito</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#FFF9FA]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="bg-white rounded-[16px] px-6" data-accordion-group>
+        <div class="border-b border-[#E4E7EC]" data-accordion>
+          <button type="button" class="flex items-center justify-between gap-4 h-[56px] w-full cursor-pointer" data-accordion-trigger>
+            <span class="text-start text-[#E4022C] font-semibold">Ficha del producto</span>
+            <img class="transform transition-transform duration-200" data-accordion-arrow src="./img/icon/arrow-top-red.svg" alt="">
+          </button>
+          <div class="pb-4 hidden" data-accordion-content>
+            <ul class="text-[#655F5F] list-disc pl-4">
+              <li>
+                <p>DISEÑO UNIBODY. PARA UNA POTENCIA FUERA DE SERIE. — Gracias a su diseño unibody de aluminio forjado en caliente, este es el iPhone más poderoso que existe.</p>
+              </li>
+              <li>
+                <p>CERAMIC SHIELD SUPERRESISTENTE. DELANTE Y ATRÁS. — El Ceramic Shield protege la parte posterior del iPhone 17 Pro Max y lo vuelve 4 veces más resistente a los golpes. Y el nuevo frente de Ceramic Shield 2 tiene una resistencia a los rayones 3 veces mayor.</p>
+              </li>
+              <li>
+                <p>EL MEJOR SISTEMA DE CÁMARAS PRO — Equipado con cámaras traseras de 48 MP y zoom de 8x de calidad óptica, el mayor rango de zoom que se haya visto en un iPhone. Es como tener 8 lentes profesionales en tu bolsillo.</p>
+              </li>
+              <li>
+                <p>CÁMARA FRONTAL CENTER STAGE DE 18 MP — Nuevas posibilidades para encuadrar tus tomas, selfies grupales más inteligentes, video con Captura Dual para grabar con la cámara frontal y una cámara trasera al mismo tiempo y mucho más.</p>
+              </li>
+              <li>
+                <p>CHIP A19 PRO. ENFRIADO POR EVAPORACIÓN. VELOCIDAD POR LAS NUBES. — El chip A19 Pro es el más potente en un iPhone y ofrece un rendimiento continuo hasta un 40% superior.</p>
+              </li>
+              <li>
+                <p>LA MAYOR DURACIÓN DE BATERÍA QUE EXISTE EN UN IPHONE — El diseño unibody libera espacio para una batería con más capacidad que permite disfrutar hasta 31 horas de reproducción de video. Y puedes cargarla hasta un 50% en 20 minutos.</p>
+              </li>
+              <li>
+                <p>iOS 26. ESTRENANDO LOOK. DERROCHANDO MAGIA. — El nuevo diseño con Liquid Glass se ve increíble y se siente familiar al instante, con una pantalla bloqueada que atrapa miradas, fondos personalizables y encuestas en Mensajes, Revisión de Llamadas y mucho más.</p>
+              </li>
+              <li>
+                <p>DISEÑADO PARA APPLE INTELLIGENCE — Personal, privado y poderoso. Escribe, exprésate y haz de todo con mucha facilidad.</p>
+              </li>
+              <li>
+                <p>FUNCIONALIDADES ESENCIALES DE SEGURIDAD — Con Detección de Choques, el iPhone puede detectar si sufres un accidente de auto grave y pedir ayuda cuando tú no puedes.</p>
+              </li>
+              <li>
+                <p>MEJOR CONECTIVIDAD. GRAN VELOCIDAD. — Sigue en contacto a velocidades más rápidas con conexiones seguras a Wi-Fi 7, redes 5G y Bluetooth 6, y con la eSIM.</p>
+              </li>
+              <li>
+                <p>eSIM. FLEXIBILIDAD. SEGURIDAD. SIMPLICIDAD. — — Con la eSIM, disfrutas una mayor flexibilidad, comodidad y seguridad, además de una gran conectividad, sobre todo cuando viajas a otro país. También te da más seguridad, ya que nadie puede quitarla en caso de robo o pérdida de tu iPhone.</p>
+              </li>
+              <li>
+                <p>PRIVACIDAD — Un nuevo nivel de privacidad y seguridad integradas.</p>
+              </li>
+              <li>
+                <p>DISPOSITIVO COMPATIBLE CON eSIM — Ya no necesitas una tarjeta SIM física. Activa tu eSIM durante la configuración del iPhone. Descubre más en nuestra guía eSIM.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-b border-[#E4E7EC]" data-accordion>
+          <button type="button" class="flex items-center justify-between gap-4 h-[56px] w-full cursor-pointer" data-accordion-trigger>
+            <span class="text-start text-[#E4022C] font-semibold">Garantía internacional Apple por un (1) año</span>
+            <img class="transform transition-transform duration-200" data-accordion-arrow src="./img/icon/arrow-top-red.svg" alt="">
+          </button>
+          <div class="pb-4 hidden" data-accordion-content>
+            <ul class="text-[#655F5F] list-disc pl-4">
+              <li>
+                <p>DISEÑO UNIBODY. PARA UNA POTENCIA FUERA DE SERIE. — Gracias a su diseño unibody de aluminio forjado en caliente, este es el iPhone más poderoso que existe.</p>
+              </li>
+              <li>
+                <p>CERAMIC SHIELD SUPERRESISTENTE. DELANTE Y ATRÁS. — El Ceramic Shield protege la parte posterior del iPhone 17 Pro Max y lo vuelve 4 veces más resistente a los golpes. Y el nuevo frente de Ceramic Shield 2 tiene una resistencia a los rayones 3 veces mayor.</p>
+              </li>
+              <li>
+                <p>EL MEJOR SISTEMA DE CÁMARAS PRO — Equipado con cámaras traseras de 48 MP y zoom de 8x de calidad óptica, el mayor rango de zoom que se haya visto en un iPhone. Es como tener 8 lentes profesionales en tu bolsillo.</p>
+              </li>
+              <li>
+                <p>CÁMARA FRONTAL CENTER STAGE DE 18 MP — Nuevas posibilidades para encuadrar tus tomas, selfies grupales más inteligentes, video con Captura Dual para grabar con la cámara frontal y una cámara trasera al mismo tiempo y mucho más.</p>
+              </li>
+              <li>
+                <p>CHIP A19 PRO. ENFRIADO POR EVAPORACIÓN. VELOCIDAD POR LAS NUBES. — El chip A19 Pro es el más potente en un iPhone y ofrece un rendimiento continuo hasta un 40% superior.</p>
+              </li>
+              <li>
+                <p>LA MAYOR DURACIÓN DE BATERÍA QUE EXISTE EN UN IPHONE — El diseño unibody libera espacio para una batería con más capacidad que permite disfrutar hasta 31 horas de reproducción de video. Y puedes cargarla hasta un 50% en 20 minutos.</p>
+              </li>
+              <li>
+                <p>iOS 26. ESTRENANDO LOOK. DERROCHANDO MAGIA. — El nuevo diseño con Liquid Glass se ve increíble y se siente familiar al instante, con una pantalla bloqueada que atrapa miradas, fondos personalizables y encuestas en Mensajes, Revisión de Llamadas y mucho más.</p>
+              </li>
+              <li>
+                <p>DISEÑADO PARA APPLE INTELLIGENCE — Personal, privado y poderoso. Escribe, exprésate y haz de todo con mucha facilidad.</p>
+              </li>
+              <li>
+                <p>FUNCIONALIDADES ESENCIALES DE SEGURIDAD — Con Detección de Choques, el iPhone puede detectar si sufres un accidente de auto grave y pedir ayuda cuando tú no puedes.</p>
+              </li>
+              <li>
+                <p>MEJOR CONECTIVIDAD. GRAN VELOCIDAD. — Sigue en contacto a velocidades más rápidas con conexiones seguras a Wi-Fi 7, redes 5G y Bluetooth 6, y con la eSIM.</p>
+              </li>
+              <li>
+                <p>eSIM. FLEXIBILIDAD. SEGURIDAD. SIMPLICIDAD. — — Con la eSIM, disfrutas una mayor flexibilidad, comodidad y seguridad, además de una gran conectividad, sobre todo cuando viajas a otro país. También te da más seguridad, ya que nadie puede quitarla en caso de robo o pérdida de tu iPhone.</p>
+              </li>
+              <li>
+                <p>PRIVACIDAD — Un nuevo nivel de privacidad y seguridad integradas.</p>
+              </li>
+              <li>
+                <p>DISPOSITIVO COMPATIBLE CON eSIM — Ya no necesitas una tarjeta SIM física. Activa tu eSIM durante la configuración del iPhone. Descubre más en nuestra guía eSIM.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-b border-[#E4E7EC]" data-accordion>
+          <button type="button" class="flex items-center justify-between gap-4 h-[56px] w-full cursor-pointer" data-accordion-trigger>
+            <span class="text-start text-[#E4022C] font-semibold">Devoluciones y cambios</span>
+            <img class="transform transition-transform duration-200" data-accordion-arrow src="./img/icon/arrow-top-red.svg" alt="">
+          </button>
+          <div class="pb-4 hidden" data-accordion-content>
+            <ul class="text-[#655F5F] list-disc pl-4">
+              <li>
+                <p>DISEÑO UNIBODY. PARA UNA POTENCIA FUERA DE SERIE. — Gracias a su diseño unibody de aluminio forjado en caliente, este es el iPhone más poderoso que existe.</p>
+              </li>
+              <li>
+                <p>CERAMIC SHIELD SUPERRESISTENTE. DELANTE Y ATRÁS. — El Ceramic Shield protege la parte posterior del iPhone 17 Pro Max y lo vuelve 4 veces más resistente a los golpes. Y el nuevo frente de Ceramic Shield 2 tiene una resistencia a los rayones 3 veces mayor.</p>
+              </li>
+              <li>
+                <p>EL MEJOR SISTEMA DE CÁMARAS PRO — Equipado con cámaras traseras de 48 MP y zoom de 8x de calidad óptica, el mayor rango de zoom que se haya visto en un iPhone. Es como tener 8 lentes profesionales en tu bolsillo.</p>
+              </li>
+              <li>
+                <p>CÁMARA FRONTAL CENTER STAGE DE 18 MP — Nuevas posibilidades para encuadrar tus tomas, selfies grupales más inteligentes, video con Captura Dual para grabar con la cámara frontal y una cámara trasera al mismo tiempo y mucho más.</p>
+              </li>
+              <li>
+                <p>CHIP A19 PRO. ENFRIADO POR EVAPORACIÓN. VELOCIDAD POR LAS NUBES. — El chip A19 Pro es el más potente en un iPhone y ofrece un rendimiento continuo hasta un 40% superior.</p>
+              </li>
+              <li>
+                <p>LA MAYOR DURACIÓN DE BATERÍA QUE EXISTE EN UN IPHONE — El diseño unibody libera espacio para una batería con más capacidad que permite disfrutar hasta 31 horas de reproducción de video. Y puedes cargarla hasta un 50% en 20 minutos.</p>
+              </li>
+              <li>
+                <p>iOS 26. ESTRENANDO LOOK. DERROCHANDO MAGIA. — El nuevo diseño con Liquid Glass se ve increíble y se siente familiar al instante, con una pantalla bloqueada que atrapa miradas, fondos personalizables y encuestas en Mensajes, Revisión de Llamadas y mucho más.</p>
+              </li>
+              <li>
+                <p>DISEÑADO PARA APPLE INTELLIGENCE — Personal, privado y poderoso. Escribe, exprésate y haz de todo con mucha facilidad.</p>
+              </li>
+              <li>
+                <p>FUNCIONALIDADES ESENCIALES DE SEGURIDAD — Con Detección de Choques, el iPhone puede detectar si sufres un accidente de auto grave y pedir ayuda cuando tú no puedes.</p>
+              </li>
+              <li>
+                <p>MEJOR CONECTIVIDAD. GRAN VELOCIDAD. — Sigue en contacto a velocidades más rápidas con conexiones seguras a Wi-Fi 7, redes 5G y Bluetooth 6, y con la eSIM.</p>
+              </li>
+              <li>
+                <p>eSIM. FLEXIBILIDAD. SEGURIDAD. SIMPLICIDAD. — — Con la eSIM, disfrutas una mayor flexibilidad, comodidad y seguridad, además de una gran conectividad, sobre todo cuando viajas a otro país. También te da más seguridad, ya que nadie puede quitarla en caso de robo o pérdida de tu iPhone.</p>
+              </li>
+              <li>
+                <p>PRIVACIDAD — Un nuevo nivel de privacidad y seguridad integradas.</p>
+              </li>
+              <li>
+                <p>DISPOSITIVO COMPATIBLE CON eSIM — Ya no necesitas una tarjeta SIM física. Activa tu eSIM durante la configuración del iPhone. Descubre más en nuestra guía eSIM.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div data-accordion>
+          <button type="button" class="flex items-center justify-between gap-4 h-[56px] w-full cursor-pointer" data-accordion-trigger>
+            <span class="text-start text-[#E4022C] font-semibold">Términos y Condiciones</span>
+            <img class="transform transition-transform duration-200" data-accordion-arrow src="./img/icon/arrow-top-red.svg" alt="">
+          </button>
+          <div class="pb-4 hidden" data-accordion-content>
+            <ul class="text-[#655F5F] list-disc pl-4">
+              <li>
+                <p>DISEÑO UNIBODY. PARA UNA POTENCIA FUERA DE SERIE. — Gracias a su diseño unibody de aluminio forjado en caliente, este es el iPhone más poderoso que existe.</p>
+              </li>
+              <li>
+                <p>CERAMIC SHIELD SUPERRESISTENTE. DELANTE Y ATRÁS. — El Ceramic Shield protege la parte posterior del iPhone 17 Pro Max y lo vuelve 4 veces más resistente a los golpes. Y el nuevo frente de Ceramic Shield 2 tiene una resistencia a los rayones 3 veces mayor.</p>
+              </li>
+              <li>
+                <p>EL MEJOR SISTEMA DE CÁMARAS PRO — Equipado con cámaras traseras de 48 MP y zoom de 8x de calidad óptica, el mayor rango de zoom que se haya visto en un iPhone. Es como tener 8 lentes profesionales en tu bolsillo.</p>
+              </li>
+              <li>
+                <p>CÁMARA FRONTAL CENTER STAGE DE 18 MP — Nuevas posibilidades para encuadrar tus tomas, selfies grupales más inteligentes, video con Captura Dual para grabar con la cámara frontal y una cámara trasera al mismo tiempo y mucho más.</p>
+              </li>
+              <li>
+                <p>CHIP A19 PRO. ENFRIADO POR EVAPORACIÓN. VELOCIDAD POR LAS NUBES. — El chip A19 Pro es el más potente en un iPhone y ofrece un rendimiento continuo hasta un 40% superior.</p>
+              </li>
+              <li>
+                <p>LA MAYOR DURACIÓN DE BATERÍA QUE EXISTE EN UN IPHONE — El diseño unibody libera espacio para una batería con más capacidad que permite disfrutar hasta 31 horas de reproducción de video. Y puedes cargarla hasta un 50% en 20 minutos.</p>
+              </li>
+              <li>
+                <p>iOS 26. ESTRENANDO LOOK. DERROCHANDO MAGIA. — El nuevo diseño con Liquid Glass se ve increíble y se siente familiar al instante, con una pantalla bloqueada que atrapa miradas, fondos personalizables y encuestas en Mensajes, Revisión de Llamadas y mucho más.</p>
+              </li>
+              <li>
+                <p>DISEÑADO PARA APPLE INTELLIGENCE — Personal, privado y poderoso. Escribe, exprésate y haz de todo con mucha facilidad.</p>
+              </li>
+              <li>
+                <p>FUNCIONALIDADES ESENCIALES DE SEGURIDAD — Con Detección de Choques, el iPhone puede detectar si sufres un accidente de auto grave y pedir ayuda cuando tú no puedes.</p>
+              </li>
+              <li>
+                <p>MEJOR CONECTIVIDAD. GRAN VELOCIDAD. — Sigue en contacto a velocidades más rápidas con conexiones seguras a Wi-Fi 7, redes 5G y Bluetooth 6, y con la eSIM.</p>
+              </li>
+              <li>
+                <p>eSIM. FLEXIBILIDAD. SEGURIDAD. SIMPLICIDAD. — — Con la eSIM, disfrutas una mayor flexibilidad, comodidad y seguridad, además de una gran conectividad, sobre todo cuando viajas a otro país. También te da más seguridad, ya que nadie puede quitarla en caso de robo o pérdida de tu iPhone.</p>
+              </li>
+              <li>
+                <p>PRIVACIDAD — Un nuevo nivel de privacidad y seguridad integradas.</p>
+              </li>
+              <li>
+                <p>DISPOSITIVO COMPATIBLE CON eSIM — Ya no necesitas una tarjeta SIM física. Activa tu eSIM durante la configuración del iPhone. Descubre más en nuestra guía eSIM.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#FFF9FA]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 py-10 flex flex-col gap-[20px]">
+      <div class="flex items-center justify-between">
+        <h2 class="text-[#1E1E1E] text-[24px] font-semibold">También te puede interesar</h2>
+        <div class="flex items-center gap-2">
+          <button class="swiper-button-prev-buscados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button class="swiper-button-next-buscados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Swiper -->
+      <div class="swiper swiper-buscados p-2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a class="block" href="./producto.html">
+              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
+              <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
+                <div>
+                  <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-[#3C3B3B]">SAMSUNG</p>
+                    <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
+                  </div>
+                  <div class="flex flex-col">
+                    <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                    <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                    <img src="./img/icon/carrito.svg" alt="">
+                    <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                  </button>
+                  <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                    <img src="./img/icon/heart.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="block" href="./producto.html">
+              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
+                <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
+                  <div>
+                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
+                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
+                      <img src="./img/icon/flash.svg" alt="">
+                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-2">
+                      <p class="text-[#3C3B3B]">APPLE</p>
+                      <p class="text-[#3C3B3B]">iPhone 15 Pro Max</p>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#E4022C] font-semibold">800 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">1000 Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                      <img src="./img/icon/carrito.svg" alt="">
+                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                    </button>
+                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                      <img src="./img/icon/heart.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="block" href="./producto.html">
+              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
+                <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
+                  <div>
+                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
+                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
+                      <img src="./img/icon/flash.svg" alt="">
+                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-2">
+                      <p class="text-[#3C3B3B]">XIAOMI</p>
+                      <p class="text-[#3C3B3B]">Redmi Note 13 Pro</p>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#E4022C] font-semibold">300 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">400 Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                      <img src="./img/icon/carrito.svg" alt="">
+                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                    </button>
+                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                      <img src="./img/icon/heart.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="block" href="./producto.html">
+              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
+                <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
+                  <div>
+                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
+                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
+                      <img src="./img/icon/flash.svg" alt="">
+                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-2">
+                      <p class="text-[#3C3B3B]">HUAWEI</p>
+                      <p class="text-[#3C3B3B]">P60 Pro</p>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#E4022C] font-semibold">600 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">750 Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                      <img src="./img/icon/carrito.svg" alt="">
+                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                    </button>
+                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                      <img src="./img/icon/heart.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="block" href="./producto.html">
+              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
+                <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
+                  <div>
+                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
+                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
+                      <img src="./img/icon/flash.svg" alt="">
+                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-2">
+                      <p class="text-[#3C3B3B]">ONEPLUS</p>
+                      <p class="text-[#3C3B3B]">OnePlus 12</p>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#E4022C] font-semibold">700 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">850 Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                      <img src="./img/icon/carrito.svg" alt="">
+                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                    </button>
+                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                      <img src="./img/icon/heart.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="block" href="./producto.html">
+              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
+                <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
+                  <div>
+                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
+                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
+                      <img src="./img/icon/flash.svg" alt="">
+                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-2">
+                      <p class="text-[#3C3B3B]">GOOGLE</p>
+                      <p class="text-[#3C3B3B]">Pixel 8 Pro</p>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#E4022C] font-semibold">900 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">1100 Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                      <img src="./img/icon/carrito.svg" alt="">
+                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                    </button>
+                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                      <img src="./img/icon/heart.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="block" href="./producto.html">
+              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
+                <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
+                  <div>
+                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
+                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
+                      <img src="./img/icon/flash.svg" alt="">
+                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-2">
+                      <p class="text-[#3C3B3B]">MOTOROLA</p>
+                      <p class="text-[#3C3B3B]">Edge 50 Pro</p>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#E4022C] font-semibold">400 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">500 Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                      <img src="./img/icon/carrito.svg" alt="">
+                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                    </button>
+                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                      <img src="./img/icon/heart.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="block" href="./producto.html">
+              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
+                <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
+                  <div>
+                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
+                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
+                      <img src="./img/icon/flash.svg" alt="">
+                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-2">
+                      <p class="text-[#3C3B3B]">REALME</p>
+                      <p class="text-[#3C3B3B]">GT 6</p>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#E4022C] font-semibold">350 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">450 Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                      <img src="./img/icon/carrito.svg" alt="">
+                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                    </button>
+                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                      <img src="./img/icon/heart.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fixed w-[540px] h-[72px] bottom-[32px] bg-white rounded-[72px] shadow-[0_0_10px_#00000026] z-20 left-1/2 -translate-x-1/2 border border-[#E1E1E1] pl-[32px] pr-[20px] hidden md:flex items-center justify-between">
+    <div class="flex flex-col gap-1">
+      <p>Llévatelo ahora</p>
+      <div class="flex items-center gap-1">
+        <p class="text-[#E4022C] font-semibold">9080 Puntos</p>
+        <p class="text-[#3C3B3B] text-[14px] line-through">12000 puntos</p>
+        <span class="bg-black rounded-full px-[10px] py-[3px] text-white text-[13px] flex items-center justify-center">
+          <span>30% OFF</span>
+        </span>
+      </div>
+    </div>
+    <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[40px] rounded-full px-[24px]" data-micromodal-trigger="modal-add-cart">
+      <span>Agregar al carrito</span>
+    </button>
+  </section>
+
+  <footer class="py-[48px] bg-[#231F20]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="flex flex-col gap-8">
+        <div class="flex items-center justify-center md:justify-start md:items-start flex-col md:flex-row gap-[32px] md:gap-0">
+          <div class="w-full flex items-center justify-center">
+            <img class="h-[50px] md:h-auto" src="./img/logo-white.svg" alt="">
+          </div>
+          <div class="w-full">
+            <div class="flex flex-col gap-4 text-center">
+              <p class="text-white text-[18px] font-semibold">CONTÁCTANOS</p>
+              <ul class="flex flex-col gap-[22px]">
+                <li>
+                  <a class="text-white" href="">callcenter@promotick.com</a>
+                </li>
+                <li>
+                  <a class="text-white" href="">1800-CANJES (226537)</a>
+                </li>
+                <li>
+                  <a class="text-white" href="">Enviar mensaje</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <span class="bg-[#E1E6EF] h-[1px] w-full block md:hidden"></span>
+          <div class="w-full">
+            <div class="flex flex-col gap-4 text-center">
+              <p class="text-white text-[18px] font-semibold">INFORMACIÓN</p>
+              <ul class="flex flex-col gap-[22px]">
+                <li>
+                  <a class="text-white" href="">Preguntas frecuentes</a>
+                </li>
+                <li>
+                  <a class="text-white" href="">Términos y condiciones</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <span class="bg-[#E1E6EF] h-[1px] w-full"></span>
+        <p class="text-white text-center">© 2025 Promotick. Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+<!-- Modal MicroModal: Agregar al carrito -->
+<div class="modal" id="modal-add-cart" aria-hidden="true">
+  <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+    <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+      <div class="flex items-center justify-between pb-[24px]">
+        <div class="flex items-center gap-2">
+          <img src="./img/check.svg" alt="">
+          <h3 class="text-[#172948] text-[20px] font-semibold">Agregado al carrito</h3>
+        </div>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+          <img src="./img/icon/x.svg" alt="">
+        </button>
+      </div>
+      <div class="flex flex-col gap-[24px]">
+        <div class="flex md:items-center justify-between flex-col md:flex-row gap-4">
+          <div class="flex items-center gap-3">
+            <img class="w-[56px] h-[56px] object-cover" src="./img/phone.jpg" alt="">
+            <div class="flex flex-col gap-2">
+              <p class="text-[#172948] text-[14px]">APPLE</p>
+              <p class="text-[#172948] font-semibold">Iphone 17 Pro</p>
+            </div>
+          </div>
+          <div class="flex flex-col md:text-end">
+            <p class="text-[#172948] text-[14px] line-through">12,080 Puntos</p>
+            <p class="text-[#172948] font-semibold">9,080 Puntos</p>
+          </div>
+        </div>
+        <div class="border-t border-[#E1E6EF]"></div>
+        <div class="hidden md:flex items-center justify-between">
+          <p class="text-[#172948] font-semibold text-[18px]">Total a pagar (1 producto)</p>
+          <p class="text-[#172948] font-semibold text-[18px]">9,080 Puntos</p>
+        </div>
+        <div class="md:hidden">
+          <p class="text-[#172948] font-semibold">Total (2 productos): 1000 puntos</p>
+        </div>
+        <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+          <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full">
+            <span>Seguir canjeando</span>
+          </button>
+          <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
+            <span>Ver carrito de compras</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
