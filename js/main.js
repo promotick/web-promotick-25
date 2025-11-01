@@ -524,8 +524,10 @@ class RadioGroup {
     group.options.forEach(option => {
       const isActive = option === optionToActivate;
 
-      // Reset de clases de estado según estilo
-      if (group.style === 'swatch') {
+      // Reset/aplicación de estado según estilo
+      if (group.style === 'icon') {
+        // No tocar clases utilitarias del contenedor; solo aria y data-selected e íconos
+      } else if (group.style === 'swatch') {
         option.classList.remove('border-[2px]', 'border-[#E4022C]');
       } else {
         option.classList.remove('border-[#E4022C]', 'text-[#E4022C]', 'bg-[#FFF1F0]', 'font-semibold');
@@ -533,7 +535,25 @@ class RadioGroup {
       }
 
       // Aplicar estado correspondiente
-      if (group.style === 'swatch') {
+      if (group.style === 'icon') {
+        // Solo manejo de aria/data-selected y alternar ícono
+        if (isActive) {
+          option.setAttribute('aria-checked', 'true');
+          option.setAttribute('data-selected', '');
+        } else {
+          option.setAttribute('aria-checked', 'false');
+          option.removeAttribute('data-selected');
+        }
+
+        const iconEl = option.querySelector('[data-radio-icon]');
+        if (iconEl) {
+          const activeSrc = iconEl.dataset.radioActiveSrc;
+          const inactiveSrc = iconEl.dataset.radioInactiveSrc;
+          if (activeSrc && inactiveSrc) {
+            iconEl.src = isActive ? activeSrc : inactiveSrc;
+          }
+        }
+      } else if (group.style === 'swatch') {
         if (isActive) {
           option.classList.add('border-[2px]', 'border-[#E4022C]');
           option.setAttribute('aria-checked', 'true');
@@ -857,6 +877,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Inicializar componentes de búsqueda
   SearchInput.init();
 
+  // Inicializar campos genéricos
+  FormField.init();
+
   // Inicializar acordeones
   Accordion.init();
 
@@ -866,6 +889,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Inicializar buscador
   SearchToggle.init();
 
+  // Inicializar tabs reutilizables
+  Tabs.init();
+
   // Inicializar MicroModal (si está disponible)
   if (typeof MicroModal !== 'undefined') {
     MicroModal.init({
@@ -873,6 +899,9 @@ document.addEventListener('DOMContentLoaded', function() {
       openClass: 'is-open',
     });
   }
+
+  // Inicializar encadenador de modales
+  ModalChain.init();
 });
 
 // Función para inicializar todos los Swipers
@@ -1248,5 +1277,252 @@ class SearchToggle {
 
   static init() {
     return new SearchToggle();
+  }
+}
+
+// Componente genérico para campos con label flotante y clear
+class FormField {
+  constructor() {
+    this.fields = [];
+    this.initializeFields();
+  }
+
+  initializeFields() {
+    const elements = document.querySelectorAll('[data-field]');
+    elements.forEach(el => this.createField(el));
+  }
+
+  createField(element) {
+    const container = element.querySelector('[data-field-container]');
+    const input = element.querySelector('[data-field-input]');
+    const label = element.querySelector('[data-field-label]');
+    const clearBtn = element.querySelector('[data-field-clear]');
+
+    if (!container || !input) {
+      console.warn('FormField: container o input no encontrado', element);
+      return;
+    }
+
+    const field = {
+      element,
+      container,
+      input,
+      label,
+      clearBtn,
+      isSelect: input.tagName && input.tagName.toLowerCase() === 'select',
+      isFocused: false,
+      hasValue: (input.value && input.value.length > 0) || false,
+      isHovered: false
+    };
+
+    this.fields.push(field);
+
+    // Estado inicial forzado: activar (flotar label) sin foco
+    if (element.dataset.fieldInitial === 'active' || field.isSelect) {
+      field.hasValue = true;
+    }
+
+    // Eventos
+    input.addEventListener('focus', () => {
+      field.isFocused = true;
+      this.updateState(field);
+    });
+
+    input.addEventListener('blur', () => {
+      field.isFocused = false;
+      this.updateState(field);
+    });
+
+    input.addEventListener('input', () => {
+      field.hasValue = input.value.length > 0;
+      this.updateState(field);
+    });
+
+    // Soporte para selects (y cambios en inputs)
+    input.addEventListener('change', () => {
+      field.hasValue = input.value.length > 0;
+      this.updateState(field);
+    });
+
+    container.addEventListener('mouseenter', () => {
+      if (!field.isFocused) {
+        field.isHovered = true;
+        this.updateState(field);
+      }
+    });
+
+    container.addEventListener('mouseleave', () => {
+      field.isHovered = false;
+      this.updateState(field);
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        input.value = '';
+        field.hasValue = false;
+        this.updateState(field);
+        input.focus();
+      });
+    }
+
+    if (label) {
+      label.addEventListener('click', () => {
+        input.focus();
+      });
+    }
+
+    // Estado inicial
+    this.updateState(field);
+  }
+
+  updateState(field) {
+    const { container, label, isFocused, hasValue, isHovered, isSelect } = field;
+
+    // Reset clases
+    container.classList.remove('border-[#3C3B3B]', 'border-[#E4022C]', 'shadow-[0_0_0_3px_#E4022C]', 'field-focused', 'field-has-value');
+
+    if (isFocused) {
+      container.classList.add('border-[#E4022C]', 'shadow-[0_0_0_3px_#E4022C]', 'field-focused');
+    } else if (isHovered) {
+      container.classList.add('border-[#3C3B3B]');
+    }
+
+    if (hasValue || isSelect) {
+      container.classList.add('field-has-value');
+    }
+  }
+
+  static init() {
+    return new FormField();
+  }
+}
+
+// Encadenador de modales: cierra el actual y abre el siguiente indicado
+class ModalChain {
+  constructor() {
+    this.bindEvents();
+  }
+
+  bindEvents() {
+    const triggers = document.querySelectorAll('[data-modal-next]');
+    triggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const nextId = btn.getAttribute('data-modal-next');
+        if (!nextId || typeof MicroModal === 'undefined') return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const currentModal = btn.closest('.modal');
+        const currentId = currentModal && currentModal.id ? currentModal.id : null;
+
+        if (currentId) {
+          try { MicroModal.close(currentId); } catch (_) {}
+          // Pequeño delay para permitir la animación de cierre antes de abrir el siguiente
+          setTimeout(() => {
+            try { MicroModal.show(nextId); } catch (_) {}
+          }, 150);
+        } else {
+          try { MicroModal.show(nextId); } catch (_) {}
+        }
+      });
+    });
+  }
+
+  static init() {
+    return new ModalChain();
+  }
+}
+
+// Clase para manejar tabs reutilizables
+class Tabs {
+  constructor() {
+    this.instances = [];
+    this.initialize();
+  }
+
+  // Buscar todos los contenedores de tabs
+  initialize() {
+    const containers = document.querySelectorAll('[data-tabs]');
+    containers.forEach(container => this.createTabs(container));
+  }
+
+  // Crear una instancia de tabs por contenedor
+  createTabs(container) {
+    const triggers = Array.from(container.querySelectorAll('[data-tab-target]'));
+    const panels = Array.from(container.querySelectorAll('[data-tab-panel]'));
+
+    if (triggers.length === 0 || panels.length === 0) {
+      console.warn('Tabs: no se encontraron triggers o panels', container);
+      return;
+    }
+
+    const instance = {
+      container,
+      triggers,
+      panels,
+      activeName: null
+    };
+
+    // Definir pestaña activa inicial
+    const preset = triggers.find(btn => btn.getAttribute('aria-selected') === 'true');
+    const initialTrigger = preset || triggers[0];
+    this.setActive(instance, initialTrigger.dataset.tabTarget, false);
+
+    // Eventos
+    triggers.forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.setActive(instance, btn.dataset.tabTarget, true);
+      });
+
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.setActive(instance, btn.dataset.tabTarget, true);
+        }
+      });
+    });
+
+    this.instances.push(instance);
+  }
+
+  // Activar una pestaña por nombre
+  setActive(instance, name, emit = true) {
+    instance.activeName = name;
+
+    // Actualizar triggers
+    instance.triggers.forEach(btn => {
+      const isActive = btn.dataset.tabTarget === name;
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      btn.setAttribute('tabindex', isActive ? '0' : '-1');
+
+      // Cambiar ícono activo/inactivo si existe
+      const icon = btn.querySelector('[data-tab-icon]');
+      const activeSrc = btn.dataset.tabActiveSrc;
+      const inactiveSrc = btn.dataset.tabInactiveSrc;
+      if (icon && activeSrc && inactiveSrc) {
+        icon.src = isActive ? activeSrc : inactiveSrc;
+      }
+    });
+
+    // Actualizar panels
+    instance.panels.forEach(panel => {
+      const isActive = panel.getAttribute('data-tab-panel') === name;
+      panel.hidden = !isActive;
+      panel.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+    });
+
+    // Evento personalizado
+    if (emit) {
+      const event = new CustomEvent('tabChange', {
+        detail: { name, container: instance.container }
+      });
+      instance.container.dispatchEvent(event);
+    }
+  }
+
+  static init() {
+    return new Tabs();
   }
 }

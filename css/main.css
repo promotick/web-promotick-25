@@ -167,7 +167,8 @@
 [data-dropdown].dropdown-open [data-dropdown-menu] li:nth-child(5) { transition-delay: 0.25s; }
 
 /* Search Input - Solo posicionamiento absoluto complejo y animaciones Material Design */
-[data-search-label] {
+[data-search-label],
+[data-field-label] {
   position: absolute;
   left: 48px;
   top: 50%;
@@ -181,22 +182,35 @@
   font-size: 16px;
 }
 
+/* Variante simple: sin icono a la izquierda */
+[data-field][data-variant="simple"] [data-field-label] {
+  left: 12px;
+}
+
 /* Estado por defecto del contenedor */
-[data-search-container] {
+[data-search-container],
+[data-field-container] {
   border: 1px solid #E1E6EF;
 }
 
 /* Estado flotante del label (Material Design) */
 .search-focused [data-search-label],
-.search-has-value [data-search-label] {
+.search-has-value [data-search-label],
+.field-focused [data-field-label],
+.field-has-value [data-field-label] {
   top: 0;
   left: 12px;
   transform: translateY(-50%);
   font-size: 12px;
-  color: #E4022C;
   background: white;
   padding: 0 4px;
   z-index: 20;
+}
+
+/* Solo el buscador pinta el label de rojo cuando flota */
+.search-focused [data-search-label],
+.search-has-value [data-search-label] {
+  color: #E4022C;
 }
 
 .search-icon {
@@ -205,7 +219,8 @@
   z-index: 5;
 }
 
-.search-clear {
+.search-clear,
+.field-clear {
   position: absolute;
   right: 16px;
   z-index: 5;
@@ -345,4 +360,11 @@
   .swiper-categories {
     padding: 0; /* Quitar padding para tablet/mobile */
   }
+}
+
+/* Modales: altura máxima y scroll interno */
+.modal [role="dialog"] {
+  max-height: 90dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
