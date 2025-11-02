@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Promotick - Puntos</title>
+</head>
+
+<body>
+  <section class="flex flex-col lg:flex-row gap-10 lg:gap-0">
+    <div class="w-full lg:h-screen flex justify-center flex-col lg:flex-row">
+      <div class="pt-10 w-full lg:w-[448px] flex flex-col items-center gap-10 px-4 md:px-5 lg:px-0">
+        <img class="h-10" src="./img/logo.svg" alt="">
+        <div class="flex items-center gap-6 flex-col w-full">
+          <h1 class="text-[#172948] text-[24px] font-semibold text-center">Verifica tu acceso</h1>
+          <p class="text-[#3C3B3B] font-regular">Elige dónde quieres que te enviemos el código de verificación:</p>
+          <div data-radio-group="" data-radio-style="icon" class="flex flex-col gap-6 w-full" role="radiogroup">
+            <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="true" role="radio" tabindex="0" data-selected="">
+              <div class="flex items-center gap-3">
+                <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio-active.svg" alt="">
+                <div class="flex flex-col">
+                  <p class="text-[#3C3B3B]">Email</p>
+                  <p class="text-[#3C3B3B]">en***@p***.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="0">
+              <div class="flex items-center gap-3">
+                <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
+                <div class="flex flex-col">
+                  <p class="text-[#3C3B3B]">SMS</p>
+                  <p class="text-[#3C3B3B]">+593 ********03</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" href="./verifica-2.html">
+            <span>Enviar código</span>
+          </a>
+          <a class="flex items-center justify-center gap-2 h-[56px] rounded-full w-full" href="./login.html">
+            <span class="text-[#E4022C] font-regular underline">Cancelar verificación</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="w-full lg:h-screen">
+      <img class="w-full h-full object-cover hidden lg:block" src="./img/login.jpg" alt="">
+      <img class="w-full h-full object-cover lg:block" src="./img/login-mobile.jpg" alt="">
+    </div>
+  </section>
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="./js/main.js"></script>
+
+</html>

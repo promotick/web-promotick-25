@@ -345,175 +345,227 @@
     </div>
   </section>
 
-  <section class="bg-[#FFF9FA] pt-[80px] lg:pt-0">
-    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 pb-[24px] pt-[32px]">
-      <a class="flex items-center gap-2" href="./carrito.html">
-        <img src="./img/icon/arrow-left-outline.svg" alt="">
-        <span class="text-[#3C3B3B]">Volver</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="bg-[#FFF9FA] pb-[24px] min-h-[calc(100dvh-560px)]">
-    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
-      <div class="flex items-start flex-col md:flex-row gap-[24px]">
-        <div class="flex flex-col gap-6 w-full">
-          <div class="bg-white rounded-[16px] w-full flex flex-col gap-4 p-6">
-            <h3 class="text-[#3C3B3B] text-[18px] font-semibold">Forma de pago</h3>
-            <p class="text-[#3C3B3B]">Tienes 4200 puntos disponibles. Escoge tu forma de pago para este pedido:</p>
-            <div class="flex flex-col gap-4" data-tabs>
-              <div class="flex items-center gap-6" role="tablist">
-                <button type="button" class="flex items-center gap-2 cursor-pointer" data-tab-target="puntos" data-tab-active-src="./img/icon/radio-active.svg" data-tab-inactive-src="./img/icon/radio.svg" aria-selected="true" role="tab">
-                  <img data-tab-icon src="./img/icon/radio-active.svg" alt="">
-                  <span class="text-[#3C3B3B]">Puntos</span>
-                </button>
-                <button type="button" class="flex items-center gap-2 cursor-pointer" data-tab-target="puntos-dinero" data-tab-active-src="./img/icon/radio-active.svg" data-tab-inactive-src="./img/icon/radio.svg" aria-selected="false" role="tab">
-                  <img data-tab-icon src="./img/icon/radio.svg" alt="">
-                  <span class="text-[#3C3B3B]">Puntos + Dinero</span>
-                </button>
-              </div>
-              <div data-tab-panel="puntos" role="tabpanel">
-                <div class="flex items-center gap-3 bg-[#E5F6FD] px-3 h-[52px] rounded-[4px]">
-                  <img src="./img/icon/info-blue.svg" alt="">
-                  <p class="text-[#014361]">Usarás 1,200 puntos de tu saldo</p>
-                </div>
-              </div>
-              <div data-tab-panel="puntos-dinero" hidden role="tabpanel">
-                <div class="flex flex-col gap-6">
-                  <p class="text-[#3C3B3B]">El valor mínimo a pagar con Puntos es del 20% del valor del pedido.</p>
-                  <div class="flex lg:items-center gap-4 flex-col lg:flex-row">
-                    <div class="w-full border border-[#E1E6EF] rounded-[16px] h-[56px] relative flex items-center px-4">
-                      <span class="bg-white text-center absolute top-[-9px] left-[10px] px-2 text-[#3C3B3B] text-[12px]">¿Cuántos Puntos canjearás?</span>
-                      <button data-quantity-minus="" class="opacity-25 cursor-not-allowed pointer-events-none" disabled="">
-                        <img src="./img/icon/remove.svg" alt="">
-                      </button>
-                      <span class="w-full text-center" data-quantity-display>600</span>
-                      <button data-quantity-plus>
-                        <img src="./img/icon/add.svg" alt="">
-                      </button>
-                    </div>
-                    <div class="flex items-center gap-3 bg-[#EDF7ED] px-3 h-[52px] rounded-[4px]">
-                      <p class="text-[14px] whitespace-nowrap">A pagar en dólares <span class="font-semibold text-[#1B5E20]">US$ 648.07</span> </p>
-                    </div>  
-                  </div>
-                  <div class="flex items-center gap-3 bg-[#E5F6FD] px-3 h-[52px] rounded-[4px]">
-                    <img src="./img/icon/info-blue.svg" alt="">
-                    <p class="text-[#014361]">Usarás 600 Puntos de tu saldo y pagarás US$ 648.07</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white rounded-[16px] w-full flex flex-col gap-6 p-6">
-            <h3 class="text-[#3C3B3B] text-[18px] font-semibold">¿En dónde recibirás tu pedido?</h3>
-            <div data-radio-group data-radio-style="icon" class="flex flex-col gap-3">
-              <div class="border border-[#E1E6EF] rounded-[16px] p-3 cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row gap-3" data-radio-option data-selected>
-                <div class="flex items-start gap-4">
-                  <img data-radio-icon data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio-active.svg" alt="">
-                  <div class="flex flex-col gap-2">
-                    <p class="text-[#3C3B3B] font-semibold">Casa</p>
-                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
-                  </div>
-                </div>
-                <button class="flex items-center gap-2 text-[#E4022C] font-medium cursor-pointer" data-micromodal-trigger="modal-edit-address">
-                  <img src="./img/icon/edit-red.svg" alt="">
-                  <span>EDITAR</span>
-                </button>
-              </div>
-              <div class="border border-[#E1E6EF] rounded-[16px] p-3 cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row gap-3" data-radio-option>
-                <div class="flex items-start gap-4">
-                  <img data-radio-icon data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
-                  <div class="flex flex-col gap-2">
-                    <p class="text-[#3C3B3B] font-semibold">Oficina</p>
-                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
-                  </div>
-                </div>
-                <button class="flex items-center gap-2 text-[#E4022C] font-medium cursor-pointer" data-micromodal-trigger="modal-edit-address">
-                  <img src="./img/icon/edit-red.svg" alt="">
-                  <span>EDITAR</span>
-                </button>
-              </div>
-              <div class="border border-[#E1E6EF] rounded-[16px] p-3 cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row gap-3" data-radio-option>
-                <div class="flex items-start gap-4">
-                  <img data-radio-icon data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
-                  <div class="flex flex-col gap-2">
-                    <p class="text-[#3C3B3B] font-semibold">Casa de playa</p>
-                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
-                  </div>
-                </div>
-                <button class="flex items-center gap-2 text-[#E4022C] font-medium cursor-pointer" data-micromodal-trigger="modal-edit-address">
-                  <img src="./img/icon/edit-red.svg" alt="">
-                  <span>EDITAR</span>
-                </button>
-              </div>
-            </div>
-            <button class="text-[#E4022C] px-6 py-4 flex items-center gap-2" data-micromodal-trigger="modal-add-address">
-              <img src="./img/icon/add-red.svg" alt="">
-              <span>Agregar nueva dirección</span>
-            </button>
-          </div>
+  <section class="bg-[#FFF9FA] pt-[80px] lg:pt-0 min-h-[calc(100vh-424px)]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 py-10">
+      <div class="flex items-center flex-col justify-center gap-2">
+        <h1 class="text-[#1E1E1E] text-[24px] font-semibold">Mi perfil</h1>
+        <span class="bg-[#E4022C] h-[4px] w-[120px] rounded-full"></span>
+      </div>
+      <div class="flex flex-col gap-6 pt-6" data-tabs>
+        <div class="flex items-center justify-center gap-4" role="tablist">
+          <button class="bg-[#E4022C] flex items-center justify-center text-white h-[40px] rounded-[12px] px-4" data-tab-target="personales" aria-selected="true" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
+            <span>Datos personales</span>
+          </button>
+          <button class="bg-[#FEE8EA] flex items-center justify-center text-[#3C3B3B] h-[40px] rounded-[12px] px-4" data-tab-target="direcciones" aria-selected="false" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
+            <span>Mis direcciones</span>
+          </button>
         </div>
-        <div class="bg-white rounded-[16px] w-full md:top-[100px] md:sticky p-6 gap-6 flex flex-col">
-          <h3 class="text-[#3C3B3B] text-[18px] font-semibold">Resumen de canje</h3>
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <img class="w-[56px] h-[56px] object-cover" src="./img/phone.jpg" alt="">
-              <div class="flex flex-col gap-2">
-                <p class="text-[#172948] text-[14px]">APPLE</p>
-                <p class="text-[#172948] font-semibold">Iphone 17 Pro</p>
-                <p class="text-[#172948]">x 1</p>
+        <div>
+          <div data-tab-panel="personales" role="tabpanel">
+            <div class="flex items-center justify-center">
+              <div class="p-8 bg-white w-full lg:w-auto lg:min-w-[800px] lg:max-w-[800px] rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
+              <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Información personal</h2>
+              <div class="flex items-center gap-6 flex-col md:flex-row">
+                <div class="w-[96px] h-[96px] rounded-full bg-[#E4022C]">
+                  <img class="w-full h-full object-cover rounded-full" src="./img/user.jpg" alt="">
+                </div>
+                <div class="flex items-center gap-2">
+                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[40px] px-4 rounded-full">
+                    <img src="./img/icon/subir-rojo.svg" alt="">
+                    <span>Subir foto</span>
+                  </button>
+                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[40px] px-4 rounded-full">
+                    <img src="./img/icon/eliminar-rojo.svg" alt="">
+                    <span>Eliminar</span>
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Nombre(s)</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Eduardo Christian</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Apellidos</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Naranjo Silva</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Fecha de nacimiento</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">23/01/1980</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Tipo de documento</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Cédula de identidad</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">N° de Documento</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">039498289</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Correo electrónico</p>
+                <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row">
+                  <p class="text-[#3C3B3B]">ricardorenteria@gmail.com</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-email">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">N° de Celular</p>
+                <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row">
+                  <div class="flex items-center gap-2">
+                    <p class="text-[#3C3B3B]">+593 9 938 628 403</p>
+                    <img src="./img/icon/verificar.svg" alt="">
+                  </div>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-phone">Verificar o cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Contraseña</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">**************</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-password">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="border border-[#096DD9] w-full p-6 flex flex-col gap-4 bg-[#E6F7FF] rounded-[24px]">
+                <div class="flex items-center gap-2">
+                  <img src="./img/icon/info.svg" alt="">
+                  <p class="font-semibold text-[#3C3B3B]">Atención</p>
+                </div>
+                <p class="text-[#3C3B3B] font-regular">Por razones de seguridad, si necesitas modificar tu nombre y/o apellido o fecha de nacimiento, solo podrás hacerlo a través de nuestros canales oficiales de atención. Deberás contar con tu documento de identificación para cualquier modificación.</p>
+                <a href="" class="text-[#009EDE] font-regular underline">Contactar</a>
+              </div>
+              <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Información adicional</h2>
+              <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Teléfono fijo</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">+51 735643</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-telefono">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Género</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Masculino</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-genero">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Estado civil</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Soltero/a</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-estado-civil">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Ubicación</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Guayas, Guayaquil</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-location">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
               </div>
             </div>
-            <div class="flex flex-col md:text-end">
-              <p class="text-[#172948] text-[14px] line-through">12,080 Puntos</p>
-              <p class="text-[#172948] font-semibold">9,080 Puntos</p>
-            </div>
           </div>
-          <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <img class="w-[56px] h-[56px] object-cover" src="./img/phone.jpg" alt="">
-              <div class="flex flex-col gap-2">
-                <p class="text-[#172948] text-[14px]">APPLE</p>
-                <p class="text-[#172948] font-semibold">Iphone 17 Pro</p>
-                <p class="text-[#172948]">x 1</p>
+          <div data-tab-panel="direcciones" role="tabpanel" hidden>
+            <div class="flex items-center justify-center">
+              <div class="p-8 bg-white w-full lg:w-auto lg:min-w-[800px] lg:max-w-[800px] rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
+              <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
+                <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Direcciones de envío</h2>
+                <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full px-6 w-full md:w-auto" data-micromodal-trigger="modal-add-address">
+                  <img src="img/icon/agregrar-blanco.svg" alt="">
+                  <span>Agregar dirección</span>
+                </button>
+              </div>
+              <div class="border border-[#E1E6EF] rounded-[24px] p-6 flex flex-col gap-4">
+                <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-[#3C3B3B] font-semibold text-[18px]">Casa</p>
+                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
+                    <p class="text-[#3C3B3B]">Alexander Ortega Mego - 9 8373648 37</p>
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <button data-micromodal-trigger="modal-view-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/ojo-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-edit-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/lapiz-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-delete-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/eliminar-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-[#E1E6EF] rounded-[24px] p-6 flex flex-col gap-4">
+                <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-[#3C3B3B] font-semibold text-[18px]">Oficina</p>
+                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
+                    <p class="text-[#3C3B3B]">Alexander Ortega Mego - 9 8373648 37</p>
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <button data-micromodal-trigger="modal-view-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/ojo-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-edit-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/lapiz-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-delete-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/eliminar-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-[#E1E6EF] rounded-[24px] p-6 flex flex-col gap-4">
+                <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-[#3C3B3B] font-semibold text-[18px]">Casa de playa</p>
+                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
+                    <p class="text-[#3C3B3B]">Alexander Ortega Mego - 9 8373648 37</p>
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <button data-micromodal-trigger="modal-view-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/ojo-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-edit-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/lapiz-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-delete-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/eliminar-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
               </div>
             </div>
-            <div class="flex flex-col md:text-end">
-              <p class="text-[#172948] text-[14px] line-through">12,080 Puntos</p>
-              <p class="text-[#172948] font-semibold">9,080 Puntos</p>
-            </div>
           </div>
-          <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
-          <a class="text-[#E4022C]" href="./carrito.html">Volver a mi carrito</a>
-          <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center justify-between">
-              <p>Sub Total</p>
-              <p>3,000 Puntos</p>
-            </div>
-            <div class="flex items-center justify-between">
-              <p>Descuento</p>
-              <p>-1,500 Puntos</p>
-            </div>
-            <div class="flex items-center justify-between">
-              <p>Importe a pagar</p>
-              <p>US$ 240.00</p>
-            </div>
-          </div>
-          <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
-          <div class="flex items-center justify-between">
-            <p class="text-[#3C3B3B] text-[18px] font-semibold">TOTAL</p>
-            <p class="text-[#3C3B3B] text-[18px] font-semibold">1,000 Puntos + US $ 648.07</p>
-          </div>
-          <a href="canje-exito.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
-            <span>PAGAR</span>
-          </a>
         </div>
       </div>
     </div>
   </section>
-  
+
   <footer class="py-[48px] bg-[#231F20]">
     <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
       <div class="flex flex-col gap-8">
@@ -559,7 +611,7 @@
   </footer>
 
   <!-- Modal -->
-  <!-- Dirección -->
+  <!-- Direccion -->
   <div class="modal" id="modal-edit-address" aria-hidden="true">
     <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
       <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
@@ -978,6 +1030,542 @@
             </button>
             <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
               <span>Guardar dirección</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-delete-address" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Eliminar dirección</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6">
+          <p class="text-[#3C3B3B] text-[16px]">¿Estás seguro(a) de eliminar esta dirección? Esta acción es irreversible.</p>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>No, cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Sí, eliminar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-view-address" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Casa</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-6 overflow-y-auto max-h-[calc(100dvh-435px)] md:max-h-[calc(100dvh-342px)] p-1">
+            <div class="pt-4 flex flex-col gap-4">
+              <iframe
+                src="https://www.google.com/maps?q=Quito,Ecuador&output=embed"
+                width="100%"
+                height="260"
+                style="border:0; border-radius: 16px;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              <div class="flex flex-col gap-1">
+                <p class="text-[#3C3B3B] font-semibold">Dirección:</p>
+                <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
+                <p class="text-[#A09F9F]">Frente a la farmacia “Boticuy”</p>
+              </div>
+              <span class="h-[1px] bg-[#E1E6EF] w-full"></span>
+              <div class="flex flex-col gap-1">
+                <p class="text-[#3C3B3B] font-semibold">Entregar a:</p>
+                <p class="text-[#3C3B3B]">Alexander Ortega Mego</p>
+                <p class="text-[#3C3B3B]">+593 9 83748 37</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Editar datos</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cerrar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Perfil -->
+  <div class="modal" id="modal-change-password" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Cambia tu contraseña</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 pt-4">
+          <div class="flex flex-col gap-6">
+            <p class="text-[#3C3B3B] font-semibold text-[16px]">Primero, ingresa tu contraseña actual</p>
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="password" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="nombre-direccion" data-field-label="" class="">Contraseña</label>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-modal-next="modal-change-password-2">
+              <span>Continuar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-password-2" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Cambia tu contraseña</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 pt-4">
+          <div class="flex flex-col gap-6 overflow-y-auto max-h-[calc(100dvh-435px)] md:max-h-[calc(100dvh-342px)] p-1">
+            <p class="text-[#3C3B3B] font-semibold text-[16px]">Crea tu nueva contraseña</p>
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="password" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="nombre-direccion" data-field-label="" class="">Contraseña nueva</label>
+              </div>
+            </div>
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="password" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="nombre-direccion" data-field-label="" class="">Repite la contraseña</label>
+              </div>
+            </div>
+            <div class="border border-[#73D13D] bg-[#F6FFED] rounded-[24px] flex flex-col p-6">
+              <span class="text-[#3C3B3B] font-semibold text-[16px]">Tu contraseña debe tener al menos:</span>
+              <ul class="pt-4 flex flex-col gap-2">
+                <li>
+                  <span class="flex items-center gap-3">
+                    <img src="./img/icon/close-rojo.svg" alt="">
+                    <span class="text-[#3C3B3B]">8 caracteres</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="flex items-center gap-3">
+                    <img src="./img/icon/check-2.svg" alt="">
+                    <span class="text-[#3C3B3B]">1 letra y 1 número</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="flex items-center gap-3">
+                    <img src="./img/icon/check-2.svg" alt="">
+                    <span class="text-[#3C3B3B]">1 mayúscula</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="flex items-center gap-3">
+                    <img src="./img/icon/check-2.svg" alt="">
+                    <span class="text-[#3C3B3B]">1 carácter especial (como # ? ! $ & @)</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="flex items-center gap-3">
+                    <img src="./img/icon/check-2.svg" alt="">
+                    <span class="text-[#3C3B3B]">Ambas deben coincidir</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-modal-next="modal-change-password-3">
+              <span>Continuar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-password-3" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[400px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex flex-col items-center justify-center text-center gap-4">
+          <img class="w-[72px] h-[72px]" src="./img/icon/check-green.svg" alt="">
+          <p class="text-[#3C3B3B] font-semibold text-[16px]">¡Cambio exitoso de contraseña!</p>
+        </div>
+        <div class="pt-8">
+          <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+            <span>Entendido</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-genero" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Actualiza tu género</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 pt-4">
+          <div class="flex flex-col gap-6">
+            <p class="text-[#3C3B3B] font-semibold text-[16px]">Selecciona tu género</p>
+            <div data-radio-group="" data-radio-style="icon" class="flex flex-col gap-6" role="radiogroup">
+              <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="true" role="radio" tabindex="0" data-selected="">
+                <div class="flex items-center gap-3">
+                  <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio-active.svg" alt="">
+                  <p class="text-[#3C3B3B]">Masculino</p>
+                </div>
+              </div>
+              <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="0">
+                <div class="flex items-center gap-3">
+                  <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
+                  <p class="text-[#3C3B3B]">Femenino</p>
+                </div>
+              </div>
+              <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="0">
+                <div class="flex items-center gap-3">
+                  <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
+                  <p class="text-[#3C3B3B]">Prefiero no decirlo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Guardar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-telefono" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Actualiza tu teléfono fijo</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 pt-4">
+          <div class="flex flex-col gap-6 overflow-y-auto max-h-[calc(100dvh-435px)] md:max-h-[calc(100dvh-342px)] p-1">
+            <p class="text-[#3C3B3B] font-semibold text-[16px]">Completa el campo</p>
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="password" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="nombre-direccion" data-field-label="" class="">Teléfono fijo</label>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Guardar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-location" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Actualiza tu ubicación</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 pt-4">
+          <div class="flex flex-col gap-6 overflow-y-auto max-h-[calc(100dvh-435px)] md:max-h-[calc(100dvh-342px)] p-1">
+            <p class="text-[#3C3B3B] font-semibold text-[16px]">Completa los campos</p>
+            <div class="relative w-full" data-field data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input>
+                  <option selected value="cedula">Guayas</option>
+                  <option value="pasaporte">Guayas</option>
+                </select>
+                <label for="tipo-documento" data-field-label class="">Provincia</label>
+                <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4" />
+              </div>
+            </div>
+            <div class="relative w-full" data-field data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input>
+                  <option selected value="cedula">Guayaquil</option>
+                  <option value="pasaporte">Guayas</option>
+                </select>
+                <label for="tipo-documento" data-field-label class="">Ciudad / Cantón</label>
+                <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4" />
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Guardar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-estado-civil" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Actualiza tu estado civil</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 pt-4">
+          <div class="flex flex-col gap-6">
+            <p class="text-[#3C3B3B] font-semibold text-[16px]">Selecciona tu género</p>
+            <div data-radio-group="" data-radio-style="icon" class="flex flex-col gap-6" role="radiogroup">
+              <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="true" role="radio" tabindex="0" data-selected="">
+                <div class="flex items-center gap-3">
+                  <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio-active.svg" alt="">
+                  <p class="text-[#3C3B3B]">Soltero/a</p>
+                </div>
+              </div>
+              <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="0">
+                <div class="flex items-center gap-3">
+                  <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
+                  <p class="text-[#3C3B3B]">Casado/a</p>
+                </div>
+              </div>
+              <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="0">
+                <div class="flex items-center gap-3">
+                  <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
+                  <p class="text-[#3C3B3B]">Divorciado/a</p>
+                </div>
+              </div>
+              <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="0">
+                <div class="flex items-center gap-3">
+                  <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
+                  <p class="text-[#3C3B3B]">Viudo/a</p>
+                </div>
+              </div>
+              <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="0">
+                <div class="flex items-center gap-3">
+                  <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
+                  <p class="text-[#3C3B3B]">Otro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Guardar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-email" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Actualiza tu correo</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 pt-4">
+          <div class="flex flex-col gap-6 overflow-y-auto max-h-[calc(100dvh-435px)] md:max-h-[calc(100dvh-342px)] p-1">
+            <p class="text-[#3C3B3B] font-semibold text-[16px]">Ingresa tu nuevo correo</p>
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="password" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="nombre-direccion" data-field-label="" class="">Correo electrónico</label>
+              </div>
+            </div>
+            <div class="flex items-center w-full md:w-auto" data-checkbox="">
+              <input type="checkbox" id="con-mis-puntos" class="sr-only" data-checkbox-input="">
+              <label for="con-mis-puntos" class="flex items-center gap-3 cursor-pointer select-none" data-checkbox-label="">
+                <div class="w-5 h-5 border-2 rounded flex items-center justify-center transition-all duration-200 hover:scale-105 border-[#E4022C] bg-[#E4022C]" data-checkbox-display="">
+                  <svg class="w-4 h-4 text-white transition-all duration-200" data-checkbox-icon="" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-[#3C3B3B] transition-colors duration-200" data-checkbox-text="">He leído y acepto los <a href="" class="text-[#E4022C] font-regular underline">Términos y Condiciones</a>.</span>
+              </label>
+            </div>
+            <div class="flex items-center w-full md:w-auto" data-checkbox="">
+              <input type="checkbox" id="con-mis-puntos" class="sr-only" data-checkbox-input="">
+              <label for="con-mis-puntos" class="flex items-center gap-3 cursor-pointer select-none" data-checkbox-label="">
+                <div class="min-w-5 min-h-5 w-5 h-5 border-2 rounded flex items-center justify-center transition-all duration-200 hover:scale-105 border-[#E4022C] bg-[#E4022C]" data-checkbox-display="">
+                  <svg class="w-4 h-4 text-white transition-all duration-200" data-checkbox-icon="" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-[#3C3B3B] transition-colors duration-200" data-checkbox-text="">Autorizo el uso de mis datos personales para recibir comunicación acerca del programa por cualquier medio digital.</span>
+              </label>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-modal-next="modal-change-email-2">
+              <span>Continuar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-email-2" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Actualiza tu correo</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 pt-4">
+          <div class="flex flex-col gap-6 overflow-y-auto max-h-[calc(100dvh-435px)] md:max-h-[calc(100dvh-342px)] p-1">
+            <p class="text-[#3C3B3B] font-semibold text-[16px]">Verificar el nuevo correo</p>
+            <p class="text-[#3C3B3B]">Te enviamos un código de 6 dígitos al correo e***@m***.com</p>
+            <div class="border border-[#E1E6EF] h-[56px] w-full flex items-center gap-4 px-3 rounded-[16px] bg-white hover:border-[#172948] transition-all duration-200 max-w-[1170px] mx-auto">
+              <input class="w-full border-none outline-none text-center" type="text" placeholder="XXX - XXX" data-search-input="">
+            </div>
+            <div class="flex items-center justify-center text-center flex-col">
+              <p class="text-[#3C3B3B]">¿No recibiste el código? Podrás solicitar uno nuevo en <span class="text-[#E4022C] font-regular">59s</span></p>
+              <button class="px-4 gap-2 flex items-center justify-center bg-[#FFF1F0] h-[40px] rounded-full text-[#E4022C]">
+                <img src="./img/icon/reenviar.svg" alt="">
+                <span>Reenviar código</span>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-modal-next="modal-change-email-3">
+              <span>Verificar código</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-email-3" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[400px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex flex-col items-center justify-center text-center gap-4">
+          <img class="w-[72px] h-[72px]" src="./img/icon/check-green.svg" alt="">
+          <p class="text-[#3C3B3B] font-semibold text-[16px]">¡Correo actualizado!</p>
+        </div>
+        <div class="pt-8">
+          <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+            <span>Entendido</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-change-phone" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Actualiza tu número de celular</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 pt-4">
+          <div class="flex flex-col gap-6">
+            <p class="text-[#3C3B3B] font-semibold text-[16px]">Verificaremos tu número y lo actualizaremos en tus datos.</p>
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="nombre-direccion" data-field-label="" class="">Teléfono celular</label>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
+              <span>Continuar</span>
             </button>
           </div>
         </div>

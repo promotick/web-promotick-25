@@ -1,21 +1,17 @@
 
-// Clase reutilizable para manejar dropdowns
 class DropdownManager {
   constructor() {
     this.dropdowns = [];
     this.activeDropdown = null;
   }
 
-  // Método estático para inicializar todos los dropdowns
   static init() {
     const manager = new DropdownManager();
     manager.initializeDropdowns();
     
-    // Agregar event listeners globales
     document.addEventListener('keydown', (e) => manager.handleKeydown(e));
     document.addEventListener('click', (e) => manager.handleClickOutside(e));
     
-    // Cerrar dropdowns cuando se abre el nav móvil
     const mobileNavToggle = document.querySelector('[data-mobile-nav-toggle]');
     if (mobileNavToggle) {
       mobileNavToggle.addEventListener('click', () => {
@@ -23,7 +19,6 @@ class DropdownManager {
       });
     }
 
-    // Cerrar dropdowns cuando se abre el buscador
     const searchToggle = document.querySelector('[data-search-toggle]');
     if (searchToggle) {
       searchToggle.addEventListener('click', () => {
@@ -34,7 +29,6 @@ class DropdownManager {
     return manager;
   }
 
-  // Inicializar todos los dropdowns en la página
   initializeDropdowns() {
     const dropdownElements = document.querySelectorAll('[data-dropdown]');
     
@@ -42,14 +36,12 @@ class DropdownManager {
       this.createDropdown(element);
     });
 
-    // Cerrar dropdowns al hacer clic fuera
     document.addEventListener('click', (e) => {
       if (!e.target.closest('[data-dropdown]')) {
         this.closeAllDropdowns();
       }
     });
 
-    // Cerrar dropdowns al presionar Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         this.closeAllDropdowns();
@@ -57,7 +49,6 @@ class DropdownManager {
     });
   }
 
-  // Crear un dropdown individual
   createDropdown(element) {
     const trigger = element.querySelector('[data-dropdown-trigger]');
     const menu = element.querySelector('[data-dropdown-menu]');
@@ -86,14 +77,12 @@ class DropdownManager {
 
     this.dropdowns.push(dropdown);
 
-    // Agregar event listener al trigger
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       this.toggleDropdown(dropdown);
     });
 
-    // Agregar event listener al botón de cerrar
     if (closeButton) {
       closeButton.addEventListener('click', (e) => {
         e.preventDefault();
@@ -102,7 +91,6 @@ class DropdownManager {
       });
     }
 
-    // Agregar event listeners a los enlaces del menú
     const menuLinks = menu.querySelectorAll('a');
     menuLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -110,16 +98,13 @@ class DropdownManager {
       });
     });
 
-    // Agregar event listeners a los elementos li del menú
     const menuItems = menu.querySelectorAll('li[data-value]');
     menuItems.forEach(item => {
       item.addEventListener('click', () => {
-        // Actualizar texto seleccionado si existe
         if (selected) {
           selected.textContent = item.textContent.trim();
         }
         
-        // Disparar evento personalizado
         const event = new CustomEvent('dropdownSelect', {
           detail: {
             value: item.dataset.value,
@@ -134,7 +119,6 @@ class DropdownManager {
     });
   }
 
-  // Alternar estado del dropdown
   toggleDropdown(dropdown) {
     if (dropdown.isOpen) {
       this.closeDropdown(dropdown);
@@ -143,22 +127,17 @@ class DropdownManager {
     }
   }
 
-  // Abrir dropdown
   openDropdown(dropdown) {
-    // Cerrar otros dropdowns abiertos
     this.closeAllDropdowns();
 
-    // Abrir el dropdown actual
     dropdown.isOpen = true;
     dropdown.menu.style.display = 'flex';
     dropdown.element.classList.add('dropdown-open');
 
-    // Rotar flecha si existe
     if (dropdown.arrow) {
       dropdown.arrow.classList.add('rotate-180');
     }
 
-    // Cambiar íconos si existen
     if (dropdown.openIcon) {
       dropdown.openIcon.classList.add('hidden');
     }
@@ -168,27 +147,22 @@ class DropdownManager {
 
     this.activeDropdown = dropdown;
 
-    // Agregar clase al body para estilos globales
     document.body.classList.add('dropdown-active');
     
-    // Solo bloquear scroll si es el dropdown del filtro (tiene botón de cerrar)
     if (dropdown.closeButton) {
       document.body.style.overflow = 'hidden';
     }
   }
 
-  // Cerrar dropdown específico
   closeDropdown(dropdown) {
     dropdown.isOpen = false;
     dropdown.menu.style.display = 'none';
     dropdown.element.classList.remove('dropdown-open');
 
-    // Restaurar flecha si existe
     if (dropdown.arrow) {
       dropdown.arrow.classList.remove('rotate-180');
     }
 
-    // Restaurar íconos si existen
     if (dropdown.openIcon) {
       dropdown.openIcon.classList.remove('hidden');
     }
@@ -200,14 +174,12 @@ class DropdownManager {
       this.activeDropdown = null;
       document.body.classList.remove('dropdown-active');
       
-      // Solo restaurar scroll si era el dropdown del filtro (tenía botón de cerrar)
       if (dropdown.closeButton) {
         document.body.style.overflow = ''; // Restaurar scroll
       }
     }
   }
 
-  // Cerrar todos los dropdowns
   closeAllDropdowns() {
     this.dropdowns.forEach(dropdown => {
       if (dropdown.isOpen) {
@@ -215,12 +187,10 @@ class DropdownManager {
         dropdown.menu.style.display = 'none';
         dropdown.element.classList.remove('dropdown-open');
 
-        // Restaurar flecha si existe
         if (dropdown.arrow) {
           dropdown.arrow.classList.remove('rotate-180');
         }
 
-        // Restaurar íconos si existen
         if (dropdown.openIcon) {
           dropdown.openIcon.classList.remove('hidden');
         }
@@ -230,25 +200,21 @@ class DropdownManager {
       }
     });
     
-    // Limpiar estado global
     this.activeDropdown = null;
     document.body.classList.remove('dropdown-active');
     document.body.style.overflow = ''; // Restaurar scroll
   }
 
-  // Método público para cerrar todos los dropdowns
   closeAll() {
     this.closeAllDropdowns();
   }
 
-  // Manejar tecla Escape
   handleKeydown(event) {
     if (event.key === 'Escape' && this.activeDropdown) {
       this.closeDropdown(this.activeDropdown);
     }
   }
 
-  // Manejar click fuera del dropdown
   handleClickOutside(event) {
     if (this.activeDropdown && !this.activeDropdown.element.contains(event.target)) {
       this.closeDropdown(this.activeDropdown);
@@ -256,14 +222,12 @@ class DropdownManager {
   }
 }
 
-// Clase para manejar contadores de cantidad
 class QuantityCounter {
   constructor() {
     this.counters = [];
     this.initializeCounters();
   }
 
-  // Inicializar todos los contadores en la página
   initializeCounters() {
     const counterElements = document.querySelectorAll('[data-quantity-counter]');
     
@@ -272,7 +236,6 @@ class QuantityCounter {
     });
   }
 
-  // Crear un contador individual
   createCounter(element) {
     const minusBtn = element.querySelector('[data-quantity-minus]');
     const plusBtn = element.querySelector('[data-quantity-plus]');
@@ -297,10 +260,8 @@ class QuantityCounter {
 
     this.counters.push(counter);
 
-    // Actualizar display inicial
     this.updateDisplay(counter);
 
-    // Event listeners
     minusBtn.addEventListener('click', () => {
       this.decrement(counter);
     });
@@ -310,7 +271,6 @@ class QuantityCounter {
     });
   }
 
-  // Decrementar cantidad
   decrement(counter) {
     if (counter.currentValue > counter.minValue) {
       counter.currentValue--;
@@ -319,7 +279,6 @@ class QuantityCounter {
     }
   }
 
-  // Incrementar cantidad
   increment(counter) {
     if (counter.currentValue < counter.maxValue) {
       counter.currentValue++;
@@ -328,11 +287,9 @@ class QuantityCounter {
     }
   }
 
-  // Actualizar display y estado de botones
   updateDisplay(counter) {
     counter.display.textContent = counter.currentValue;
     
-    // Estado del botón menos
     if (counter.currentValue <= counter.minValue) {
       counter.minusBtn.classList.add('opacity-25', 'cursor-not-allowed', 'pointer-events-none');
       counter.minusBtn.disabled = true;
@@ -341,7 +298,6 @@ class QuantityCounter {
       counter.minusBtn.disabled = false;
     }
 
-    // Estado del botón más
     if (counter.currentValue >= counter.maxValue) {
       counter.plusBtn.classList.add('opacity-25', 'cursor-not-allowed', 'pointer-events-none');
       counter.plusBtn.disabled = true;
@@ -351,7 +307,6 @@ class QuantityCounter {
     }
   }
 
-  // Disparar evento de cambio
   triggerChangeEvent(counter) {
     const event = new CustomEvent('quantityChange', {
       detail: {
@@ -362,20 +317,17 @@ class QuantityCounter {
     counter.element.dispatchEvent(event);
   }
 
-  // Método estático para inicializar
   static init() {
     return new QuantityCounter();
   }
 }
 
-// Clase para manejar checkboxes personalizados
 class CustomCheckbox {
   constructor() {
     this.checkboxes = [];
     this.initializeCheckboxes();
   }
 
-  // Inicializar todos los checkboxes en la página
   initializeCheckboxes() {
     const checkboxElements = document.querySelectorAll('[data-checkbox]');
     
@@ -384,7 +336,6 @@ class CustomCheckbox {
     });
   }
 
-  // Crear un checkbox individual
   createCheckbox(element) {
     const input = element.querySelector('[data-checkbox-input]');
     const display = element.querySelector('[data-checkbox-display]');
@@ -407,15 +358,12 @@ class CustomCheckbox {
 
     this.checkboxes.push(checkbox);
 
-    // Actualizar display inicial
     this.updateDisplay(checkbox);
 
-    // Event listeners
     input.addEventListener('change', () => {
       this.toggleCheckbox(checkbox);
     });
 
-    // Click en el label también debe activar el checkbox
     if (label) {
       label.addEventListener('click', (e) => {
         e.preventDefault();
@@ -425,17 +373,14 @@ class CustomCheckbox {
     }
   }
 
-  // Alternar estado del checkbox
   toggleCheckbox(checkbox) {
     checkbox.isChecked = checkbox.input.checked;
     this.updateDisplay(checkbox);
     this.triggerChangeEvent(checkbox);
   }
 
-  // Actualizar display visual
   updateDisplay(checkbox) {
     if (checkbox.isChecked) {
-      // Estado seleccionado
       checkbox.display.classList.remove('border-[#687286]', 'bg-white');
       checkbox.display.classList.add('border-[#E4022C]', 'bg-[#E4022C]');
       
@@ -443,7 +388,6 @@ class CustomCheckbox {
         checkbox.icon.classList.remove('hidden');
       }
     } else {
-      // Estado no seleccionado
       checkbox.display.classList.remove('border-[#E4022C]', 'bg-[#E4022C]');
       checkbox.display.classList.add('border-[#687286]', 'bg-white');
       
@@ -453,7 +397,6 @@ class CustomCheckbox {
     }
   }
 
-  // Disparar evento de cambio
   triggerChangeEvent(checkbox) {
     const event = new CustomEvent('checkboxChange', {
       detail: {
@@ -465,21 +408,18 @@ class CustomCheckbox {
     checkbox.element.dispatchEvent(event);
   }
 
-  // Método estático para inicializar
   static init() {
     return new CustomCheckbox();
   }
 }
 
 
-// Clase para manejar grupos de opciones estilo radio
 class RadioGroup {
   constructor() {
     this.groups = [];
     this.initializeGroups();
   }
 
-  // Inicializar todos los grupos en la página
   initializeGroups() {
     const groupElements = document.querySelectorAll('[data-radio-group]');
 
@@ -488,7 +428,6 @@ class RadioGroup {
     });
   }
 
-  // Crear un grupo individual
   createGroup(element) {
     const optionElements = Array.from(element.querySelectorAll('[data-radio-option]'));
     if (optionElements.length === 0) {
@@ -503,11 +442,9 @@ class RadioGroup {
       style: element.dataset.radioStyle || 'chip' // 'chip' o 'swatch'
     };
 
-    // Determinar opción inicial: marcada con data-selected o la primera
     const initialOption = optionElements.find(opt => opt.hasAttribute('data-selected')) || optionElements[0];
     this.setActiveOption(group, initialOption, false);
 
-    // Eventos de click para cada opción
     optionElements.forEach(option => {
       option.addEventListener('click', () => {
         this.setActiveOption(group, option, true);
@@ -517,16 +454,13 @@ class RadioGroup {
     this.groups.push(group);
   }
 
-  // Establecer opción activa y actualizar estilos
   setActiveOption(group, optionToActivate, emitEvent = true) {
     if (!group || !optionToActivate) return;
 
     group.options.forEach(option => {
       const isActive = option === optionToActivate;
 
-      // Reset/aplicación de estado según estilo
       if (group.style === 'icon') {
-        // No tocar clases utilitarias del contenedor; solo aria y data-selected e íconos
       } else if (group.style === 'swatch') {
         option.classList.remove('border-[2px]', 'border-[#E4022C]');
       } else {
@@ -534,9 +468,7 @@ class RadioGroup {
         option.classList.remove('border-[#C6C8CC]', 'text-[#C6C8CC]', 'bg-transparent', 'font-light');
       }
 
-      // Aplicar estado correspondiente
       if (group.style === 'icon') {
-        // Solo manejo de aria/data-selected y alternar ícono
         if (isActive) {
           option.setAttribute('aria-checked', 'true');
           option.setAttribute('data-selected', '');
@@ -592,13 +524,11 @@ class RadioGroup {
     }
   }
 
-  // Método estático para inicializar
   static init() {
     return new RadioGroup();
   }
 }
 
-// Clase para manejar acordeones
 class Accordion {
   constructor() {
     this.accordions = [];
@@ -606,7 +536,6 @@ class Accordion {
     this.initializeAccordions();
   }
 
-  // Inicializar todos los acordeones en la página
   initializeAccordions() {
     const accordionElements = document.querySelectorAll('[data-accordion]');
     
@@ -615,7 +544,6 @@ class Accordion {
     });
   }
 
-  // Crear un acordeón individual
   createAccordion(element) {
     const trigger = element.querySelector('[data-accordion-trigger]');
     const content = element.querySelector('[data-accordion-content]');
@@ -638,26 +566,21 @@ class Accordion {
 
     this.accordions.push(accordion);
 
-    // Registrar en su grupo si existe
     if (groupEl) {
       if (!this.groups.has(groupEl)) this.groups.set(groupEl, []);
       this.groups.get(groupEl).push(accordion);
     }
 
-    // Event listener para el trigger
     trigger.addEventListener('click', () => {
       this.toggleAccordion(accordion);
     });
 
-    // Estado inicial
     this.updateState(accordion);
   }
 
-  // Alternar acordeón
   toggleAccordion(accordion) {
     const willOpen = !accordion.isOpen;
 
-    // Si pertenece a un grupo y se abrirá, cerrar los demás del grupo
     if (willOpen && accordion.groupEl && this.groups.has(accordion.groupEl)) {
       const siblings = this.groups.get(accordion.groupEl);
       siblings.forEach(acc => {
@@ -672,7 +595,6 @@ class Accordion {
     this.updateState(accordion);
   }
 
-  // Actualizar estado visual
   updateState(accordion) {
     const { content, arrow, isOpen } = accordion;
 
@@ -680,33 +602,28 @@ class Accordion {
       content.style.display = 'block';
       content.classList.remove('hidden');
       if (arrow) {
-        // Flecha hacia arriba cuando está abierto
         arrow.classList.remove('rotate-180');
       }
     } else {
       content.style.display = 'none';
       content.classList.add('hidden');
       if (arrow) {
-        // Flecha hacia abajo cuando está cerrado
         arrow.classList.add('rotate-180');
       }
     }
   }
 
-  // Método estático para inicializar
   static init() {
     return new Accordion();
   }
 }
 
-// Clase para manejar componentes de búsqueda personalizados
 class SearchInput {
   constructor() {
     this.searchInputs = [];
     this.initializeSearchInputs();
   }
 
-  // Inicializar todos los componentes de búsqueda en la página
   initializeSearchInputs() {
     const searchElements = document.querySelectorAll('[data-search-input]');
     
@@ -715,7 +632,6 @@ class SearchInput {
     });
   }
 
-  // Crear un componente de búsqueda individual
   createSearchInput(element) {
     const label = element.querySelector('[data-search-label]');
     const container = element.querySelector('[data-search-container]');
@@ -740,7 +656,6 @@ class SearchInput {
 
     this.searchInputs.push(searchInput);
 
-    // Event listeners
     field.addEventListener('focus', () => {
       searchInput.isFocused = true;
       this.updateState(searchInput);
@@ -756,7 +671,6 @@ class SearchInput {
       this.updateState(searchInput);
     });
 
-    // Hover events
     container.addEventListener('mouseenter', () => {
       if (!searchInput.isFocused) {
         searchInput.isHovered = true;
@@ -769,7 +683,6 @@ class SearchInput {
       this.updateState(searchInput);
     });
 
-    // Clear button
     if (clearBtn) {
       clearBtn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -780,14 +693,12 @@ class SearchInput {
       });
     }
 
-    // Label click
     if (label) {
       label.addEventListener('click', () => {
         field.focus();
       });
     }
 
-    // Click fuera del campo
     document.addEventListener('click', (e) => {
       if (!container.contains(e.target)) {
         searchInput.isFocused = false;
@@ -796,36 +707,29 @@ class SearchInput {
       }
     });
 
-    // Estado inicial
     this.updateState(searchInput);
   }
 
 
-  // Actualizar estado visual
   updateState(searchInput) {
     const { container, label, isFocused, hasValue, isHovered } = searchInput;
 
-    // Reset todas las clases
     container.classList.remove('border-[#3C3B3B]', 'border-[#E4022C]', 'shadow-[0_0_0_3px_#E4022C]', 'search-focused', 'search-has-value');
     if (label) label.classList.remove('text-[#E4022C]');
 
-    // Aplicar estado focus
     if (isFocused) {
       container.classList.add('border-[#E4022C]', 'shadow-[0_0_0_3px_#E4022C]', 'search-focused');
       if (label) label.classList.add('text-[#E4022C]');
     }
-    // Aplicar estado hover (solo si no está en focus)
     else if (isHovered) {
       container.classList.add('border-[#3C3B3B]');
     }
 
-    // Aplicar clase para label flotante cuando hay valor
     if (hasValue) {
       container.classList.add('search-has-value');
     }
   }
 
-  // Disparar evento personalizado
   triggerEvent(eventType, searchInput) {
     const event = new CustomEvent(`search${eventType.charAt(0).toUpperCase() + eventType.slice(1)}`, {
       detail: {
@@ -836,20 +740,16 @@ class SearchInput {
     searchInput.element.dispatchEvent(event);
   }
 
-  // Método estático para inicializar
   static init() {
     return new SearchInput();
   }
 }
 
-// Inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
-  // Inicializar Lucide icons
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
   }
 
-  // Inicializar AOS
   if (typeof AOS !== 'undefined') {
     AOS.init({
       duration: 4000,
@@ -859,40 +759,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Inicializar Swipers
   initializeSwipers();
 
-  // Inicializar dropdowns
   DropdownManager.init();
   
-  // Inicializar contadores de cantidad
   QuantityCounter.init();
   
-  // Inicializar checkboxes personalizados
   CustomCheckbox.init();
   
-  // Inicializar grupos radio personalizados
   RadioGroup.init();
   
-  // Inicializar componentes de búsqueda
   SearchInput.init();
 
-  // Inicializar campos genéricos
   FormField.init();
 
-  // Inicializar acordeones
   Accordion.init();
 
-  // Inicializar menú móvil
   MobileNav.init();
 
-  // Inicializar buscador
   SearchToggle.init();
 
-  // Inicializar tabs reutilizables
   Tabs.init();
 
-  // Inicializar MicroModal (si está disponible)
   if (typeof MicroModal !== 'undefined') {
     MicroModal.init({
       disableScroll: true,
@@ -900,13 +788,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Inicializar encadenador de modales
   ModalChain.init();
 });
 
-// Función para inicializar todos los Swipers
 function initializeSwipers() {
-  // Inicializar Swiper para "Más destacados"
   if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-destacados')) {
     const swiperDestacados = new Swiper('.swiper-destacados', {
       slidesPerView: 1.2,
@@ -935,7 +820,6 @@ function initializeSwipers() {
     });
   }
 
-  // Inicializar Swiper para "Recomendados para ti"
   if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-recomendados')) {
     const swiperRecomendados = new Swiper('.swiper-recomendados', {
       slidesPerView: 1.2,
@@ -964,7 +848,6 @@ function initializeSwipers() {
     });
   }
 
-  // Inicializar Swiper para "Lo más buscado"
   if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-buscados')) {
     const swiperBuscados = new Swiper('.swiper-buscados', {
       slidesPerView: 1.2,
@@ -993,7 +876,6 @@ function initializeSwipers() {
     });
   }
 
-  // Inicializar Swiper para Banner
   if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-banner')) {
     const swiperBanner = new Swiper('.swiper-banner', {
       slidesPerView: 1,
@@ -1018,7 +900,6 @@ function initializeSwipers() {
     });
   }
 
-  // Inicializar Swiper para Ofertas
   if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-ofertas')) {
     const swiperOfertas = new Swiper('.swiper-ofertas', {
       slidesPerView: "auto",
@@ -1050,7 +931,6 @@ function initializeSwipers() {
     });
   }
 
-  // Inicializar Swiper para Categorías
   if (typeof Swiper !== 'undefined' && document.querySelector('.swiper-categories')) {
     const swiperCategories = new Swiper('.swiper-categories', {
       slidesPerView: "auto",
@@ -1131,7 +1011,6 @@ class MobileNav {
       if (target && (target.tagName === 'A' || target.closest('a'))) this.close();
     });
 
-    // Cerrar cuando se abre el buscador
     const searchToggle = document.querySelector('[data-search-toggle]');
     if (searchToggle) {
       searchToggle.addEventListener('click', () => {
@@ -1139,7 +1018,6 @@ class MobileNav {
       });
     }
 
-    // Cerrar cuando se abre el carrito
     const cartToggle = document.querySelector('[data-dropdown-trigger]');
     if (cartToggle) {
       cartToggle.addEventListener('click', () => {
@@ -1175,7 +1053,6 @@ class MobileNav {
   }
 }
 
-// Clase para manejar el buscador (desktop y mobile)
 class SearchToggle {
   constructor() {
     this.toggleButton = document.querySelector('[data-search-toggle]');
@@ -1189,7 +1066,6 @@ class SearchToggle {
   }
 
   initializeState() {
-    // Asegurar estado inicial correcto
     if (this.openIcon) this.openIcon.classList.remove('hidden');
     if (this.closeIcon) this.closeIcon.classList.add('hidden');
   }
@@ -1199,30 +1075,25 @@ class SearchToggle {
 
     this.toggleButton.addEventListener('click', () => this.toggle());
 
-    // Cerrar con Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && this.isOpen) {
         this.close();
       }
     });
 
-    // No cerrar automáticamente al cambiar de tamaño - funciona en desktop y mobile
 
-    // Cerrar al hacer click fuera del panel
     document.addEventListener('click', (e) => {
       if (this.isOpen && !this.panel.contains(e.target) && !this.toggleButton.contains(e.target)) {
         this.close();
       }
     });
 
-    // Enfocar el input cuando se abre
     this.panel.addEventListener('transitionend', () => {
       if (this.isOpen && this.input) {
         this.input.focus();
       }
     });
 
-    // Cerrar cuando se abre el nav móvil
     const mobileNavToggle = document.querySelector('[data-mobile-nav-toggle]');
     if (mobileNavToggle) {
       mobileNavToggle.addEventListener('click', () => {
@@ -1230,7 +1101,6 @@ class SearchToggle {
       });
     }
 
-    // Cerrar cuando se abre el carrito
     const cartToggle = document.querySelector('[data-dropdown-trigger]');
     if (cartToggle) {
       cartToggle.addEventListener('click', () => {
@@ -1248,13 +1118,11 @@ class SearchToggle {
     this.panel.classList.remove('hidden');
     this.toggleButton.setAttribute('aria-expanded', 'true');
     
-    // Mostrar X, ocultar ícono de búsqueda
     if (this.openIcon) this.openIcon.classList.add('hidden');
     if (this.closeIcon) this.closeIcon.classList.remove('hidden');
     
     document.body.classList.add('overflow-hidden');
     
-    // Enfocar el input después de un pequeño delay para asegurar que el panel esté visible
     setTimeout(() => {
       if (this.input) this.input.focus();
     }, 100);
@@ -1265,13 +1133,11 @@ class SearchToggle {
     this.panel.classList.add('hidden');
     this.toggleButton.setAttribute('aria-expanded', 'false');
     
-    // Mostrar ícono de búsqueda, ocultar X
     if (this.openIcon) this.openIcon.classList.remove('hidden');
     if (this.closeIcon) this.closeIcon.classList.add('hidden');
     
     document.body.classList.remove('overflow-hidden');
     
-    // Limpiar el input al cerrar
     if (this.input) this.input.value = '';
   }
 
@@ -1280,7 +1146,6 @@ class SearchToggle {
   }
 }
 
-// Componente genérico para campos con label flotante y clear
 class FormField {
   constructor() {
     this.fields = [];
@@ -1317,12 +1182,10 @@ class FormField {
 
     this.fields.push(field);
 
-    // Estado inicial forzado: activar (flotar label) sin foco
     if (element.dataset.fieldInitial === 'active' || field.isSelect) {
       field.hasValue = true;
     }
 
-    // Eventos
     input.addEventListener('focus', () => {
       field.isFocused = true;
       this.updateState(field);
@@ -1338,7 +1201,6 @@ class FormField {
       this.updateState(field);
     });
 
-    // Soporte para selects (y cambios en inputs)
     input.addEventListener('change', () => {
       field.hasValue = input.value.length > 0;
       this.updateState(field);
@@ -1372,14 +1234,12 @@ class FormField {
       });
     }
 
-    // Estado inicial
     this.updateState(field);
   }
 
   updateState(field) {
     const { container, label, isFocused, hasValue, isHovered, isSelect } = field;
 
-    // Reset clases
     container.classList.remove('border-[#3C3B3B]', 'border-[#E4022C]', 'shadow-[0_0_0_3px_#E4022C]', 'field-focused', 'field-has-value');
 
     if (isFocused) {
@@ -1398,7 +1258,6 @@ class FormField {
   }
 }
 
-// Encadenador de modales: cierra el actual y abre el siguiente indicado
 class ModalChain {
   constructor() {
     this.bindEvents();
@@ -1419,7 +1278,6 @@ class ModalChain {
 
         if (currentId) {
           try { MicroModal.close(currentId); } catch (_) {}
-          // Pequeño delay para permitir la animación de cierre antes de abrir el siguiente
           setTimeout(() => {
             try { MicroModal.show(nextId); } catch (_) {}
           }, 150);
@@ -1435,20 +1293,17 @@ class ModalChain {
   }
 }
 
-// Clase para manejar tabs reutilizables
 class Tabs {
   constructor() {
     this.instances = [];
     this.initialize();
   }
 
-  // Buscar todos los contenedores de tabs
   initialize() {
     const containers = document.querySelectorAll('[data-tabs]');
     containers.forEach(container => this.createTabs(container));
   }
 
-  // Crear una instancia de tabs por contenedor
   createTabs(container) {
     const triggers = Array.from(container.querySelectorAll('[data-tab-target]'));
     const panels = Array.from(container.querySelectorAll('[data-tab-panel]'));
@@ -1465,12 +1320,10 @@ class Tabs {
       activeName: null
     };
 
-    // Definir pestaña activa inicial
     const preset = triggers.find(btn => btn.getAttribute('aria-selected') === 'true');
     const initialTrigger = preset || triggers[0];
     this.setActive(instance, initialTrigger.dataset.tabTarget, false);
 
-    // Eventos
     triggers.forEach(btn => {
       btn.addEventListener('click', () => {
         this.setActive(instance, btn.dataset.tabTarget, true);
@@ -1487,33 +1340,40 @@ class Tabs {
     this.instances.push(instance);
   }
 
-  // Activar una pestaña por nombre
   setActive(instance, name, emit = true) {
     instance.activeName = name;
 
-    // Actualizar triggers
     instance.triggers.forEach(btn => {
       const isActive = btn.dataset.tabTarget === name;
       btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
       btn.setAttribute('tabindex', isActive ? '0' : '-1');
 
-      // Cambiar ícono activo/inactivo si existe
       const icon = btn.querySelector('[data-tab-icon]');
       const activeSrc = btn.dataset.tabActiveSrc;
       const inactiveSrc = btn.dataset.tabInactiveSrc;
       if (icon && activeSrc && inactiveSrc) {
         icon.src = isActive ? activeSrc : inactiveSrc;
       }
+
+      const activeClasses = (btn.dataset.tabActiveClasses || '').split(/\s+/).filter(Boolean);
+      const inactiveClasses = (btn.dataset.tabInactiveClasses || '').split(/\s+/).filter(Boolean);
+      if (activeClasses.length || inactiveClasses.length) {
+        if (isActive) {
+          if (inactiveClasses.length) btn.classList.remove(...inactiveClasses);
+          if (activeClasses.length) btn.classList.add(...activeClasses);
+        } else {
+          if (activeClasses.length) btn.classList.remove(...activeClasses);
+          if (inactiveClasses.length) btn.classList.add(...inactiveClasses);
+        }
+      }
     });
 
-    // Actualizar panels
     instance.panels.forEach(panel => {
       const isActive = panel.getAttribute('data-tab-panel') === name;
       panel.hidden = !isActive;
       panel.setAttribute('aria-hidden', isActive ? 'false' : 'true');
     });
 
-    // Evento personalizado
     if (emit) {
       const event = new CustomEvent('tabChange', {
         detail: { name, container: instance.container }
