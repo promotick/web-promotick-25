@@ -807,17 +807,17 @@
                       <label for="nombre-direccion" data-field-label class="">Nombre completo de la persona</label>
                     </div>
                   </div>
-                  <div class="flex items-center gap-6">
-                  <div class="relative w-full" data-field data-variant="simple">
-                    <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
-                      <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input>
-                        <option selected value="cedula">Cédula de Identidad</option>
-                        <option value="pasaporte">Pasaporte</option>
-                      </select>
-                      <label for="tipo-documento" data-field-label class="">Tipo de documento</label>
-                      <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4" />
+                  <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="relative w-full" data-field data-variant="simple">
+                      <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                        <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input>
+                          <option selected value="cedula">Cédula de Identidad</option>
+                          <option value="pasaporte">Pasaporte</option>
+                        </select>
+                        <label for="tipo-documento" data-field-label class="">Tipo de documento</label>
+                        <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4" />
+                      </div>
                     </div>
-                  </div>
                     <div class="relative w-full" data-field data-variant="simple" data-field-initial="active">
                       <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
                         <input type="text" id="nombre-direccion" placeholder="Ej: 12345678" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
@@ -825,7 +825,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="flex items-center gap-6">
+                  <div class="flex flex-col md:flex-row items-center gap-6">
                     <div class="relative w-full" data-field data-variant="simple" data-field-initial="active">
                       <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
                         <input type="text" id="nombre-direccion" placeholder="Ej: hola@gmail.com" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
