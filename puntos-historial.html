@@ -357,125 +357,237 @@
     </div>
   </section>
 
-  <section class="pb-[32px] pt-[112px] lg:pt-[32px] bg-[#FFF9FA] min-h-[calc(100dvh-344px)]">
-    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 flex flex-col gap-6">
-      <div class="flex items-center gap-3">
-        <img class="min-w-[24px] h-[24px]" src="./img/icon/carrito.svg" alt="">
-        <h3 class="text-[#3C3B3B] text-[24px] font-semibold">Mi carrito</h3>
+  <section class="bg-[#FFF9FA] pt-[80px] lg:pt-0 min-h-[calc(100vh-424px)]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 py-10">
+      <div class="flex items-center flex-col justify-center gap-2">
+        <h1 class="text-[#1E1E1E] text-[24px] font-semibold">Mis puntos</h1>
+        <span class="bg-[#E4022C] h-[4px] w-[120px] rounded-full"></span>
       </div>
-      <div class="bg-white rounded-[16px] p-4 lg:p-8">
-        <div class="md:border md:border-[#E1E6EF] rounded-[16px]">
-          <div class="hidden md:flex items-center h-[56px] px-4 bg-[#FFF9FA] border-b border-[#E1E6EF] rounded-t-[16px]">
-            <div class="w-full">
-              <p class="font-semibold">Productos</p>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4">
-              <p class="font-semibold">Puntos</p>
-            </div>
-            <div class="md:min-w-[180px] md:max-w-[180px] lg:min-w-[207px] lg:max-w-[207px] px-2 lg:px-4">
-              <p class="font-semibold">Cantidad</p>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4">
-              <p class="font-semibold">Sub total</p>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4 text-center">
-              <p class="font-semibold">Eliminar</p>
-            </div>
-          </div>
-          <div class="flex flex-col md:flex-row md:items-center md:h-[144px] lg:px-4 md:px-2 border-b border-[#E1E6EF] gap-4 md:gap-0 pb-[32px] md:pb-0">
-            <div class="w-full">
-              <div class="flex items-center gap-3">
-                <img class="w-[56px] h-[56px] object-cover" src="./img/phone.jpg" alt="">
-                <div class="flex flex-col gap-2">
-                  <p class="text-[#172948] text-[14px]">APPLE</p>
-                  <p class="text-[#172948] font-semibold">Iphone 17 Pro</p>
-                </div>
-              </div>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4 hidden md:block">
-              <p>500</p>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4 md:hidden">
-              <div class="flex flex-col md:text-start">
-                <p class="text-[#172948] text-[14px] line-through">12,080 Puntos</p>
-                <p class="text-[#172948] font-semibold">9,080 Puntos</p>
-              </div>
-            </div>
-            <div class="md:min-w-[180px] md:max-w-[180px] lg:min-w-[207px] lg:max-w-[207px] md:px-2 lg:px-4">
-              <div class="flex items-center gap-2">
-                <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter="" data-min-value="1" data-max-value="10">
-                  <button data-quantity-minus="" class="opacity-25 cursor-not-allowed pointer-events-none" disabled="">
-                    <img src="./img/icon/remove.svg" alt="">
-                  </button>
-                  <span class="min-w-[76px] text-center" data-quantity-display="">1</span>
-                  <button data-quantity-plus="">
-                    <img src="./img/icon/add.svg" alt="">
-                  </button>
-                </div>
-                <button class="w-10 h-10 flex md:hidden items-center justify-center border border-[#E1E6EF] rounded-full">
-                  <img src="./img/icon/tacho.svg" alt="">
-                </button>
-              </div>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4 hidden md:block">
-              <p>500</p>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4 text-center hidden md:flex items-center justify-center">
-              <button class="w-10 h-10 flex items-center justify-center">
-                <img src="./img/icon/tacho.svg" alt="">
-              </button>
-            </div>
-          </div>
-          <div class="flex flex-col md:flex-row md:items-center md:h-[144px] lg:px-4 md:px-2 gap-4 md:gap-0 py-[32px] md:py-0 border-b border-[#E1E6EF] md:border-none">
-            <div class="w-full">
-              <div class="flex items-center gap-3">
-                <img class="w-[56px] h-[56px] object-cover" src="./img/phone.jpg" alt="">
-                <div class="flex flex-col gap-2">
-                  <p class="text-[#172948] text-[14px]">APPLE</p>
-                  <p class="text-[#172948] font-semibold">Iphone 17 Pro</p>
-                </div>
-              </div>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4 hidden md:block">
-              <p>500</p>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4 md:hidden">
-              <div class="flex flex-col md:text-start">
-                <p class="text-[#172948] text-[14px] line-through">12,080 Puntos</p>
-                <p class="text-[#172948] font-semibold">9,080 Puntos</p>
-              </div>
-            </div>
-            <div class="md:min-w-[180px] md:max-w-[180px] lg:min-w-[207px] lg:max-w-[207px] md:px-2 lg:px-4">
-              <div class="flex items-center gap-2">
-                <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter="" data-min-value="1" data-max-value="10">
-                  <button data-quantity-minus="" class="opacity-25 cursor-not-allowed pointer-events-none" disabled="">
-                    <img src="./img/icon/remove.svg" alt="">
-                  </button>
-                  <span class="min-w-[76px] text-center" data-quantity-display="">1</span>
-                  <button data-quantity-plus="">
-                    <img src="./img/icon/add.svg" alt="">
-                  </button>
-                </div>
-                <button class="w-10 h-10 flex md:hidden items-center justify-center border border-[#E1E6EF] rounded-full">
-                  <img src="./img/icon/tacho.svg" alt="">
-                </button>
-              </div>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4 hidden md:block">
-              <p>500</p>
-            </div>
-            <div class="md:min-w-[100px] md:max-w-[100px] lg:min-w-[120px] lg:max-w-[120px] px-2 lg:px-4 text-center hidden md:flex items-center justify-center">
-              <button class="w-10 h-10 flex items-center justify-center">
-                <img src="./img/icon/tacho.svg" alt="">
-              </button>
-            </div>
-          </div>
+      <div class="flex flex-col gap-6 pt-6" data-tabs>
+        <div class="flex items-center justify-center gap-4" role="tablist">
+          <button class="bg-[#E4022C] flex items-center justify-center text-white h-[40px] rounded-[12px] px-4" data-tab-target="acumulados" aria-selected="true" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
+            <span>Acumulados</span>
+          </button>
+          <button class="bg-[#FEE8EA] flex items-center justify-center text-[#3C3B3B] h-[40px] rounded-[12px] px-4" data-tab-target="canjeados" aria-selected="false" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
+            <span>Canjeados</span>
+          </button>
+          <button class="bg-[#FEE8EA] flex items-center justify-center text-[#3C3B3B] h-[40px] rounded-[12px] px-4" data-tab-target="descargados" aria-selected="false" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
+            <span>Descargados</span>
+          </button>
         </div>
-        <div class="flex flex-col md:flex-row md:items-center justify-end pt-6 gap-8">
-          <p class="text-[#3C3B3B] font-semibold">Total: 1000 puntos</p>
-          <a href="./canjea.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full px-[24px] w-full md:w-fit">
-            <span>Ir a canjear</span>
-          </a>
+        <div>
+          <div data-tab-panel="acumulados" role="tabpanel">
+            <div class="flex items-center justify-center">
+              <div class="p-8 bg-white w-full lg:w-auto rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
+              <div class="flex items-center justify-between">
+                <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Puntos disponibles: 20,800</h2>
+                <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full min-w-[310px]">
+                  <img src="./img/icon/descarga.svg" alt="">
+                  <span>Estado de cuenta</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between">
+                <div></div>
+                <div>
+                  <p class="text-[#3C3B3B] font-regular">Última actualización: 13/10/2025</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-6 flex-col md:flex-row">
+                <div class="w-[96px] h-[96px] rounded-full bg-[#E4022C]">
+                  <img class="w-full h-full object-cover rounded-full" src="./img/user.jpg" alt="">
+                </div>
+                <div class="flex items-center gap-2">
+                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[40px] px-4 rounded-full">
+                    <img src="./img/icon/subir-rojo.svg" alt="">
+                    <span>Subir foto</span>
+                  </button>
+                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[40px] px-4 rounded-full">
+                    <img src="./img/icon/eliminar-rojo.svg" alt="">
+                    <span>Eliminar</span>
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Nombre(s)</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Eduardo Christian</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Apellidos</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Naranjo Silva</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Fecha de nacimiento</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">23/01/1980</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Tipo de documento</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Cédula de identidad</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">N° de Documento</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">039498289</p>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Correo electrónico</p>
+                <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row">
+                  <p class="text-[#3C3B3B]">ricardorenteria@gmail.com</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-email">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">N° de Celular</p>
+                <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row">
+                  <div class="flex items-center gap-2">
+                    <p class="text-[#3C3B3B]">+593 9 938 628 403</p>
+                    <img src="./img/icon/verificar.svg" alt="">
+                  </div>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-phone">Verificar o cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Contraseña</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">**************</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-password">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="border border-[#096DD9] w-full p-6 flex flex-col gap-4 bg-[#E6F7FF] rounded-[24px]">
+                <div class="flex items-center gap-2">
+                  <img src="./img/icon/info.svg" alt="">
+                  <p class="font-semibold text-[#3C3B3B]">Atención</p>
+                </div>
+                <p class="text-[#3C3B3B] font-regular">Por razones de seguridad, si necesitas modificar tu nombre y/o apellido o fecha de nacimiento, solo podrás hacerlo a través de nuestros canales oficiales de atención. Deberás contar con tu documento de identificación para cualquier modificación.</p>
+                <a href="" class="text-[#009EDE] font-regular underline">Contactar</a>
+              </div>
+              <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Información adicional</h2>
+              <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Teléfono fijo</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">+51 735643</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-telefono">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Género</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Masculino</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-genero">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Estado civil</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Soltero/a</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-estado-civil">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[12px] text-[#3C3B3B] font-regular">Ubicación</p>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B]">Guayas, Guayaquil</p>
+                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-location">Cambiar</button>
+                </div>
+                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div data-tab-panel="canjeados" role="tabpanel" hidden>
+            <div class="flex items-center justify-center">
+              <div class="p-8 bg-white w-full lg:w-auto lg:min-w-[800px] lg:max-w-[800px] rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
+              <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
+                <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Direcciones de envío</h2>
+                <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full px-6 w-full md:w-auto" data-micromodal-trigger="modal-add-address">
+                  <img src="img/icon/agregrar-blanco.svg" alt="">
+                  <span>Agregar dirección</span>
+                </button>
+              </div>
+              <div class="border border-[#E1E6EF] rounded-[24px] p-6 flex flex-col gap-4">
+                <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-[#3C3B3B] font-semibold text-[18px]">Casa</p>
+                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
+                    <p class="text-[#3C3B3B]">Alexander Ortega Mego - 9 8373648 37</p>
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <button data-micromodal-trigger="modal-view-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/ojo-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-edit-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/lapiz-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-delete-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/eliminar-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-[#E1E6EF] rounded-[24px] p-6 flex flex-col gap-4">
+                <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-[#3C3B3B] font-semibold text-[18px]">Oficina</p>
+                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
+                    <p class="text-[#3C3B3B]">Alexander Ortega Mego - 9 8373648 37</p>
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <button data-micromodal-trigger="modal-view-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/ojo-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-edit-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/lapiz-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-delete-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/eliminar-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-[#E1E6EF] rounded-[24px] p-6 flex flex-col gap-4">
+                <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-[#3C3B3B] font-semibold text-[18px]">Casa de playa</p>
+                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
+                    <p class="text-[#3C3B3B]">Alexander Ortega Mego - 9 8373648 37</p>
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <button data-micromodal-trigger="modal-view-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/ojo-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-edit-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/lapiz-rojo.svg" alt="">
+                    </button>
+                    <button data-micromodal-trigger="modal-delete-address">
+                      <img class="w-[24px] h-[24px]" src="./img/icon/eliminar-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

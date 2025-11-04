@@ -5,6 +5,20 @@
 .modal.is-open {
   display: block;
 }
+/* Animaciones suaves para contenido del modal */
+.modal [role="dialog"] {
+  transform: scale(0.98);
+  opacity: 0;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+.modal.is-open [role="dialog"] {
+  transform: scale(1);
+  opacity: 1;
+}
+.modal.is-open.is-leaving [role="dialog"] {
+  transform: scale(0.98);
+  opacity: 0;
+}
 * {
   font-family: "Inter", sans-serif;
 }
@@ -277,9 +291,7 @@
   padding: 0 8px;
 }
 
-.swiper-categories .swiper-slide a:hover {
-  transform: translateY(-2px);
-}
+/* Hover removido por solicitud: no desplazar categorías en hover */
 
 /* Estado activo para categorías */
 .swiper-categories .swiper-slide.active a {
@@ -360,11 +372,4 @@
   .swiper-categories {
     padding: 0; /* Quitar padding para tablet/mobile */
   }
-}
-
-/* Modales: altura máxima y scroll interno */
-.modal [role="dialog"] {
-  max-height: 90dvh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
 }

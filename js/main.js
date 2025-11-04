@@ -37,7 +37,7 @@ class DropdownManager {
     });
 
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('[data-dropdown]')) {
+      if (!e.target.closest('[data-dropdown]') && !e.target.closest('[data-dropdown-menu]')) {
         this.closeAllDropdowns();
       }
     });
@@ -72,7 +72,9 @@ class DropdownManager {
       closeIcon,
       closeButton,
       selected,
-      isOpen: false
+      isOpen: false,
+      portalMode: element.hasAttribute('data-dropdown-portal'),
+      repositionHandler: null
     };
 
     this.dropdowns.push(dropdown);
@@ -82,6 +84,44 @@ class DropdownManager {
       e.stopPropagation();
       this.toggleDropdown(dropdown);
     });
+    // Hover en desktop si está habilitado con data-dropdown-hover-desktop
+    if (element.hasAttribute('data-dropdown-hover-desktop')) {
+      element.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024) this.openDropdown(dropdown);
+      });
+      element.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 1024) {
+          setTimeout(() => {
+            const stillHover = element.matches(':hover') || (menu && menu.matches(':hover'));
+            if (!stillHover) this.closeDropdown(dropdown);
+          }, 80);
+        }
+      });
+      if (menu) {
+        menu.addEventListener('mouseleave', () => {
+          if (window.innerWidth >= 1024) {
+            setTimeout(() => {
+              const stillHover = element.matches(':hover') || (menu && menu.matches(':hover'));
+              if (!stillHover) this.closeDropdown(dropdown);
+            }, 80);
+          }
+        });
+      }
+    }
+
+    // Hover en desktop si está habilitado con data-dropdown-hover-desktop
+    if (element.hasAttribute('data-dropdown-hover-desktop')) {
+      element.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024) {
+          this.openDropdown(dropdown);
+        }
+      });
+      element.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 1024) {
+          this.closeDropdown(dropdown);
+        }
+      });
+    }
 
     if (closeButton) {
       closeButton.addEventListener('click', (e) => {
@@ -138,19 +178,36 @@ class DropdownManager {
       dropdown.arrow.classList.add('rotate-180');
     }
 
-    if (dropdown.openIcon) {
-      dropdown.openIcon.classList.add('hidden');
-    }
-    if (dropdown.closeIcon) {
-      dropdown.closeIcon.classList.remove('hidden');
-    }
+    if (dropdown.openIcon) dropdown.openIcon.classList.add('hidden');
+    if (dropdown.closeIcon) dropdown.closeIcon.classList.remove('hidden');
 
     this.activeDropdown = dropdown;
 
     document.body.classList.add('dropdown-active');
     
-    if (dropdown.closeButton) {
-      document.body.style.overflow = 'hidden';
+    if (dropdown.closeButton) document.body.style.overflow = 'hidden';
+
+    // Portal: posicionar como fixed para evadir overflow hidden (e.g., sliders)
+    if (dropdown.portalMode && dropdown.menu) {
+      dropdown.menu.classList.remove('hidden');
+      dropdown.menu.style.opacity = '1';
+      dropdown.menu.style.visibility = 'visible';
+      dropdown.menu.style.transform = 'translateY(0)';
+      if (!dropdown.menu.dataset.portalized) {
+        document.body.appendChild(dropdown.menu);
+        dropdown.menu.dataset.portalized = 'true';
+      }
+      const positionMenu = () => {
+        const rect = dropdown.trigger.getBoundingClientRect();
+        dropdown.menu.style.position = 'fixed';
+        dropdown.menu.style.top = `${rect.bottom + 4}px`;
+        dropdown.menu.style.left = `${Math.max(8, Math.min(rect.left, window.innerWidth - dropdown.menu.offsetWidth - 8))}px`;
+        dropdown.menu.style.zIndex = '1000';
+      };
+      positionMenu();
+      dropdown.repositionHandler = positionMenu;
+      window.addEventListener('scroll', dropdown.repositionHandler, true);
+      window.addEventListener('resize', dropdown.repositionHandler, true);
     }
   }
 
@@ -163,19 +220,23 @@ class DropdownManager {
       dropdown.arrow.classList.remove('rotate-180');
     }
 
-    if (dropdown.openIcon) {
-      dropdown.openIcon.classList.remove('hidden');
-    }
-    if (dropdown.closeIcon) {
-      dropdown.closeIcon.classList.add('hidden');
-    }
+    if (dropdown.openIcon) dropdown.openIcon.classList.remove('hidden');
+    if (dropdown.closeIcon) dropdown.closeIcon.classList.add('hidden');
 
     if (this.activeDropdown === dropdown) {
       this.activeDropdown = null;
       document.body.classList.remove('dropdown-active');
       
-      if (dropdown.closeButton) {
-        document.body.style.overflow = ''; // Restaurar scroll
+      if (dropdown.closeButton) document.body.style.overflow = '';
+
+      if (dropdown.portalMode && dropdown.repositionHandler) {
+        window.removeEventListener('scroll', dropdown.repositionHandler, true);
+        window.removeEventListener('resize', dropdown.repositionHandler, true);
+        dropdown.repositionHandler = null;
+        dropdown.menu.classList.add('hidden');
+        dropdown.menu.style.opacity = '0';
+        dropdown.menu.style.visibility = 'hidden';
+        dropdown.menu.style.transform = 'translateY(10px)';
       }
     }
   }
@@ -602,13 +663,25 @@ class Accordion {
       content.style.display = 'block';
       content.classList.remove('hidden');
       if (arrow) {
-        arrow.classList.remove('rotate-180');
+        const customRotate = arrow.dataset.accordionArrowRotate;
+        if (customRotate === '90') {
+          arrow.style.transform = 'rotate(90deg)';
+          if (!arrow.style.transition) {
+            arrow.style.transition = 'transform 200ms';
+          }
+        }
       }
     } else {
       content.style.display = 'none';
       content.classList.add('hidden');
       if (arrow) {
-        arrow.classList.add('rotate-180');
+        const customRotate = arrow.dataset.accordionArrowRotate;
+        if (customRotate === '90') {
+          arrow.style.transform = 'rotate(0deg)';
+          if (!arrow.style.transition) {
+            arrow.style.transition = 'transform 200ms';
+          }
+        }
       }
     }
   }
@@ -789,6 +862,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   ModalChain.init();
+
+  HeartToggle.init();
+
+  Popover.init();
 });
 
 function initializeSwipers() {
@@ -1277,10 +1354,16 @@ class ModalChain {
         const currentId = currentModal && currentModal.id ? currentModal.id : null;
 
         if (currentId) {
-          try { MicroModal.close(currentId); } catch (_) {}
+          if (currentModal && currentModal.classList.contains('is-open')) {
+            currentModal.classList.add('is-leaving');
+          }
           setTimeout(() => {
-            try { MicroModal.show(nextId); } catch (_) {}
-          }, 150);
+            try { MicroModal.close(currentId); } catch (_) {}
+            if (currentModal) currentModal.classList.remove('is-leaving');
+            setTimeout(() => {
+              try { MicroModal.show(nextId); } catch (_) {}
+            }, 50);
+          }, 180);
         } else {
           try { MicroModal.show(nextId); } catch (_) {}
         }
@@ -1323,6 +1406,20 @@ class Tabs {
     const preset = triggers.find(btn => btn.getAttribute('aria-selected') === 'true');
     const initialTrigger = preset || triggers[0];
     this.setActive(instance, initialTrigger.dataset.tabTarget, false);
+
+    // Activar tab por URL (?tab=nombre o #tab=nombre o #nombre)
+    try {
+      const url = new URL(window.location.href);
+      let desired = url.searchParams.get('tab');
+      if (!desired && window.location.hash) {
+        const hashVal = window.location.hash.replace('#', '');
+        desired = hashVal.startsWith('tab=') ? hashVal.split('=')[1] : hashVal;
+      }
+      if (desired) {
+        const exists = triggers.find(btn => btn.dataset.tabTarget === desired);
+        if (exists) this.setActive(instance, desired, false);
+      }
+    } catch (_) {}
 
     triggers.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1384,5 +1481,178 @@ class Tabs {
 
   static init() {
     return new Tabs();
+  }
+}
+
+class Popover {
+  constructor() {
+    this.instances = [];
+    this.onDocClick = this.onDocClick.bind(this);
+    this.init();
+  }
+
+  init() {
+    const nodes = document.querySelectorAll('[data-popover]');
+    nodes.forEach(node => this.create(node));
+    document.addEventListener('click', this.onDocClick);
+  }
+
+  create(el) {
+    const trigger = el.querySelector('[data-popover-trigger]');
+    const menu = el.querySelector('[data-popover-menu]');
+    if (!trigger || !menu) return;
+
+    const inst = { el, trigger, menu, isOpen: false, handler: null };
+    this.instances.push(inst);
+
+    const openHover = () => { if (window.innerWidth >= 1024) this.open(inst); };
+    const closeHover = () => {
+      if (window.innerWidth >= 1024) {
+        setTimeout(() => {
+          const over = inst.trigger.matches(':hover') || inst.menu.matches(':hover');
+          if (!over) this.close(inst);
+        }, 80);
+      }
+    };
+
+    el.addEventListener('mouseenter', openHover);
+    el.addEventListener('mouseleave', closeHover);
+    inst.menu.addEventListener('mouseleave', closeHover);
+
+    trigger.addEventListener('click', (e) => {
+      if (window.innerWidth < 1024) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.toggle(inst);
+      }
+    });
+  }
+
+  onDocClick(e) {
+    const menu = e.target.closest('[data-popover-menu]');
+    const wrap = e.target.closest('[data-popover]');
+    if (!menu && !wrap) this.closeAll();
+  }
+
+  toggle(inst) { inst.isOpen ? this.close(inst) : this.open(inst); }
+
+  open(inst) {
+    this.closeAll();
+    inst.isOpen = true;
+    const rect = inst.trigger.getBoundingClientRect();
+    if (!inst.menu.dataset.popoverPortalized) {
+      document.body.appendChild(inst.menu);
+      inst.menu.dataset.popoverPortalized = 'true';
+    }
+    inst.menu.style.display = 'block';
+    inst.menu.style.position = 'fixed';
+    const menuW = inst.menu.offsetWidth;
+    const centeredLeft = rect.left + (rect.width / 2) - (menuW / 2);
+    const left = Math.max(8, Math.min(centeredLeft, window.innerWidth - menuW - 8));
+    inst.menu.style.top = `${rect.bottom + 4}px`;
+    inst.menu.style.left = `${left}px`;
+    inst.menu.style.zIndex = '1000';
+    inst.menu.classList.remove('hidden');
+    inst.handler = () => {
+      const r = inst.trigger.getBoundingClientRect();
+      const mW = inst.menu.offsetWidth;
+      const cLeft = r.left + (r.width / 2) - (mW / 2);
+      const l = Math.max(8, Math.min(cLeft, window.innerWidth - mW - 8));
+      inst.menu.style.top = `${r.bottom + 4}px`;
+      inst.menu.style.left = `${l}px`;
+    };
+    window.addEventListener('scroll', inst.handler, true);
+    window.addEventListener('resize', inst.handler, true);
+  }
+
+  close(inst) {
+    inst.isOpen = false;
+    inst.menu.style.display = 'none';
+    inst.menu.classList.add('hidden');
+    if (inst.handler) {
+      window.removeEventListener('scroll', inst.handler, true);
+      window.removeEventListener('resize', inst.handler, true);
+      inst.handler = null;
+    }
+  }
+
+  closeAll() { this.instances.forEach(i => i.isOpen && this.close(i)); }
+
+  static init() { return new Popover(); }
+}
+
+class HeartToggle {
+  constructor() {
+    this.bindAll();
+  }
+
+  bindAll() {
+    const buttons = Array.from(document.querySelectorAll('[data-heart-toggle]'));
+    buttons.forEach(btn => this.bindButton(btn));
+
+    const selector = 'img[src$="/img/icon/heart.svg"], img[src$="/img/icon/heart-black.svg"], img[src$="icon/heart.svg"], img[src$="icon/heart-black.svg"]';
+    const icons = Array.from(document.querySelectorAll(selector));
+    icons.forEach(icon => this.bindIcon(icon));
+  }
+
+  bindIcon(icon) {
+    const button = icon.closest('button');
+    if (button && button.hasAttribute('data-heart-toggle')) return;
+    if (!button) return;
+
+    if (button.dataset.heartBound === 'true') return;
+
+    button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') || 'false');
+
+    button.addEventListener('click', (e) => {
+      const anchor = button.closest('a');
+      if (anchor) {
+        e.preventDefault();
+        e.stopPropagation();
+      } else {
+        e.stopPropagation();
+      }
+      const activeSrc = button.dataset.heartActiveSrc || icon.dataset.heartActiveSrc || './img/icon/heart-black.svg';
+      const inactiveSrc = button.dataset.heartInactiveSrc || icon.dataset.heartInactiveSrc || './img/icon/heart.svg';
+      const current = icon.getAttribute('src') || '';
+      const next = current.includes('heart-black.svg') ? inactiveSrc : activeSrc;
+      icon.setAttribute('src', next);
+      const pressed = button.getAttribute('aria-pressed') === 'true';
+      button.setAttribute('aria-pressed', (!pressed).toString());
+    });
+
+    button.dataset.heartBound = 'true';
+  }
+
+  bindButton(button) {
+    if (button.dataset.heartBound === 'true') return;
+    const icon = button.querySelector('[data-heart-icon]') || button.querySelector('img');
+    if (!icon) return;
+
+    const activeSrc = button.dataset.heartActiveSrc || icon.dataset.heartActiveSrc || './img/icon/heart-black.svg';
+    const inactiveSrc = button.dataset.heartInactiveSrc || icon.dataset.heartInactiveSrc || './img/icon/heart.svg';
+
+    button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') || 'false');
+
+    button.addEventListener('click', (e) => {
+      const anchor = button.closest('a');
+      if (anchor) {
+        e.preventDefault();
+        e.stopPropagation();
+      } else {
+        e.stopPropagation();
+      }
+      const current = icon.getAttribute('src') || '';
+      const isActive = current.includes('heart-black.svg') || current.endsWith(activeSrc);
+      icon.setAttribute('src', isActive ? inactiveSrc : activeSrc);
+      const pressed = button.getAttribute('aria-pressed') === 'true';
+      button.setAttribute('aria-pressed', (!pressed).toString());
+    });
+
+    button.dataset.heartBound = 'true';
+  }
+
+  static init() {
+    return new HeartToggle();
   }
 }
