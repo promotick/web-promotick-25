@@ -429,7 +429,7 @@
                 <div class="flex items-center gap-[14px]">
                   <img class="w-[40px] h-[40px]" src="./img/icon/check-green.svg" alt="">
                   <div class="flex flex-col justify-start">
-                    <p class="font-semibold">En prepareción</p>
+                    <p class="font-semibold">En preparación</p>
                     <p>14/10/2025 - 10:30 AM</p>
                   </div>
                 </div>
@@ -459,7 +459,7 @@
                 <p class="text-[#3C3B3B] font-semibold">Dirección de envío</p>
               </div>
               <p class="text-[#3C3B3B]">Calle Santa Isabel 265, Dpto 201, Miraflores, Ecuador</p>
-              <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full">
+              <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-trigger="modal-edit-address">
                 <span>Editar dirección</span>
               </button>
             </div>
@@ -579,6 +579,123 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <!-- Direccion -->
+  <div class="modal" id="modal-edit-address" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Editar dirección</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex items-center justify-center py-4">
+          <div class="flex items-center gap-1">
+            <div class="flex items-center justify-center w-[56px] h-[56px] rounded-full bg-[#FFF1F0] border border-[#E4022C] text-[#E4022C] font-semibold">
+              <span>1</span>
+            </div>
+            <span class="h-[1px] w-[24px] bg-[#C6C8CC]"></span>
+            <div class="flex items-center justify-center w-[56px] h-[56px] rounded-full border border-[#C6C8CC] text-[#C6C8CC] font-semibold">
+              <span>2</span>
+            </div>
+            <span class="h-[1px] w-[24px] bg-[#C6C8CC]"></span>
+            <div class="flex items-center justify-center w-[56px] h-[56px] rounded-full border border-[#C6C8CC] text-[#C6C8CC] font-semibold">
+              <span>3</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-6 overflow-y-auto max-h-[calc(100dvh-435px)] md:max-h-[calc(100dvh-342px)] p-1">
+            <div class="flex items-center gap-2">
+              <img src="./img/icon/home.svg" alt="">
+              <p>Identificación de la dirección</p>
+            </div>
+            <div>
+              <div class="relative w-full" data-field data-variant="simple">
+                <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                  <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                  <label for="nombre-direccion" data-field-label class="">Nombre</label>
+                </div>
+              </div>
+              <p class="text-[#3C3B3B] text-[12px] pt-1 pl-3">Este nombre te ayudará a identificar la dirección en tus pedidos.</p>
+            </div>
+            <div class="h-[1px] bg-[#E1E6EF] w-full"></div>
+            <div class="flex items-center gap-2">
+              <img src="./img/icon/user-2.svg" alt="">
+              <p>¿Quién recibirá el pedido?</p>
+            </div>
+            <div class="flex flex-col gap-6" data-tabs>
+              <div class="flex items-center gap-6" role="tablist">
+                <button type="button" class="flex items-center gap-2 cursor-pointer" data-tab-target="yo" data-tab-active-src="./img/icon/radio-active.svg" data-tab-inactive-src="./img/icon/radio.svg" aria-selected="true" role="tab">
+                  <img data-tab-icon src="./img/icon/radio-active.svg" alt="">
+                  <span class="text-[#3C3B3B]">Yo mismo</span>
+                </button>
+                <button type="button" class="flex items-center gap-2 cursor-pointer" data-tab-target="otra" data-tab-active-src="./img/icon/radio-active.svg" data-tab-inactive-src="./img/icon/radio.svg" aria-selected="false" role="tab">
+                  <img data-tab-icon src="./img/icon/radio.svg" alt="">
+                  <span class="text-[#3C3B3B]">Otra persona</span>
+                </button>
+              </div>
+              <div data-tab-panel="yo" role="tabpanel"></div>
+              <div data-tab-panel="otra" hidden role="tabpanel">
+                <div class="flex flex-col gap-4">
+                  <div class="relative w-full" data-field data-variant="simple" data-field-initial="active">
+                    <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                      <input type="text" id="nombre-direccion" placeholder="Ej: Juan Pérez Rivera" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                      <label for="nombre-direccion" data-field-label class="">Nombre completo de la persona</label>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-6">
+                  <div class="relative w-full" data-field data-variant="simple">
+                    <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                      <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input>
+                        <option selected value="cedula">Cédula de Identidad</option>
+                        <option value="pasaporte">Pasaporte</option>
+                      </select>
+                      <label for="tipo-documento" data-field-label class="">Tipo de documento</label>
+                      <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4" />
+                    </div>
+                  </div>
+                    <div class="relative w-full" data-field data-variant="simple" data-field-initial="active">
+                      <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                        <input type="text" id="nombre-direccion" placeholder="Ej: 12345678" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                        <label for="nombre-direccion" data-field-label class="">Número de documento</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-6">
+                    <div class="relative w-full" data-field data-variant="simple" data-field-initial="active">
+                      <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                        <input type="text" id="nombre-direccion" placeholder="Ej: hola@gmail.com" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                        <label for="nombre-direccion" data-field-label class="">Correo electrónico</label>
+                      </div>
+                    </div>
+                    <div class="relative w-full" data-field data-variant="simple" data-field-initial="active">
+                      <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                        <input type="text" id="nombre-direccion" placeholder="Celular" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                        <label for="nombre-direccion" data-field-label class="">Número de celular</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cancelar</span>
+            </button>
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Continuar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

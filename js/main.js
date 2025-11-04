@@ -855,10 +855,31 @@ document.addEventListener('DOMContentLoaded', function() {
   Tabs.init();
 
   if (typeof MicroModal !== 'undefined') {
+    const sanitizeOverlay = (modalEl) => {
+      if (!modalEl) return;
+      const directChildren = Array.from(modalEl.children || []);
+      const overlay = directChildren.find(ch => ch.hasAttribute && ch.hasAttribute('data-micromodal-close'));
+      if (overlay) overlay.removeAttribute('data-micromodal-close');
+    };
+
     MicroModal.init({
       disableScroll: true,
       openClass: 'is-open',
+      onShow: (modalEl) => {
+        sanitizeOverlay(modalEl);
+      }
     });
+
+    // Sanitizar overlays existentes en DOM inicial
+    document.querySelectorAll('.modal').forEach(m => sanitizeOverlay(m));
+
+    // Bloquear cierre por tecla Escape (solo cerrar con data-micromodal-close)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.querySelector('.modal.is-open')) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+      }
+    }, true);
   }
 
   ModalChain.init();
