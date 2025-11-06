@@ -503,8 +503,28 @@ class RadioGroup {
       style: element.dataset.radioStyle || 'chip' // 'chip' o 'swatch'
     };
 
-    const initialOption = optionElements.find(opt => opt.hasAttribute('data-selected')) || optionElements[0];
-    this.setActiveOption(group, initialOption, false);
+    const variant = (element.dataset.radioVariant || '').split(' ').map(v => v.trim()).filter(Boolean);
+    const skipInitial = variant.includes('no-initial');
+
+    if (!skipInitial) {
+      const initialOption = optionElements.find(opt => opt.hasAttribute('data-selected')) || optionElements[0];
+      this.setActiveOption(group, initialOption, false);
+    } else {
+      optionElements.forEach((opt, index) => {
+        opt.setAttribute('aria-checked', 'false');
+        opt.setAttribute('role', 'radio');
+        opt.setAttribute('tabindex', index === 0 ? '0' : '-1');
+        opt.removeAttribute('data-selected');
+        if (group.style === 'swatch') {
+          opt.classList.remove('border-[2px]', 'border-[#E4022C]');
+        } else {
+          opt.classList.remove('border-[#E4022C]', 'text-[#E4022C]', 'bg-[#FFF1F0]', 'font-semibold');
+          opt.classList.remove('border-[#C6C8CC]', 'text-[#C6C8CC]', 'bg-transparent', 'font-light');
+        }
+      });
+      group.element.setAttribute('role', 'radiogroup');
+      group.activeOption = null;
+    }
 
     optionElements.forEach(option => {
       option.addEventListener('click', () => {

@@ -62,7 +62,7 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Transferencia de puntos</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mi meta</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./meta.html">Mi meta</a>
                   </li>
                   <li class="w-full">
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Viajes</a>
@@ -71,13 +71,13 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Capacitaciones</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Quiz & Win</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./trivia.html">Quiz & Win</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Lucky Code</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./codigo.html">Lucky Code</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Spin & Win</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./ruleta.html">Spin & Win</a>
                   </li>
                   <li class="w-full">
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mundial</a>
@@ -102,7 +102,7 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html?tab=direcciones">Mis direcciones</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mis favoritos</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./favorito.html">Mis favoritos</a>
                   </li>
                 </ul>
               </div>
@@ -148,9 +148,9 @@
                 </div>
               </div>
             </div>
-            <button class="hidden lg:block">
+            <a href="./favorito.html" class="hidden lg:block cursor-pointer">
               <img class="min-w-[24px] h-[24px]" src="./img/icon/heart.svg" alt="">
-            </button>
+            </a>
             <div class="relative h-[24px]" data-dropdown>
               <button data-dropdown-trigger>
                 <img class="min-w-[24px] h-[24px]" src="./img/icon/carrito.svg" alt="">
@@ -325,7 +325,7 @@
             </ul>
           </li>
           <li>
-            <a class="text-white" href="">Mi meta</a>
+            <a class="text-white" href="./meta.html">Mi meta</a>
           </li>
           <li>
             <a class="text-white" href="">Viajes</a>
@@ -334,13 +334,13 @@
             <a class="text-white" href="">Capacitaciones</a>
           </li>
           <li>
-            <a class="text-white" href="">Quiz & Win</a>
+            <a class="text-white" href="./trivia.html">Quiz & Win</a>
           </li>
           <li>
-            <a class="text-white" href="">Lucky Code</a>
+            <a class="text-white" href="./codigo.html">Lucky Code</a>
           </li>
           <li>
-            <a class="text-white" href="">Spin & Win</a>
+            <a class="text-white" href="./ruleta.html">Spin & Win</a>
           </li>
           <li>
             <a class="text-white" href="">Mundial</a>
@@ -364,7 +364,7 @@
         <span class="bg-[#E4022C] h-[4px] w-[120px] rounded-full"></span>
       </div>
       <div class="flex flex-col gap-6 pt-6" data-tabs>
-        <div class="flex items-center justify-center gap-4" role="tablist">
+        <div class="flex items-center md:justify-center justify-start gap-4 overflow-x-auto" role="tablist">
           <button class="bg-[#E4022C] flex items-center justify-center text-white h-[40px] rounded-[12px] px-4" data-tab-target="acumulados" aria-selected="true" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
             <span>Acumulados</span>
           </button>
@@ -377,214 +377,535 @@
         </div>
         <div>
           <div data-tab-panel="acumulados" role="tabpanel">
-            <div class="flex items-center justify-center">
+            <div class="flex flex-col gap-6">
               <div class="p-8 bg-white w-full lg:w-auto rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
-              <div class="flex items-center justify-between">
-                <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Puntos disponibles: 20,800</h2>
-                <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full min-w-[310px]">
-                  <img src="./img/icon/descarga.svg" alt="">
-                  <span>Estado de cuenta</span>
-                </button>
-              </div>
-              <div class="flex items-center justify-between">
-                <div></div>
-                <div>
-                  <p class="text-[#3C3B3B] font-regular">Última actualización: 13/10/2025</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-6 flex-col md:flex-row">
-                <div class="w-[96px] h-[96px] rounded-full bg-[#E4022C]">
-                  <img class="w-full h-full object-cover rounded-full" src="./img/user.jpg" alt="">
-                </div>
-                <div class="flex items-center gap-2">
-                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[40px] px-4 rounded-full">
-                    <img src="./img/icon/subir-rojo.svg" alt="">
-                    <span>Subir foto</span>
-                  </button>
-                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[40px] px-4 rounded-full">
-                    <img src="./img/icon/eliminar-rojo.svg" alt="">
-                    <span>Eliminar</span>
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                  <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Puntos disponibles: 20,800</h2>
+                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full min-w-[310px]">
+                    <img src="./img/icon/descarga.svg" alt="">
+                    <span>Estado de cuenta</span>
                   </button>
                 </div>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Nombre(s)</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">Eduardo Christian</p>
-                </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Apellidos</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">Naranjo Silva</p>
-                </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Fecha de nacimiento</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">23/01/1980</p>
-                </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Tipo de documento</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">Cédula de identidad</p>
-                </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">N° de Documento</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">039498289</p>
-                </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Correo electrónico</p>
-                <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row">
-                  <p class="text-[#3C3B3B]">ricardorenteria@gmail.com</p>
-                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-email">Cambiar</button>
-                </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">N° de Celular</p>
-                <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row">
-                  <div class="flex items-center gap-2">
-                    <p class="text-[#3C3B3B]">+593 9 938 628 403</p>
-                    <img src="./img/icon/verificar.svg" alt="">
+                <div class="flex md:items-center lg:justify-between flex-col lg:flex-row gap-6">
+                  <div class="flex items-center flex-col md:flex-row gap-6 w-full md:w-auto">
+                    <div class="relative w-full md:min-w-[210px] md:max-w-[210px]" data-field data-variant="simple" data-field-initial="active">
+                      <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                        <input type="date" id="fecha-desde" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                        <label for="fecha-desde" data-field-label class="">Desde</label>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-6 w-full md:w-auto">
+                      <div class="relative w-full md:min-w-[210px] md:max-w-[210px]" data-field data-variant="simple" data-field-initial="active">
+                        <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                          <input type="date" id="fecha-desde" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                          <label for="fecha-desde" data-field-label class="">Hasta</label>
+                        </div>
+                      </div>
+                      <button class="h-[56px] min-w-[56px] max-w-[56px] rounded-full bg-[#E4022C] flex items-center justify-center">
+                        <img src="./img/icon/search-blanco.svg" alt="">
+                      </button>
+                    </div>
                   </div>
-                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-phone">Verificar o cambiar</button>
+                  <div>
+                    <p class="text-[#3C3B3B] font-regular">Última actualización: 13/10/2025</p>
+                  </div>
                 </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Contraseña</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">**************</p>
-                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-password">Cambiar</button>
+                <div class="h-[1px] bg-[#E1E1E1] w-full lg:hidden"></div>
+                <div class="border border-[#E1E6EF] rounded-[16px]">
+                  <div class="hidden md:flex items-center h-[56px] md:px-4 bg-[#FFF9FA] border-b border-[#E1E6EF] rounded-t-[16px]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-2 flex items-center gap-1">
+                      <p class="font-semibold">Fecha</p>
+                      <img src="./img/icon/arrow-down-outline-black.svg" alt="">
+                    </div>
+                    <div class="px-2 w-full">
+                      <p class="font-semibold">Evento</p>
+                    </div>
+                    <div class="w-full md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-2 flex items-center gap-1">
+                      <p class="font-semibold">Cantidad de puntos</p>
+                      <img src="./img/icon/filtro-black.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="md:hidden flex items-center h-[56px] bg-[#FFF9FA] border-b border-[#E1E6EF] rounded-t-[16px]">
+                    <div class="w-full px-4 md:px-2">
+                      <p class="font-semibold">Evento</p>
+                    </div>
+                    <div class="px-4 md:px-2 w-full max-w-[88px] min-w-[88px]">
+                      <p class="font-semibold">Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[86px] md:h-[56px] lg:px-4 md:px-2 border-b border-[#E1E6EF]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Ruleta ganadora</p>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Ruleta ganadora</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">500</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[86px] md:h-[56px] lg:px-4 md:px-2 border-b border-[#E1E6EF]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Trivia completada</p>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Trivia completada</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">20</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[86px] md:h-[56px] lg:px-4 md:px-2 border-b border-[#E1E6EF]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Código validado</p>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Código validado</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">350</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[86px] md:h-[56px] lg:px-4 md:px-2">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Cumplimiento de meta - Junio</p>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Cumplimiento de meta - Junio</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">100</p>
+                    </div>
+                  </div>
                 </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="border border-[#096DD9] w-full p-6 flex flex-col gap-4 bg-[#E6F7FF] rounded-[24px]">
-                <div class="flex items-center gap-2">
-                  <img src="./img/icon/info.svg" alt="">
-                  <p class="font-semibold text-[#3C3B3B]">Atención</p>
+                <div class="flex items-center justify-end flex-col md:flex-row gap-2 md:gap-6">
+                  <div class="flex items-center gap-2">
+                    <p class="text-[#959595] text-[12px]">Resultados por página:</p>
+                    <div>
+                      <select name="" id="" class="text-[#172948] text-[12px] outline-none">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select>
+                    </div>
+                  </div>
+                  <p class="text-[#172948] text-[12px]">1-1 de 7</p>
+                  <div class="flex items-center">
+                    <button class="w-10 h-10 flex items-center justify-center">
+                      <img src="./img/icon/flecha-iz-roja.svg" alt="">
+                    </button>
+                    <button class="w-10 h-10 flex items-center justify-center">
+                      <img src="./img/icon/flecha-de-roja.svg" alt="">
+                    </button>
+                  </div>
                 </div>
-                <p class="text-[#3C3B3B] font-regular">Por razones de seguridad, si necesitas modificar tu nombre y/o apellido o fecha de nacimiento, solo podrás hacerlo a través de nuestros canales oficiales de atención. Deberás contar con tu documento de identificación para cualquier modificación.</p>
-                <a href="" class="text-[#009EDE] font-regular underline">Contactar</a>
               </div>
-              <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Información adicional</h2>
-              <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Teléfono fijo</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">+51 735643</p>
-                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-telefono">Cambiar</button>
+              <div class="p-8 bg-white w-full lg:w-auto border border-[#E1E1E1] rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
+                <div class="flex w-full flex-col gap-6">
+                  <div class="flex items-start justify-between flex-col md:flex-row gap-6">
+                    <div class="flex flex-col gap-4">
+                      <p class="font-semibold">¿Necesitas más puntos?</p>
+                      <p class="text-[14px]">Compra más puntos ahora mismo y aprovecha las ofertas especiales que tenemos para ti.</p>
+                    </div>
+                    <a href="./catalogo.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full px-6 min-w-[296px]">
+                      <span>Comprar puntos</span>
+                    </a>
+                  </div>
+                  <div class="h-[1px] bg-[#E1E1E1] w-full"></div>
+                  <div class="flex items-start justify-between flex-col md:flex-row gap-6">
+                    <div class="flex flex-col gap-4">
+                      <p class="font-semibold">¿Quieres enviarle puntos a alguien?</p>
+                      <p class="text-[14px]">Comparte tus puntos con tus contactos, para que puedan canjear productos, experiencias, pasajes de avión, estadías en hoteles, y mucho más.</p>
+                    </div>
+                    <a href="./catalogo.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full px-6 min-w-[296px]">
+                      <span>Transferir puntos</span>
+                    </a>
+                  </div>
                 </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Género</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">Masculino</p>
-                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-genero">Cambiar</button>
-                </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Estado civil</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">Soltero/a</p>
-                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-estado-civil">Cambiar</button>
-                </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="text-[12px] text-[#3C3B3B] font-regular">Ubicación</p>
-                <div class="flex items-center justify-between">
-                  <p class="text-[#3C3B3B]">Guayas, Guayaquil</p>
-                  <button class="text-[#E4022C] font-regular underline" data-micromodal-trigger="modal-change-location">Cambiar</button>
-                </div>
-                <span class="h-[1px] w-full bg-[#E1E6EF]"></span>
-              </div>
               </div>
             </div>
           </div>
           <div data-tab-panel="canjeados" role="tabpanel" hidden>
-            <div class="flex items-center justify-center">
-              <div class="p-8 bg-white w-full lg:w-auto lg:min-w-[800px] lg:max-w-[800px] rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
-              <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
-                <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Direcciones de envío</h2>
-                <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full px-6 w-full md:w-auto" data-micromodal-trigger="modal-add-address">
-                  <img src="img/icon/agregrar-blanco.svg" alt="">
-                  <span>Agregar dirección</span>
-                </button>
-              </div>
-              <div class="border border-[#E1E6EF] rounded-[24px] p-6 flex flex-col gap-4">
-                <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
-                  <div class="flex flex-col gap-2">
-                    <p class="text-[#3C3B3B] font-semibold text-[18px]">Casa</p>
-                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
-                    <p class="text-[#3C3B3B]">Alexander Ortega Mego - 9 8373648 37</p>
+            <div class="flex flex-col gap-6">
+              <div class="p-8 bg-white w-full lg:w-auto rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                  <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Puntos canjeados: 1,800</h2>
+                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full min-w-[310px]">
+                    <img src="./img/icon/descarga.svg" alt="">
+                    <span>Estado de cuenta</span>
+                  </button>
+                </div>
+                <div class="flex md:items-center lg:justify-between flex-col lg:flex-row gap-6">
+                  <div class="flex items-center flex-col md:flex-row gap-6 w-full md:w-auto">
+                    <div class="relative w-full md:min-w-[210px] md:max-w-[210px]" data-field data-variant="simple" data-field-initial="active">
+                      <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                        <input type="date" id="fecha-desde" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                        <label for="fecha-desde" data-field-label class="">Desde</label>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-6 w-full md:w-auto">
+                      <div class="relative w-full md:min-w-[210px] md:max-w-[210px]" data-field data-variant="simple" data-field-initial="active">
+                        <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                          <input type="date" id="fecha-desde" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                          <label for="fecha-desde" data-field-label class="">Hasta</label>
+                        </div>
+                      </div>
+                      <button class="h-[56px] min-w-[56px] max-w-[56px] rounded-full bg-[#E4022C] flex items-center justify-center">
+                        <img src="./img/icon/search-blanco.svg" alt="">
+                      </button>
+                    </div>
                   </div>
-                  <div class="flex items-center gap-6">
-                    <button data-micromodal-trigger="modal-view-address">
-                      <img class="w-[24px] h-[24px]" src="./img/icon/ojo-rojo.svg" alt="">
+                  <div>
+                    <p class="text-[#3C3B3B] font-regular">Última actualización: 13/10/2025</p>
+                  </div>
+                </div>
+                <div class="h-[1px] bg-[#E1E1E1] w-full lg:hidden"></div>
+                <div class="border border-[#E1E6EF] rounded-[16px]">
+                  <div class="hidden md:flex items-center h-[56px] md:px-4 bg-[#FFF9FA] border-b border-[#E1E6EF] rounded-t-[16px]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-2 flex items-center gap-1">
+                      <p class="font-semibold">Fecha</p>
+                      <img src="./img/icon/arrow-down-outline-black.svg" alt="">
+                    </div>
+                    <div class="px-2 w-full">
+                      <p class="font-semibold">Evento</p>
+                    </div>
+                    <div class="w-full md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-2 flex items-center gap-1">
+                      <p class="font-semibold">Cantidad de puntos</p>
+                      <img src="./img/icon/filtro-black.svg" alt="">
+                    </div>
+                    <div class="w-full md:min-w-[140px] md:max-w-[140px] text-center lg:min-w-[240px] lg:max-w-[240px] px-2">
+                      <p class="font-semibold">Detalle</p>
+                    </div>
+                  </div>
+                  <div class="md:hidden flex items-center h-[56px] bg-[#FFF9FA] border-b border-[#E1E6EF] rounded-t-[16px]">
+                    <div class="w-full px-4 md:px-2">
+                      <p class="font-semibold">Evento</p>
+                    </div>
+                    <div class="px-4 md:px-2 w-full max-w-[88px] min-w-[88px]">
+                      <p class="font-semibold">Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[116px] md:h-[56px] lg:px-4 md:px-2 border-b border-[#E1E6EF]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Ruleta ganadora</p>
+                        <button class="text-[#E4022C] underline w-fit md:hidden" data-micromodal-trigger="modal-details">
+                          <span>Ver detalles</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Ruleta ganadora</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">500</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2 hidden lg:flex items-center justify-center">
+                      <button data-micromodal-trigger="modal-details">
+                        <img src="./img/icon/ojo.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[116px] md:h-[56px] lg:px-4 md:px-2 border-b border-[#E1E6EF]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Trivia completada</p>
+                        <button class="text-[#E4022C] underline w-fit md:hidden" data-micromodal-trigger="modal-details">
+                          <span>Ver detalles</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Trivia completada</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">20</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2 hidden lg:flex items-center justify-center">
+                      <button data-micromodal-trigger="modal-details">
+                        <img src="./img/icon/ojo.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[116px] md:h-[56px] lg:px-4 md:px-2 border-b border-[#E1E6EF]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Código validado</p>
+                        <button class="text-[#E4022C] underline w-fit md:hidden" data-micromodal-trigger="modal-details">
+                          <span>Ver detalles</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Código validado</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">350</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2 hidden lg:flex items-center justify-center">
+                      <button data-micromodal-trigger="modal-details">
+                        <img src="./img/icon/ojo.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[116px] md:h-[56px] lg:px-4 md:px-2">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Cumplimiento de meta - Junio</p>
+                        <button class="text-[#E4022C] underline w-fit md:hidden" data-micromodal-trigger="modal-details">
+                          <span>Ver detalles</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Cumplimiento de meta - Junio</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">100</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2 hidden lg:flex items-center justify-center">
+                      <button data-micromodal-trigger="modal-details">
+                        <img src="./img/icon/ojo.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-end flex-col md:flex-row gap-2 md:gap-6">
+                  <div class="flex items-center gap-2">
+                    <p class="text-[#959595] text-[12px]">Resultados por página:</p>
+                    <div>
+                      <select name="" id="" class="text-[#172948] text-[12px] outline-none">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select>
+                    </div>
+                  </div>
+                  <p class="text-[#172948] text-[12px]">1-1 de 7</p>
+                  <div class="flex items-center">
+                    <button class="w-10 h-10 flex items-center justify-center">
+                      <img src="./img/icon/flecha-iz-roja.svg" alt="">
                     </button>
-                    <button data-micromodal-trigger="modal-edit-address">
-                      <img class="w-[24px] h-[24px]" src="./img/icon/lapiz-rojo.svg" alt="">
-                    </button>
-                    <button data-micromodal-trigger="modal-delete-address">
-                      <img class="w-[24px] h-[24px]" src="./img/icon/eliminar-rojo.svg" alt="">
+                    <button class="w-10 h-10 flex items-center justify-center">
+                      <img src="./img/icon/flecha-de-roja.svg" alt="">
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="border border-[#E1E6EF] rounded-[24px] p-6 flex flex-col gap-4">
-                <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
-                  <div class="flex flex-col gap-2">
-                    <p class="text-[#3C3B3B] font-semibold text-[18px]">Oficina</p>
-                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
-                    <p class="text-[#3C3B3B]">Alexander Ortega Mego - 9 8373648 37</p>
+              <div class="p-8 bg-white w-full lg:w-auto border border-[#E1E1E1] rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
+                <div class="flex w-full flex-col gap-6">
+                  <div class="flex items-start justify-between flex-col md:flex-row gap-6">
+                    <div class="flex flex-col gap-4">
+                      <p class="font-semibold">¿Necesitas más puntos?</p>
+                      <p class="text-[14px]">Compra más puntos ahora mismo y aprovecha las ofertas especiales que tenemos para ti.</p>
+                    </div>
+                    <a href="./catalogo.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full px-6 min-w-[296px]">
+                      <span>Comprar puntos</span>
+                    </a>
                   </div>
-                  <div class="flex items-center gap-6">
-                    <button data-micromodal-trigger="modal-view-address">
-                      <img class="w-[24px] h-[24px]" src="./img/icon/ojo-rojo.svg" alt="">
+                  <div class="h-[1px] bg-[#E1E1E1] w-full"></div>
+                  <div class="flex items-start justify-between flex-col md:flex-row gap-6">
+                    <div class="flex flex-col gap-4">
+                      <p class="font-semibold">¿Quieres enviarle puntos a alguien?</p>
+                      <p class="text-[14px]">Comparte tus puntos con tus contactos, para que puedan canjear productos, experiencias, pasajes de avión, estadías en hoteles, y mucho más.</p>
+                    </div>
+                    <a href="./catalogo.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full px-6 min-w-[296px]">
+                      <span>Transferir puntos</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-tab-panel="descargados" role="tabpanel" hidden>
+            <div class="flex flex-col gap-6">
+              <div class="p-8 bg-white w-full lg:w-auto rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                  <h2 class="text-[24px] font-semibold text-[#3C3B3B]">Puntos descargados: 20,800</h2>
+                  <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full min-w-[310px]">
+                    <img src="./img/icon/descarga.svg" alt="">
+                    <span>Estado de cuenta</span>
+                  </button>
+                </div>
+                <div class="flex md:items-center lg:justify-between flex-col lg:flex-row gap-6">
+                  <div class="flex items-center flex-col md:flex-row gap-6 w-full md:w-auto">
+                    <div class="relative w-full md:min-w-[210px] md:max-w-[210px]" data-field data-variant="simple" data-field-initial="active">
+                      <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                        <input type="date" id="fecha-desde" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                        <label for="fecha-desde" data-field-label class="">Desde</label>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-6 w-full md:w-auto">
+                      <div class="relative w-full md:min-w-[210px] md:max-w-[210px]" data-field data-variant="simple" data-field-initial="active">
+                        <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container>
+                          <input type="date" id="fecha-desde" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input>
+                          <label for="fecha-desde" data-field-label class="">Hasta</label>
+                        </div>
+                      </div>
+                      <button class="h-[56px] min-w-[56px] max-w-[56px] rounded-full bg-[#E4022C] flex items-center justify-center">
+                        <img src="./img/icon/search-blanco.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-[#3C3B3B] font-regular">Última actualización: 13/10/2025</p>
+                  </div>
+                </div>
+                <div class="h-[1px] bg-[#E1E1E1] w-full lg:hidden"></div>
+                <div class="border border-[#E1E6EF] rounded-[16px]">
+                  <div class="hidden md:flex items-center h-[56px] md:px-4 bg-[#FFF9FA] border-b border-[#E1E6EF] rounded-t-[16px]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-2 flex items-center gap-1">
+                      <p class="font-semibold">Fecha</p>
+                      <img src="./img/icon/arrow-down-outline-black.svg" alt="">
+                    </div>
+                    <div class="px-2 w-full">
+                      <p class="font-semibold">Evento</p>
+                    </div>
+                    <div class="w-full md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-2 flex items-center gap-1">
+                      <p class="font-semibold">Cantidad de puntos</p>
+                      <img src="./img/icon/filtro-black.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="md:hidden flex items-center h-[56px] bg-[#FFF9FA] border-b border-[#E1E6EF] rounded-t-[16px]">
+                    <div class="w-full px-4 md:px-2">
+                      <p class="font-semibold">Evento</p>
+                    </div>
+                    <div class="px-4 md:px-2 w-full max-w-[88px] min-w-[88px]">
+                      <p class="font-semibold">Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[86px] md:h-[56px] lg:px-4 md:px-2 border-b border-[#E1E6EF]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Ruleta ganadora</p>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Ruleta ganadora</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">500</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[86px] md:h-[56px] lg:px-4 md:px-2 border-b border-[#E1E6EF]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Trivia completada</p>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Trivia completada</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">20</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[86px] md:h-[56px] lg:px-4 md:px-2 border-b border-[#E1E6EF]">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Código validado</p>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Código validado</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">350</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center h-[86px] md:h-[56px] lg:px-4 md:px-2">
+                    <div class="w-full lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <div class="flex-col md:flex-row flex md:items-center md:gap-2 text-[#172948]">
+                        <img class="hidden md:block" src="./img/icon/calendario.svg" alt="">
+                        <p>04/06/2025</p>
+                        <p class="md:hidden">Cumplimiento de meta - Junio</p>
+                      </div>
+                    </div>
+                    <div class="md:px-2 w-full hidden md:block">
+                      <p class="text-[#172948]">Cumplimiento de meta - Junio</p>
+                    </div>
+                    <div class="w-full max-w-[88px] min-w-[88px] md:min-w-[140px] md:max-w-[140px] lg:min-w-[240px] lg:max-w-[240px] px-4 md:px-2">
+                      <p class="text-[#172948]">100</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-end flex-col md:flex-row gap-2 md:gap-6">
+                  <div class="flex items-center gap-2">
+                    <p class="text-[#959595] text-[12px]">Resultados por página:</p>
+                    <div>
+                      <select name="" id="" class="text-[#172948] text-[12px] outline-none">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select>
+                    </div>
+                  </div>
+                  <p class="text-[#172948] text-[12px]">1-1 de 7</p>
+                  <div class="flex items-center">
+                    <button class="w-10 h-10 flex items-center justify-center">
+                      <img src="./img/icon/flecha-iz-roja.svg" alt="">
                     </button>
-                    <button data-micromodal-trigger="modal-edit-address">
-                      <img class="w-[24px] h-[24px]" src="./img/icon/lapiz-rojo.svg" alt="">
-                    </button>
-                    <button data-micromodal-trigger="modal-delete-address">
-                      <img class="w-[24px] h-[24px]" src="./img/icon/eliminar-rojo.svg" alt="">
+                    <button class="w-10 h-10 flex items-center justify-center">
+                      <img src="./img/icon/flecha-de-roja.svg" alt="">
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="border border-[#E1E6EF] rounded-[24px] p-6 flex flex-col gap-4">
-                <div class="flex md:items-center justify-between flex-col md:flex-row gap-6">
-                  <div class="flex flex-col gap-2">
-                    <p class="text-[#3C3B3B] font-semibold text-[18px]">Casa de playa</p>
-                    <p class="text-[#3C3B3B]">Calle Santa Isabel 265 Dpto 202, Quito</p>
-                    <p class="text-[#3C3B3B]">Alexander Ortega Mego - 9 8373648 37</p>
+              <div class="p-8 bg-white w-full lg:w-auto border border-[#E1E1E1] rounded-[24px] flex flex-col gap-6 shadow-[0_0_20px_#00000010]">
+                <div class="flex w-full flex-col gap-6">
+                  <div class="flex items-start justify-between flex-col md:flex-row gap-6">
+                    <div class="flex flex-col gap-4">
+                      <p class="font-semibold">¿Necesitas más puntos?</p>
+                      <p class="text-[14px]">Compra más puntos ahora mismo y aprovecha las ofertas especiales que tenemos para ti.</p>
+                    </div>
+                    <a href="./catalogo.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full px-6 min-w-[296px]">
+                      <span>Comprar puntos</span>
+                    </a>
                   </div>
-                  <div class="flex items-center gap-6">
-                    <button data-micromodal-trigger="modal-view-address">
-                      <img class="w-[24px] h-[24px]" src="./img/icon/ojo-rojo.svg" alt="">
-                    </button>
-                    <button data-micromodal-trigger="modal-edit-address">
-                      <img class="w-[24px] h-[24px]" src="./img/icon/lapiz-rojo.svg" alt="">
-                    </button>
-                    <button data-micromodal-trigger="modal-delete-address">
-                      <img class="w-[24px] h-[24px]" src="./img/icon/eliminar-rojo.svg" alt="">
-                    </button>
+                  <div class="h-[1px] bg-[#E1E1E1] w-full"></div>
+                  <div class="flex items-start justify-between flex-col md:flex-row gap-6">
+                    <div class="flex flex-col gap-4">
+                      <p class="font-semibold">¿Quieres enviarle puntos a alguien?</p>
+                      <p class="text-[14px]">Comparte tus puntos con tus contactos, para que puedan canjear productos, experiencias, pasajes de avión, estadías en hoteles, y mucho más.</p>
+                    </div>
+                    <a href="./catalogo.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full px-6 min-w-[296px]">
+                      <span>Transferir puntos</span>
+                    </a>
                   </div>
                 </div>
-              </div>
               </div>
             </div>
           </div>
@@ -639,6 +960,85 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal-details" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_0_10px_#00000026] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Detalles de canje</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-6 overflow-y-auto max-h-[calc(100dvh-435px)] md:max-h-[calc(100dvh-342px)] p-1">
+            <div class="bg-[#FEE8EA] rounded-[16px] p-4 flex flex-col gap-3">
+              <div class="flex items-start flex-col md:flex-row">
+                <p class="text-[#3C3B3B] w-full font-semibold">N° Pedido</p>
+                <p class="text-[#3C3B3B] w-full font-regular">0123456</p>
+              </div>
+              <div class="flex items-start flex-col md:flex-row">
+                <p class="text-[#3C3B3B] w-full font-semibold">Fecha y hora</p>
+                <p class="text-[#3C3B3B] w-full font-regular">11/08/2025, 11:20 am</p>
+              </div>
+              <div class="flex items-start flex-col md:flex-row">
+                <p class="text-[#3C3B3B] w-full font-semibold">Dirección de entrega</p>
+                <p class="text-[#3C3B3B] w-full font-regular">Calle Santa Isabel 265, Salinas, Ecuador</p>
+              </div>
+              <div class="flex items-start flex-col md:flex-row">
+                <p class="text-[#3C3B3B] w-full font-semibold">Indicaciones</p>
+                <p class="text-[#3C3B3B] w-full font-regular">-</p>
+              </div>
+              <div class="flex items-start flex-col md:flex-row">
+                <p class="text-[#3C3B3B] w-full font-semibold">TOTAL PUNTOS</p>
+                <p class="text-[#3C3B3B] w-full font-semibold">1,820</p>
+              </div>
+            </div>
+            <div class="h-[1px] bg-[#E1E6EF] w-full"></div>
+            <h3 class="text-[#172948] text-[20px] font-semibold">Resumen de canje</h3>
+            <div class="flex flex-col gap-6">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img class="w-[56px] h-[56px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-[#172948] text-[14px]">APPLE</p>
+                    <p class="text-[#172948] font-semibold">Iphone 17 Pro</p>
+                    <p class="text-[#172948]">x 1</p>
+                  </div>
+                </div>
+                <div class="flex flex-col md:text-end">
+                  <p class="text-[#172948] text-[14px] line-through">12,080 Puntos</p>
+                  <p class="text-[#172948] font-semibold">9,080 Puntos</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img class="w-[56px] h-[56px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-[#172948] text-[14px]">APPLE</p>
+                    <p class="text-[#172948] font-semibold">Iphone 17 Pro</p>
+                    <p class="text-[#172948]">x 1</p>
+                  </div>
+                </div>
+                <div class="flex flex-col md:text-end">
+                  <p class="text-[#172948] text-[14px] line-through">12,080 Puntos</p>
+                  <p class="text-[#172948] font-semibold">9,080 Puntos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>Cerrar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

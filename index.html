@@ -9,7 +9,9 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
   <title>Promotick - Puntos</title>
 </head>
@@ -28,7 +30,8 @@
               <img src="./img/logo.svg" alt="The Future Forward">
             </a>
           </div>
-          <div class="fixed top-[80px] left-0 right-0 bg-white z-20 w-full lg:hidden hidden" id="mobile-nav" data-mobile-nav-panel>
+          <div class="fixed top-[80px] left-0 right-0 bg-white z-20 w-full lg:hidden hidden" id="mobile-nav"
+            data-mobile-nav-panel>
             <div class="flex flex-col py-2">
               <div class="flex flex-col gap-3">
                 <div class="px-4 py-2 gap-3 flex flex-col items-start">
@@ -62,7 +65,7 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Transferencia de puntos</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mi meta</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./meta.html">Mi meta</a>
                   </li>
                   <li class="w-full">
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Viajes</a>
@@ -71,13 +74,13 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Capacitaciones</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Quiz & Win</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./trivia.html">Quiz & Win</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Lucky Code</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./codigo.html">Lucky Code</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Spin & Win</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./ruleta.html">Spin & Win</a>
                   </li>
                   <li class="w-full">
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mundial</a>
@@ -99,10 +102,11 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html">Mis datos</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html?tab=direcciones">Mis direcciones</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html?tab=direcciones">Mis
+                      direcciones</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mis favoritos</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./favorito.html">Mis favoritos</a>
                   </li>
                 </ul>
               </div>
@@ -141,24 +145,31 @@
                 <img class="min-w-[24px] h-[24px]" src="./img/icon/search-2.svg" alt="" data-search-icon="open">
                 <img class="min-w-[24px] h-[24px] hidden" src="./img/icon/x.svg" alt="" data-search-icon="close">
               </button>
-              <div class="px-6 py-4 fixed top-0 left-0 right-0 bg-white z-10 top-[80px] w-full border-b border-[#E1E1E1] hidden" id="search-panel" data-search-panel>
-                <div class="border border-[#E1E6EF] h-[56px] w-full flex items-center gap-4 px-3 rounded-[16px] bg-white hover:border-[#172948] transition-all duration-200 max-w-[1170px] mx-auto">
+              <div
+                class="px-6 py-4 fixed top-0 left-0 right-0 bg-white z-10 top-[80px] w-full border-b border-[#E1E1E1] hidden"
+                id="search-panel" data-search-panel>
+                <div
+                  class="border border-[#E1E6EF] h-[56px] w-full flex items-center gap-4 px-3 rounded-[16px] bg-white hover:border-[#172948] transition-all duration-200 max-w-[1170px] mx-auto">
                   <img src="./img/icon/search.svg" alt="">
-                  <input class="w-full border-none outline-none" type="text" placeholder="¿Qué estás buscando?" data-search-input/>
+                  <input class="w-full border-none outline-none" type="text" placeholder="¿Qué estás buscando?"
+                    data-search-input />
                 </div>
               </div>
             </div>
-            <button class="hidden lg:block">
+            <a href="./favorito.html" class="hidden lg:block cursor-pointer">
               <img class="min-w-[24px] h-[24px]" src="./img/icon/heart.svg" alt="">
-            </button>
+            </a>
             <div class="relative h-[24px]" data-dropdown>
               <button data-dropdown-trigger>
                 <img class="min-w-[24px] h-[24px]" src="./img/icon/carrito.svg" alt="">
-                <span class="flex items-center justify-center bg-[#E4022C] w-[21px] h-[21px] rounded-full text-white text-[10px] font-semibold absolute top-[-10px] right-[-10px]">
+                <span
+                  class="flex items-center justify-center bg-[#E4022C] w-[21px] h-[21px] rounded-full text-white text-[10px] font-semibold absolute top-[-10px] right-[-10px]">
                   <span>2</span>
                 </span>
               </button>
-              <div class="absolute top-full right-0 bg-white flex flex-col gap-4 py-[32px] px-[24px] rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 min-w-[328px] md:min-w-[360px]" data-dropdown-menu>
+              <div
+                class="absolute top-full right-0 bg-white flex flex-col gap-4 py-[32px] px-[24px] rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 min-w-[328px] md:min-w-[360px]"
+                data-dropdown-menu>
                 <div class="flex items-center gap-3">
                   <img class="min-w-[24px] h-[24px]" src="./img/icon/carrito.svg" alt="">
                   <p class="text-[#3C3B3B] text-[24px] font-semibold">Mi carrito</p>
@@ -176,7 +187,8 @@
                       </div>
                     </div>
                     <div class="flex items-center gap-2">
-                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter data-min-value="1" data-max-value="10">
+                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10"
+                        data-quantity-counter data-min-value="1" data-max-value="10">
                         <button data-quantity-minus>
                           <img src="./img/icon/remove.svg" alt="">
                         </button>
@@ -202,7 +214,8 @@
                       </div>
                     </div>
                     <div class="flex items-center gap-2">
-                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter data-min-value="1" data-max-value="10">
+                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10"
+                        data-quantity-counter data-min-value="1" data-max-value="10">
                         <button data-quantity-minus>
                           <img src="./img/icon/remove.svg" alt="">
                         </button>
@@ -228,7 +241,8 @@
                       </div>
                     </div>
                     <div class="flex items-center gap-2">
-                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter data-min-value="1" data-max-value="10">
+                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10"
+                        data-quantity-counter data-min-value="1" data-max-value="10">
                         <button data-quantity-minus>
                           <img src="./img/icon/remove.svg" alt="">
                         </button>
@@ -246,10 +260,12 @@
                 <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
                 <p class="text-[#3C3B3B] font-semibold">Total: 1000 puntos</p>
                 <div class="flex flex-col gap-4">
-                  <a href="./carrito.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full">
+                  <a href="./carrito.html"
+                    class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full">
                     <span>Ver mi carrito</span>
                   </a>
-                  <a href="./canjea.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full">
+                  <a href="./canjea.html"
+                    class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full">
                     <span>Canjear ahora</span>
                   </a>
                 </div>
@@ -257,9 +273,11 @@
             </div>
             <div class="relative h-[24px] hidden lg:block" data-dropdown>
               <button data-dropdown-trigger>
-              <img class="min-w-[24px] h-[24px]" src="./img/icon/user.svg" alt="">
-            </button>
-              <div class="absolute top-full right-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 min-w-[280px]" data-dropdown-menu>
+                <img class="min-w-[24px] h-[24px]" src="./img/icon/user.svg" alt="">
+              </button>
+              <div
+                class="absolute top-full right-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 min-w-[280px]"
+                data-dropdown-menu>
                 <div class="px-4 py-2 gap-3 flex flex-col items-start">
                   <p class="text-[24px] font-semibold">Eduardo Naranjo</p>
                   <div class="flex items-center gap-[10px] bg-[#E6F7FF] h-[32px] px-2 rounded-full min-w-[159px]">
@@ -277,13 +295,15 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html">Mis datos</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html?tab=direcciones">Mis direcciones</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html?tab=direcciones">Mis
+                      direcciones</a>
                   </li>
                 </ul>
                 <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
                 <ul class="flex flex-col">
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap flex items-center gap-3" href="./login.html">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap flex items-center gap-3"
+                      href="./login.html">
                       <img src="./img/icon/cerrar-sesion.svg" alt="">
                       <span>Cerrar sesión</span>
                     </a>
@@ -310,9 +330,12 @@
           <li class="relative" data-dropdown>
             <span class="flex items-center gap-2 cursor-pointer" data-dropdown-trigger>
               <span class="text-white">Puntos</span>
-              <img src="./img/icon/arrow-drop-down.svg" alt="" data-dropdown-arrow class="transition-transform duration-200">
+              <img src="./img/icon/arrow-drop-down.svg" alt="" data-dropdown-arrow
+                class="transition-transform duration-200">
             </span>
-            <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2" data-dropdown-menu>
+            <ul
+              class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2"
+              data-dropdown-menu>
               <li class="w-full">
                 <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./puntos-historial.html">Historial</a>
               </li>
@@ -325,7 +348,7 @@
             </ul>
           </li>
           <li>
-            <a class="text-white" href="">Mi meta</a>
+            <a class="text-white" href="./meta.html">Mi meta</a>
           </li>
           <li>
             <a class="text-white" href="">Viajes</a>
@@ -334,13 +357,13 @@
             <a class="text-white" href="">Capacitaciones</a>
           </li>
           <li>
-            <a class="text-white" href="">Quiz & Win</a>
+            <a class="text-white" href="./trivia.html">Quiz & Win</a>
           </li>
           <li>
-            <a class="text-white" href="">Lucky Code</a>
+            <a class="text-white" href="./codigo.html">Lucky Code</a>
           </li>
           <li>
-            <a class="text-white" href="">Spin & Win</a>
+            <a class="text-white" href="./ruleta.html">Spin & Win</a>
           </li>
           <li>
             <a class="text-white" href="">Mundial</a>
@@ -371,18 +394,18 @@
             <img class="w-full h-[400px] object-cover rounded-[24px]" src="./img/banner.jpg" alt="Banner 3">
           </div>
         </div>
-        
-        <div class="swiper-button-prev-banner absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all">
+        <div
+          class="swiper-button-prev-banner absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all">
           <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
           </svg>
         </div>
-        <div class="swiper-button-next-banner absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all">
+        <div
+          class="swiper-button-next-banner absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all">
           <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </div>
-
         <div class="swiper-pagination-banner absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10"></div>
       </div>
     </div>
@@ -400,46 +423,56 @@
         <!-- Desktop: Una fila de 5 -->
         <div class="hidden lg:flex items-center justify-center gap-8">
           <div class="flex flex-col gap-2 items-center">
-            <div class="w-[164px] h-[164px] rounded-full border-[4px] border-[#E4022C] flex items-center justify-center">
+            <div
+              class="w-[164px] h-[164px] rounded-full border-[4px] border-[#E4022C] flex items-center justify-center">
               <img class="w-[144px] h-[144px] rounded-full" src="./img/user.jpg" alt="">
             </div>
-            <div class="bg-[#E4022C] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
+            <div
+              class="bg-[#E4022C] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
               <span>1</span>
             </div>
             <span class="text-[#3C3B3B] font-semibold">Javier Ramos</span>
           </div>
           <div class="flex flex-col gap-2 items-center">
-            <div class="w-[164px] h-[164px] rounded-full border-[4px] border-[#FF5A66] flex items-center justify-center">
+            <div
+              class="w-[164px] h-[164px] rounded-full border-[4px] border-[#FF5A66] flex items-center justify-center">
               <img class="w-[144px] h-[144px] rounded-full" src="./img/user.jpg" alt="">
             </div>
-            <div class="bg-[#FF5A66] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
+            <div
+              class="bg-[#FF5A66] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
               <span>2</span>
             </div>
             <span class="text-[#3C3B3B] font-semibold">Marco Palacios</span>
           </div>
           <div class="flex flex-col gap-2 items-center">
-            <div class="w-[164px] h-[164px] rounded-full border-[4px] border-[#FF7A85] flex items-center justify-center">
+            <div
+              class="w-[164px] h-[164px] rounded-full border-[4px] border-[#FF7A85] flex items-center justify-center">
               <img class="w-[144px] h-[144px] rounded-full" src="./img/user.jpg" alt="">
             </div>
-            <div class="bg-[#FF7A85] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
+            <div
+              class="bg-[#FF7A85] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
               <span>3</span>
             </div>
             <span class="text-[#3C3B3B] font-semibold">Norali Sánchez</span>
           </div>
           <div class="flex flex-col gap-2 items-center">
-            <div class="w-[164px] h-[164px] rounded-full border-[4px] border-[#FF9FA9] flex items-center justify-center">
+            <div
+              class="w-[164px] h-[164px] rounded-full border-[4px] border-[#FF9FA9] flex items-center justify-center">
               <img class="w-[144px] h-[144px] rounded-full" src="./img/user.jpg" alt="">
             </div>
-            <div class="bg-[#FF9FA9] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
+            <div
+              class="bg-[#FF9FA9] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
               <span>4</span>
             </div>
             <span class="text-[#3C3B3B] font-semibold">Norali Sánchez</span>
           </div>
           <div class="flex flex-col gap-2 items-center">
-            <div class="w-[164px] h-[164px] rounded-full border-[4px] border-[#FFC1C6] flex items-center justify-center">
+            <div
+              class="w-[164px] h-[164px] rounded-full border-[4px] border-[#FFC1C6] flex items-center justify-center">
               <img class="w-[144px] h-[144px] rounded-full" src="./img/user.jpg" alt="">
             </div>
-            <div class="bg-[#FFC1C6] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
+            <div
+              class="bg-[#FFC1C6] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
               <span>5</span>
             </div>
             <span class="text-[#3C3B3B] font-semibold">Norali Sánchez</span>
@@ -451,28 +484,34 @@
           <!-- Primera fila: 3 elementos -->
           <div class="flex items-center justify-center gap-8">
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#E4022C] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#E4022C] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#E4022C] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#E4022C] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
                 <span>1</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Javier Ramos</span>
             </div>
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF5A66] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF5A66] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#FF5A66] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#FF5A66] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
                 <span>2</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Marco Palacios</span>
             </div>
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF7A85] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF7A85] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#FF7A85] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#FF7A85] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
                 <span>3</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Norali Sánchez</span>
@@ -481,19 +520,23 @@
           <!-- Segunda fila: 2 elementos centrados -->
           <div class="flex items-center justify-center gap-8">
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF9FA9] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF9FA9] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#FF9FA9] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#FF9FA9] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
                 <span>4</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Norali Sánchez</span>
             </div>
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FFC1C6] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FFC1C6] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#FFC1C6] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#FFC1C6] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
                 <span>5</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Norali Sánchez</span>
@@ -506,19 +549,23 @@
           <!-- Primera fila: 2 elementos -->
           <div class="flex items-center justify-center gap-8">
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#E4022C] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#E4022C] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#E4022C] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#E4022C] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
                 <span>1</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Javier Ramos</span>
             </div>
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF5A66] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF5A66] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#FF5A66] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#FF5A66] rounded-full w-[40px] h-[40px] flex items-center justify-center text-white font-semibold text-[18px] mt-[-30px]">
                 <span>2</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Marco Palacios</span>
@@ -527,19 +574,23 @@
           <!-- Segunda fila: 2 elementos -->
           <div class="flex items-center justify-center gap-8">
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF7A85] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF7A85] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#FF7A85] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#FF7A85] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
                 <span>3</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Norali Sánchez</span>
             </div>
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF9FA9] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FF9FA9] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#FF9FA9] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#FF9FA9] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
                 <span>4</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Norali Sánchez</span>
@@ -548,10 +599,12 @@
           <!-- Tercera fila: 1 elemento -->
           <div class="flex items-center justify-center">
             <div class="flex flex-col gap-2 items-center">
-              <div class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FFC1C6] flex items-center justify-center">
+              <div
+                class="w-[128px] h-[128px] rounded-full border-[4px] border-[#FFC1C6] flex items-center justify-center">
                 <img class="w-[112px] h-[112px] rounded-full" src="./img/user.jpg" alt="">
               </div>
-              <div class="bg-[#FFC1C6] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
+              <div
+                class="bg-[#FFC1C6] rounded-full w-[40px] h-[40px] flex items-center justify-center text-black font-semibold text-[18px] mt-[-30px]">
                 <span>5</span>
               </div>
               <span class="text-[#3C3B3B] font-semibold">Norali Sánchez</span>
@@ -568,7 +621,8 @@
       <p class="text-[#1E1E1E]">Encuentra rápidamente lo que buscas en nuestro catálogo</p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 place-items-center">
-      <a href="./catalogo-nuevo.html" class="w-full bg-[#F3FBFC] p-4 flex items-center flex-col justify-center rounded-[24px] gap-2">
+      <a href="./catalogo-nuevo.html"
+        class="w-full bg-[#F3FBFC] p-4 flex items-center flex-col justify-center rounded-[24px] gap-2">
         <img src="./img/icon/nuevo.svg" alt="">
         <div class="flex items-center justify-center flex-col gap-1 text-center">
           <p class="text-[18px] font-semibold">Nuevos</p>
@@ -622,22 +676,26 @@
             <img class="w-[262px] relative" src="./img/relampago.png" alt="">
             <div class="flex items-center gap-1">
               <span class="text-white">Acaba en:</span>
-              <div class="bg-white rounded-[4px] w-[36px] h-[42px] flex items-center justify-center flex-col text-center">
+              <div
+                class="bg-white rounded-[4px] w-[36px] h-[42px] flex items-center justify-center flex-col text-center">
                 <span class="text-[#001430] font-bold text-[20px] leading-none">01</span>
                 <span class="text-[#001430] text-[12px] leading-none">Días</span>
               </div>
               <span class="text-white">:</span>
-              <div class="bg-white rounded-[4px] w-[36px] h-[42px] flex items-center justify-center flex-col text-center">
+              <div
+                class="bg-white rounded-[4px] w-[36px] h-[42px] flex items-center justify-center flex-col text-center">
                 <span class="text-[#001430] font-bold text-[20px] leading-none">05</span>
                 <span class="text-[#001430] text-[12px] leading-none">Hrs</span>
               </div>
               <span class="text-white">:</span>
-              <div class="bg-white rounded-[4px] w-[36px] h-[42px] flex items-center justify-center flex-col text-center">
+              <div
+                class="bg-white rounded-[4px] w-[36px] h-[42px] flex items-center justify-center flex-col text-center">
                 <span class="text-[#001430] font-bold text-[20px] leading-none">32</span>
                 <span class="text-[#001430] text-[12px] leading-none">Min</span>
               </div>
               <span class="text-white">:</span>
-              <div class="bg-white rounded-[4px] w-[36px] h-[42px] flex items-center justify-center flex-col text-center">
+              <div
+                class="bg-white rounded-[4px] w-[36px] h-[42px] flex items-center justify-center flex-col text-center">
                 <span class="text-[#001430] font-bold text-[20px] leading-none">10</span>
                 <span class="text-[#001430] text-[12px] leading-none">Seg</span>
               </div>
@@ -654,18 +712,21 @@
                   <a class="block" href="./producto.html">
                     <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                       <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                        <div>
-                          <img class="h-[270px] rounded-[24px] object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
-                          <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                          <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                            <img src="./img/icon/flash.svg" alt="">
-                            <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                          </div>
+                        <div class="w-full">
+                          <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                          <span
+                            class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                         </div>
+                        <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                        <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                       </div>
                       <div class="p-4 flex flex-col gap-4">
                         <div class="flex flex-col gap-3">
                           <div class="flex flex-col gap-2">
+                            <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                              <img src="./img/icon/flash.svg" alt="">
+                              <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                            </div>
                             <p class="text-[#3C3B3B]">SAMSUNG</p>
                             <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                           </div>
@@ -675,12 +736,14 @@
                           </div>
                         </div>
                         <div class="flex items-center gap-3">
-                          <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                          <button
+                            class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                             <img src="./img/icon/carrito.svg" alt="">
                             <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                           </button>
-                          <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full" data-heart-toggle data-heart-active-src="./img/icon/heart-black.svg" data-heart-inactive-src="./img/icon/heart.svg">
-                            <img data-heart-icon src="./img/icon/heart.svg" alt="">
+                          <button
+                            class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                            <img src="./img/icon/heart.svg" alt="">
                           </button>
                         </div>
                       </div>
@@ -688,40 +751,45 @@
                   </a>
                 </div>
               </div>
-              
+
               <!-- Producto 2 -->
               <div class="swiper-slide">
                 <div class="w-[220px]">
                   <a class="block" href="./producto.html">
                     <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                       <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                        <div>
-                          <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                          <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                          <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                            <img src="./img/icon/flash.svg" alt="">
-                            <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                          </div>
+                        <div class="w-full">
+                          <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                          <span
+                            class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                         </div>
+                        <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                        <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                       </div>
                       <div class="p-4 flex flex-col gap-4">
                         <div class="flex flex-col gap-3">
                           <div class="flex flex-col gap-2">
-                            <p class="text-[#3C3B3B]">APPLE</p>
-                            <p class="text-[#3C3B3B]">iPhone 15 Pro Max</p>
+                            <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                              <img src="./img/icon/flash.svg" alt="">
+                              <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                            </div>
+                            <p class="text-[#3C3B3B]">SAMSUNG</p>
+                            <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                           </div>
                           <div class="flex flex-col">
-                            <p class="text-[#E4022C] font-semibold">800 Puntos</p>
-                            <p class="text-[#3C3B3B] text-[14px] line-through">1000 Puntos</p>
+                            <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                            <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                           </div>
                         </div>
                         <div class="flex items-center gap-3">
-                          <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                          <button
+                            class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                             <img src="./img/icon/carrito.svg" alt="">
                             <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                           </button>
-                          <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full" data-heart-toggle data-heart-active-src="./img/icon/heart-black.svg" data-heart-inactive-src="./img/icon/heart.svg">
-                            <img data-heart-icon src="./img/icon/heart.svg" alt="">
+                          <button
+                            class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                            <img src="./img/icon/heart.svg" alt="">
                           </button>
                         </div>
                       </div>
@@ -729,40 +797,45 @@
                   </a>
                 </div>
               </div>
-              
+
               <!-- Producto 3 -->
               <div class="swiper-slide">
                 <div class="w-[220px]">
                   <a class="block" href="./producto.html">
                     <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                       <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                        <div>
-                          <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                          <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                          <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                            <img src="./img/icon/flash.svg" alt="">
-                            <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                          </div>
+                        <div class="w-full">
+                          <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                          <span
+                            class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                         </div>
+                        <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                        <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                       </div>
                       <div class="p-4 flex flex-col gap-4">
                         <div class="flex flex-col gap-3">
                           <div class="flex flex-col gap-2">
-                            <p class="text-[#3C3B3B]">XIAOMI</p>
-                            <p class="text-[#3C3B3B]">Redmi Note 13 Pro</p>
+                            <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                              <img src="./img/icon/flash.svg" alt="">
+                              <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                            </div>
+                            <p class="text-[#3C3B3B]">SAMSUNG</p>
+                            <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                           </div>
                           <div class="flex flex-col">
-                            <p class="text-[#E4022C] font-semibold">300 Puntos</p>
-                            <p class="text-[#3C3B3B] text-[14px] line-through">400 Puntos</p>
+                            <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                            <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                           </div>
                         </div>
                         <div class="flex items-center gap-3">
-                          <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                          <button
+                            class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                             <img src="./img/icon/carrito.svg" alt="">
                             <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                           </button>
-                          <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full" data-heart-toggle data-heart-active-src="./img/icon/heart-black.svg" data-heart-inactive-src="./img/icon/heart.svg">
-                            <img data-heart-icon src="./img/icon/heart.svg" alt="">
+                          <button
+                            class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                            <img src="./img/icon/heart.svg" alt="">
                           </button>
                         </div>
                       </div>
@@ -770,40 +843,45 @@
                   </a>
                 </div>
               </div>
-              
+
               <!-- Producto 4 -->
               <div class="swiper-slide">
                 <div class="w-[220px]">
                   <a class="block" href="./producto.html">
                     <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                       <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                        <div>
-                          <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                          <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                          <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                            <img src="./img/icon/flash.svg" alt="">
-                            <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                          </div>
+                        <div class="w-full">
+                          <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                          <span
+                            class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                         </div>
+                        <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                        <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                       </div>
                       <div class="p-4 flex flex-col gap-4">
                         <div class="flex flex-col gap-3">
                           <div class="flex flex-col gap-2">
-                            <p class="text-[#3C3B3B]">HUAWEI</p>
-                            <p class="text-[#3C3B3B]">P60 Pro</p>
+                            <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                              <img src="./img/icon/flash.svg" alt="">
+                              <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                            </div>
+                            <p class="text-[#3C3B3B]">SAMSUNG</p>
+                            <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                           </div>
                           <div class="flex flex-col">
-                            <p class="text-[#E4022C] font-semibold">600 Puntos</p>
-                            <p class="text-[#3C3B3B] text-[14px] line-through">750 Puntos</p>
+                            <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                            <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                           </div>
                         </div>
                         <div class="flex items-center gap-3">
-                          <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                          <button
+                            class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                             <img src="./img/icon/carrito.svg" alt="">
                             <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                           </button>
-                          <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full" data-heart-toggle data-heart-active-src="./img/icon/heart-black.svg" data-heart-inactive-src="./img/icon/heart.svg">
-                            <img data-heart-icon src="./img/icon/heart.svg" alt="">
+                          <button
+                            class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                            <img src="./img/icon/heart.svg" alt="">
                           </button>
                         </div>
                       </div>
@@ -811,40 +889,45 @@
                   </a>
                 </div>
               </div>
-              
+
               <!-- Producto 5 -->
               <div class="swiper-slide">
                 <div class="w-[220px]">
                   <a class="block" href="./producto.html">
                     <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                       <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                        <div>
-                          <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                          <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                          <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                            <img src="./img/icon/flash.svg" alt="">
-                            <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                          </div>
+                        <div class="w-full">
+                          <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                          <span
+                            class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                         </div>
+                        <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                        <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                       </div>
                       <div class="p-4 flex flex-col gap-4">
                         <div class="flex flex-col gap-3">
                           <div class="flex flex-col gap-2">
-                            <p class="text-[#3C3B3B]">ONEPLUS</p>
-                            <p class="text-[#3C3B3B]">OnePlus 12</p>
+                            <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                              <img src="./img/icon/flash.svg" alt="">
+                              <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                            </div>
+                            <p class="text-[#3C3B3B]">SAMSUNG</p>
+                            <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                           </div>
                           <div class="flex flex-col">
-                            <p class="text-[#E4022C] font-semibold">700 Puntos</p>
-                            <p class="text-[#3C3B3B] text-[14px] line-through">850 Puntos</p>
+                            <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                            <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                           </div>
                         </div>
                         <div class="flex items-center gap-3">
-                          <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                          <button
+                            class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                             <img src="./img/icon/carrito.svg" alt="">
                             <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                           </button>
-                          <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full" data-heart-toggle data-heart-active-src="./img/icon/heart-black.svg" data-heart-inactive-src="./img/icon/heart.svg">
-                            <img data-heart-icon src="./img/icon/heart.svg" alt="">
+                          <button
+                            class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                            <img src="./img/icon/heart.svg" alt="">
                           </button>
                         </div>
                       </div>
@@ -852,40 +935,45 @@
                   </a>
                 </div>
               </div>
-              
+
               <!-- Producto 6 -->
               <div class="swiper-slide">
                 <div class="w-[220px]">
                   <a class="block" href="./producto.html">
                     <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                       <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                        <div>
-                          <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                          <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                          <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                            <img src="./img/icon/flash.svg" alt="">
-                            <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                          </div>
+                        <div class="w-full">
+                          <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                          <span
+                            class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                         </div>
+                        <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                        <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                       </div>
                       <div class="p-4 flex flex-col gap-4">
                         <div class="flex flex-col gap-3">
                           <div class="flex flex-col gap-2">
-                            <p class="text-[#3C3B3B]">GOOGLE</p>
-                            <p class="text-[#3C3B3B]">Pixel 8 Pro</p>
+                            <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                              <img src="./img/icon/flash.svg" alt="">
+                              <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                            </div>
+                            <p class="text-[#3C3B3B]">SAMSUNG</p>
+                            <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                           </div>
                           <div class="flex flex-col">
-                            <p class="text-[#E4022C] font-semibold">900 Puntos</p>
-                            <p class="text-[#3C3B3B] text-[14px] line-through">1100 Puntos</p>
+                            <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                            <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                           </div>
                         </div>
                         <div class="flex items-center gap-3">
-                          <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                          <button
+                            class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                             <img src="./img/icon/carrito.svg" alt="">
                             <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                           </button>
-                          <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full" data-heart-toggle data-heart-active-src="./img/icon/heart-black.svg" data-heart-inactive-src="./img/icon/heart.svg">
-                            <img data-heart-icon src="./img/icon/heart.svg" alt="">
+                          <button
+                            class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                            <img src="./img/icon/heart.svg" alt="">
                           </button>
                         </div>
                       </div>
@@ -894,14 +982,16 @@
                 </div>
               </div>
             </div>
-            
+
             <!-- Navegación -->
-            <div class="swiper-button-prev-ofertas absolute left-2 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center hover:bg-black/40 transition-all">
+            <div
+              class="swiper-button-prev-ofertas absolute left-2 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center hover:bg-black/40 transition-all">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
               </svg>
             </div>
-            <div class="swiper-button-next-ofertas absolute right-2 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center hover:bg-black/40 transition-all">
+            <div
+              class="swiper-button-next-ofertas absolute right-2 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center hover:bg-black/40 transition-all">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
               </svg>
@@ -917,17 +1007,19 @@
       <div class="flex items-center justify-between">
         <h2 class="text-[#1E1E1E] text-[24px] font-semibold">Más destacados</h2>
         <div class="flex items-center gap-2">
-          <button class="swiper-button-prev-destacados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
+          <button
+            class="swiper-button-prev-destacados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
-          <button class="swiper-button-next-destacados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
+          <button
+            class="swiper-button-next-destacados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
-      </div>
+        </div>
       </div>
       <!-- Swiper -->
       <div class="swiper swiper-destacados p-2">
@@ -936,18 +1028,21 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span
+                      class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
                       <p class="text-[#3C3B3B]">SAMSUNG</p>
                       <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
@@ -957,11 +1052,13 @@
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
-                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                    <button
+                      class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                       <img src="./img/icon/carrito.svg" alt="">
                       <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                     </button>
-                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                    <button
+                      class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
                   </div>
@@ -973,33 +1070,37 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <span class="bg-[#389E0D] text-white rounded-full h-[64px] w-[64px] flex items-center justify-center absolute top-4 right-4">Oferta</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span
+                      class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">APPLE</p>
-                      <p class="text-[#3C3B3B]">iPhone 15 Pro Max</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">800 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">1000 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
-                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                    <button
+                      class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                       <img src="./img/icon/carrito.svg" alt="">
                       <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                     </button>
-                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                    <button
+                      class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
                   </div>
@@ -1011,33 +1112,37 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <span class="bg-[#389E0D] text-white rounded-full h-[64px] w-[64px] flex items-center justify-center absolute top-4 right-4">Oferta</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span
+                      class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">XIAOMI</p>
-                      <p class="text-[#3C3B3B]">Redmi Note 13 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">300 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">400 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
-                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                    <button
+                      class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                       <img src="./img/icon/carrito.svg" alt="">
                       <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                     </button>
-                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                    <button
+                      class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
                   </div>
@@ -1049,32 +1154,37 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span
+                      class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">HUAWEI</p>
-                      <p class="text-[#3C3B3B]">P60 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">600 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">750 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
-                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                    <button
+                      class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                       <img src="./img/icon/carrito.svg" alt="">
                       <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                     </button>
-                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                    <button
+                      class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
                   </div>
@@ -1086,32 +1196,37 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span
+                      class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">ONEPLUS</p>
-                      <p class="text-[#3C3B3B]">OnePlus 12</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">700 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">850 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
-                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                    <button
+                      class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                       <img src="./img/icon/carrito.svg" alt="">
                       <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                     </button>
-                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                    <button
+                      class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
                   </div>
@@ -1123,32 +1238,37 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span
+                      class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">GOOGLE</p>
-                      <p class="text-[#3C3B3B]">Pixel 8 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">900 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">1100 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
-                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                    <button
+                      class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                       <img src="./img/icon/carrito.svg" alt="">
                       <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                     </button>
-                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                    <button
+                      class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
                   </div>
@@ -1160,32 +1280,37 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span
+                      class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">MOTOROLA</p>
-                      <p class="text-[#3C3B3B]">Edge 50 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">400 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">500 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
-                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                    <button
+                      class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                       <img src="./img/icon/carrito.svg" alt="">
                       <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                     </button>
-                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                    <button
+                      class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
                   </div>
@@ -1197,32 +1322,37 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span
+                      class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">REALME</p>
-                      <p class="text-[#3C3B3B]">GT 6</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">350 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">450 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
-                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                    <button
+                      class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
                       <img src="./img/icon/carrito.svg" alt="">
                       <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
                     </button>
-                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                    <button
+                      class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
                   </div>
@@ -1240,12 +1370,14 @@
       <div class="flex items-center justify-between">
         <h2 class="text-[#1E1E1E] text-[24px] font-semibold">Recomendados para ti</h2>
         <div class="flex items-center gap-2">
-          <button class="swiper-button-prev-recomendados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
+          <button
+            class="swiper-button-prev-recomendados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
-          <button class="swiper-button-next-recomendados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
+          <button
+            class="swiper-button-next-recomendados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
@@ -1259,13 +1391,20 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
                       <p class="text-[#3C3B3B]">SAMSUNG</p>
                       <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
@@ -1276,9 +1415,9 @@
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1291,26 +1430,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">APPLE</p>
-                      <p class="text-[#3C3B3B]">iPhone 15 Pro Max</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">800 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">1000 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1323,26 +1469,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">XIAOMI</p>
-                      <p class="text-[#3C3B3B]">Redmi Note 13 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">300 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">400 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1355,26 +1508,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">HUAWEI</p>
-                      <p class="text-[#3C3B3B]">P60 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">600 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">750 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1387,26 +1547,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">ONEPLUS</p>
-                      <p class="text-[#3C3B3B]">OnePlus 12</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">700 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">850 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1419,26 +1586,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">GOOGLE</p>
-                      <p class="text-[#3C3B3B]">Pixel 8 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">900 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">1100 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1451,26 +1625,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">MOTOROLA</p>
-                      <p class="text-[#3C3B3B]">Edge 50 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">400 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">500 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1483,26 +1664,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">REALME</p>
-                      <p class="text-[#3C3B3B]">GT 6</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">350 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">450 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1521,12 +1709,14 @@
       <div class="flex items-center justify-between">
         <h2 class="text-[#1E1E1E] text-[24px] font-semibold">Lo más buscado</h2>
         <div class="flex items-center gap-2">
-          <button class="swiper-button-prev-buscados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
+          <button
+            class="swiper-button-prev-buscados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
-          <button class="swiper-button-next-buscados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
+          <button
+            class="swiper-button-next-buscados flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#E4022C] hover:bg-[#C7002A] transition-colors">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
@@ -1539,69 +1729,34 @@
           <div class="swiper-slide">
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
-              <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                <div>
-                  <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
-                  <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                    <img src="./img/icon/flash.svg" alt="">
-                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                  </div>
-                </div>
-              </div>
-              <div class="p-4 flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <div class="flex flex-col gap-2">
-                    <p class="text-[#3C3B3B]">SAMSUNG</p>
-                    <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
-                  </div>
-                  <div class="flex flex-col">
-                    <p class="text-[#E4022C] font-semibold">500 Puntos</p>
-                    <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
-                  </div>
-                </div>
-                <div class="flex items-center gap-3">
-                  <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                    <img src="./img/icon/carrito.svg" alt="">
-                    <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                  </button>
-                  <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
-                    <img src="./img/icon/heart.svg" alt="">
-                  </button>
-                </div>
-              </div>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a class="block" href="./producto.html">
-              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                     <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">APPLE</p>
-                      <p class="text-[#3C3B3B]">iPhone 15 Pro Max</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">800 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">1000 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1614,31 +1769,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                     <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">XIAOMI</p>
-                      <p class="text-[#3C3B3B]">Redmi Note 13 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">300 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">400 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1651,31 +1808,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                     <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">HUAWEI</p>
-                      <p class="text-[#3C3B3B]">P60 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">600 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">750 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1688,31 +1847,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                     <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">ONEPLUS</p>
-                      <p class="text-[#3C3B3B]">OnePlus 12</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">700 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">850 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1725,31 +1886,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                     <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">GOOGLE</p>
-                      <p class="text-[#3C3B3B]">Pixel 8 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">900 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">1100 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1762,31 +1925,33 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                     <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">MOTOROLA</p>
-                      <p class="text-[#3C3B3B]">Edge 50 Pro</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">400 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">500 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
-                    </button>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1799,31 +1964,72 @@
             <a class="block" href="./producto.html">
               <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
                 <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
-                  <div>
-                    <img class="h-[270px] rounded-[24px] object-cover" src="./img/phone.jpg" alt="">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                     <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                    <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                      <img src="./img/icon/flash.svg" alt="">
-                      <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                    </div>
                   </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
                 </div>
                 <div class="p-4 flex flex-col gap-4">
                   <div class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2">
-                      <p class="text-[#3C3B3B]">REALME</p>
-                      <p class="text-[#3C3B3B]">GT 6</p>
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                     </div>
                     <div class="flex flex-col">
-                      <p class="text-[#E4022C] font-semibold">350 Puntos</p>
-                      <p class="text-[#3C3B3B] text-[14px] line-through">450 Puntos</p>
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3">
                     <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
-                      <img src="./img/icon/carrito.svg" alt="">
-                      <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
+                    <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
+                      <img src="./img/icon/heart.svg" alt="">
                     </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="block" href="./producto.html">
+              <div class="bg-white rounded-[24px] shadow-[0_0_10px_#00000026]">
+                <div class="w-full h-[270px] rounded-[24px] flex items-center justify-center relative">
+                  <div class="w-full">
+                    <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
+                    <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
+                  </div>
+                  <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+                  <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
+                </div>
+                <div class="p-4 flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-2">
+                      <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                        <img src="./img/icon/flash.svg" alt="">
+                        <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                      </div>
+                      <p class="text-[#3C3B3B]">SAMSUNG</p>
+                      <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-[#E4022C] font-semibold">500 Puntos</p>
+                      <p class="text-[#3C3B3B] text-[14px] line-through">600 Puntos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button class="flex items-center justify-center gap-2 border border-[#E1E6EF] h-[40px] w-full rounded-full">
+                        <img src="./img/icon/carrito.svg" alt="">
+                        <span class="text-[#3C3B3B] text-[14px]">Agregar</span>
+                      </button>
                     <button class="flex items-center justify-center border border-[#E1E6EF] min-w-[40px] h-[40px] rounded-full">
                       <img src="./img/icon/heart.svg" alt="">
                     </button>
@@ -1853,7 +2059,8 @@
               <p class="text-[#1E1E1E] text-[18px] font-semibold">Catálogo de Productos</p>
               <p class="text-[#1E1E1E]">Explora cientos de productos y experiencias para canje</p>
             </div>
-            <a class="flex items-center justify-center bg-[#E4022C] text-white rounded-full h-[40px] px-4" href="catalogo.html">
+            <a class="flex items-center justify-center bg-[#E4022C] text-white rounded-full h-[40px] px-4"
+              href="catalogo.html">
               <span>Ver catálogo completo</span>
             </a>
           </div>
@@ -1866,7 +2073,8 @@
               <p class="text-[#1E1E1E] text-[18px] font-semibold">Contáctanos</p>
               <p class="text-[#1E1E1E]">¿Tienes dudas sobre tus puntos o necesitas ayuda?</p>
             </div>
-            <a class="flex items-center justify-center border border-[#E1E6EF] text-[#3C3B3B] rounded-full h-[40px] px-4" href="">
+            <a class="flex items-center justify-center border border-[#E1E6EF] text-[#3C3B3B] rounded-full h-[40px] px-4"
+              href="">
               <span>Obtener ayuda</span>
             </a>
           </div>
@@ -1878,7 +2086,8 @@
   <footer class="py-[48px] bg-[#231F20]">
     <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
       <div class="flex flex-col gap-8">
-        <div class="flex items-center justify-center md:justify-start md:items-start flex-col md:flex-row gap-[32px] md:gap-0">
+        <div
+          class="flex items-center justify-center md:justify-start md:items-start flex-col md:flex-row gap-[32px] md:gap-0">
           <div class="w-full flex items-center justify-center">
             <img class="h-[50px] md:h-auto" src="./img/logo-white.svg" alt="">
           </div>

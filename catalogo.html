@@ -62,7 +62,7 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Transferencia de puntos</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mi meta</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./meta.html">Mi meta</a>
                   </li>
                   <li class="w-full">
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Viajes</a>
@@ -71,13 +71,13 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Capacitaciones</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Quiz & Win</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./trivia.html">Quiz & Win</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Lucky Code</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./codigo.html">Lucky Code</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Spin & Win</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./ruleta.html">Spin & Win</a>
                   </li>
                   <li class="w-full">
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mundial</a>
@@ -102,7 +102,7 @@
                     <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html?tab=direcciones">Mis direcciones</a>
                   </li>
                   <li class="w-full">
-                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Mis favoritos</a>
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./favorito.html">Mis favoritos</a>
                   </li>
                 </ul>
               </div>
@@ -148,9 +148,9 @@
                 </div>
               </div>
             </div>
-            <button class="hidden lg:block">
+            <a href="./favorito.html" class="hidden lg:block cursor-pointer">
               <img class="min-w-[24px] h-[24px]" src="./img/icon/heart.svg" alt="">
-            </button>
+            </a>
             <div class="relative h-[24px]" data-dropdown>
               <button data-dropdown-trigger>
                 <img class="min-w-[24px] h-[24px]" src="./img/icon/carrito.svg" alt="">
@@ -325,7 +325,7 @@
             </ul>
           </li>
           <li>
-            <a class="text-white" href="">Mi meta</a>
+            <a class="text-white" href="./meta.html">Mi meta</a>
           </li>
           <li>
             <a class="text-white" href="">Viajes</a>
@@ -334,13 +334,13 @@
             <a class="text-white" href="">Capacitaciones</a>
           </li>
           <li>
-            <a class="text-white" href="">Quiz & Win</a>
+            <a class="text-white" href="./trivia.html">Quiz & Win</a>
           </li>
           <li>
-            <a class="text-white" href="">Lucky Code</a>
+            <a class="text-white" href="./codigo.html">Lucky Code</a>
           </li>
           <li>
-            <a class="text-white" href="">Spin & Win</a>
+            <a class="text-white" href="./ruleta.html">Spin & Win</a>
           </li>
           <li>
             <a class="text-white" href="">Mundial</a>
@@ -358,8 +358,37 @@
   </section>
 
   <section class="pt-[80px] lg:pt-0">
-    <img class="w-full hidden md:block" src="./img/banner-catalogo.jpg" alt="">
-    <img class="w-full md:hidden" src="./img/banner-catalogo-mobile.jpg" alt="">
+    <div class="relative">
+      <div class="swiper swiper-banner swiper-banner--unstyled">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="w-full hidden md:block" src="./img/banner-catalogo.jpg" alt="Catálogo Destacado">
+            <img class="w-full md:hidden" src="./img/banner-catalogo-mobile.jpg" alt="Catálogo Destacado">
+          </div>
+          <div class="swiper-slide">
+            <img class="w-full hidden md:block" src="./img/banner-catalogo.jpg" alt="Catálogo Destacado">
+            <img class="w-full md:hidden" src="./img/banner-catalogo-mobile.jpg" alt="Catálogo Destacado">
+          </div>
+          <div class="swiper-slide">
+            <img class="w-full hidden md:block" src="./img/banner-catalogo.jpg" alt="Catálogo Destacado">
+            <img class="w-full md:hidden" src="./img/banner-catalogo-mobile.jpg" alt="Catálogo Destacado">
+          </div>
+        </div>
+        <div
+          class="swiper-button-prev-banner absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </div>
+        <div
+          class="swiper-button-next-banner absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+        <div class="swiper-pagination-banner absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10"></div>
+      </div>
+    </div>
   </section>
 
   <section class="bg-[#FFF9FA] pt-[24px]">
@@ -388,40 +417,40 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Electrohogar</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Electrohogar</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Línea blanca</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Línea blanca</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Ollas y sartenes</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Ollas y sartenes</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Utencilio de Cocinas</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Utencilio de Cocinas</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Equipo de limpieza</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Equipo de limpieza</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Almohadas / Colchones</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Almohadas / Colchones</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Ropa de Cama</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Ropa de Cama</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Baño</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Baño</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Mobiliario</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Mobiliario</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Artículos para Bebés</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Artículos para Bebés</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Complementos</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Complementos</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Herramientas</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Herramientas</a>
                 </li>
               </ul>
             </div>
@@ -437,25 +466,25 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Celulares y Tablets</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Celulares y Tablets</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Smart Watch</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Smart Watch</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Televisores</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Televisores</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Audio y Video</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Audio y Video</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Computadoras e Impresoras</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Computadoras e Impresoras</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Accesorios y Consolas</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Accesorios y Consolas</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Mi casa Smart</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Mi casa Smart</a>
                 </li>
               </ul>
             </div>
@@ -471,25 +500,25 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">GIFTEALO</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">GIFTEALO</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">GC Físicas</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">GC Físicas</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">GC Digitales</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">GC Digitales</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Certificados Físicos</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Certificados Físicos</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Certificados Digitales</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Certificados Digitales</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">GC Internacionales</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">GC Internacionales</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Recargas</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Recargas</a>
                 </li>
               </ul>
             </div>
@@ -505,19 +534,19 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Electro Belleza</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Electro Belleza</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Maquillaje</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Maquillaje</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Cuidado Facial</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Cuidado Facial</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Cuidado Capilar</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Cuidado Capilar</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Cuidado Corporal</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Cuidado Corporal</a>
                 </li>
               </ul>
             </div>
@@ -533,16 +562,16 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Perfumes Femeninos</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Perfumes Femeninos</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Perfumes Masculinos</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Perfumes Masculinos</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Perfumes Unisex y Splashes</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Perfumes Unisex y Splashes</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Perfumes Infantiles</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Perfumes Infantiles</a>
                 </li>
               </ul>
             </div>
@@ -558,16 +587,16 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Deportes</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Deportes</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Campo y Playa</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Campo y Playa</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Turismo</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Turismo</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Movilización</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Movilización</a>
                 </li>
               </ul>
             </div>
@@ -583,13 +612,13 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Suplemento Nutricionales</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Suplemento Nutricionales</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Suplemento Deportivos</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Suplemento Deportivos</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Salud desde Casa</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Salud desde Casa</a>
                 </li>
               </ul>
             </div>
@@ -605,31 +634,31 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Relojes</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Relojes</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Gafas</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Gafas</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Gorras</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Gorras</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Bolsos y Carteras</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Bolsos y Carteras</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Ramiro Albán</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Ramiro Albán</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Canguros y Billeteras</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Canguros y Billeteras</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Crocs Adulto</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Crocs Adulto</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Crocs Niños</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Crocs Niños</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Accesorios</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Accesorios</a>
                 </li>
               </ul>
             </div>
@@ -645,13 +674,13 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Equipaje</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Equipaje</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Bolsos</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Bolsos</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Maletines Laptop</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Maletines Laptop</a>
                 </li>
               </ul>
             </div>
@@ -667,16 +696,16 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Mochilas</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Mochilas</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Loncheras y Cartucheras</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Loncheras y Cartucheras</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Útiles Escolares</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Útiles Escolares</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Aprendizaje</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Aprendizaje</a>
                 </li>
               </ul>
             </div>
@@ -692,19 +721,19 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Para Todos</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Para Todos</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Niños</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Niños</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Niñas</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Niñas</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Bebés</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Bebés</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Juegos de mesa</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Juegos de mesa</a>
                 </li>
               </ul>
             </div>
@@ -720,19 +749,19 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Juguetes y Accesorios</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Juguetes y Accesorios</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Camas y Casas</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Camas y Casas</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Limpieza y Dispensadores</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Limpieza y Dispensadores</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Paseo y Seguridad</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Paseo y Seguridad</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Juego de Mesa</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Juego de Mesa</a>
                 </li>
               </ul>
             </div>
@@ -748,22 +777,22 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Whisky</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Whisky</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Vinos</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Vinos</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Cavas y Espumantes</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Cavas y Espumantes</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Ron Vodka Tequila y Gin</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Ron Vodka Tequila y Gin</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Otros Licores</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Otros Licores</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Al por mayor</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Al por mayor</a>
                 </li>
               </ul>
             </div>
@@ -779,22 +808,22 @@
               </a>
               <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_#00000026] z-10 hidden mt-2 w-[200px]" data-popover-menu>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Whisky</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Whisky</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Vinos</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Vinos</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Cavas y Espumantes</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Cavas y Espumantes</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Ron Vodka Tequila y Gin</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Ron Vodka Tequila y Gin</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Otros Licores</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Otros Licores</a>
                 </li>
                 <li>
-                  <a class="block px-4 py-2 hover:bg-[#EEECEC]" href="">Al por mayor</a>
+                  <a class="block px-4 py-2 hover:bg-[#EEECEC] text-[14px]" href="">Al por mayor</a>
                 </li>
               </ul>
             </div>
@@ -3151,15 +3180,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3186,15 +3217,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3221,15 +3254,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3256,15 +3291,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3291,15 +3328,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3326,15 +3365,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3361,15 +3402,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3396,15 +3439,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3431,15 +3476,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3466,15 +3513,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3501,15 +3550,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3536,15 +3587,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3571,15 +3624,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
@@ -3606,15 +3661,17 @@
               <div class="w-full">
                 <img class="h-[270px] w-full object-cover rounded-[24px]" src="./img/phone.jpg" alt="">
                 <span class="bg-[#E4022C] text-white rounded-full h-[24px] px-[14px] absolute top-4 left-4">Nuevo</span>
-                <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] absolute bottom-4 left-4">
-                  <img src="./img/icon/flash.svg" alt="">
-                  <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
-                </div>
               </div>
+              <img class="absolute bottom-4 left-4 h-[24px]" src="./img/libre.png" alt="">
+              <img class="absolute top-4 right-4 h-[47px]" src="./img/oferta.png" alt="">
             </div>
             <div class="p-4 flex flex-col gap-4">
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2">
+                  <div class="bg-[#FFF1B8] h-[32px] px-2 flex items-center gap-2 rounded-[8px] w-fit">
+                    <img src="./img/icon/flash.svg" alt="">
+                    <span class="text-[#AD6800]">Recíbelo en 48 Hrs</span>
+                  </div>
                   <p class="text-[#3C3B3B]">SAMSUNG</p>
                   <p class="text-[#3C3B3B]">Galaxy S24 Ultra</p>
                 </div>
