@@ -1,3 +1,8 @@
+.accordion-transition {
+  overflow: hidden;
+  transition: height 0.25s ease, opacity 0.25s ease;
+}
+
 /* MicroModal visibility control */
 .modal {
   display: none;
@@ -206,7 +211,7 @@
   left: 48px;
   top: 50%;
   transform: translateY(-50%);
-  background: white;
+  background: var(--field-label-bg, white);
   padding: 0 4px;
   z-index: 10;
   transition: all 0.2s ease-in-out;
@@ -235,7 +240,7 @@
   left: 12px;
   transform: translateY(-50%);
   font-size: 12px;
-  background: white;
+  background: var(--field-label-bg, white);
   padding: 0 4px;
   z-index: 20;
 }
@@ -252,7 +257,7 @@
   left: 12px;
   transform: translateY(-50%);
   font-size: 12px;
-  background: white;
+  background: var(--field-label-bg, white);
   padding: 0 4px;
   z-index: 20;
   transition: none;

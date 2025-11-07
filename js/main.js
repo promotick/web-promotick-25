@@ -642,17 +642,32 @@ class Accordion {
       content,
       arrow,
       isOpen: false,
-      groupEl
+      groupEl,
+      wasOpen: false
     };
 
     this.accordions.push(accordion);
+
+    if (content) {
+      content.classList.add('accordion-transition');
+      content.style.height = '0px';
+      content.style.opacity = '0';
+      content.style.pointerEvents = 'none';
+      content.addEventListener('transitionend', (event) => {
+        if (event.propertyName !== 'height') return;
+        if (accordion.isOpen) {
+          content.style.height = 'auto';
+        }
+      });
+    }
 
     if (groupEl) {
       if (!this.groups.has(groupEl)) this.groups.set(groupEl, []);
       this.groups.get(groupEl).push(accordion);
     }
 
-    trigger.addEventListener('click', () => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
       this.toggleAccordion(accordion);
     });
 
@@ -677,11 +692,18 @@ class Accordion {
   }
 
   updateState(accordion) {
-    const { content, arrow, isOpen } = accordion;
+    const { element, trigger, content, arrow, isOpen } = accordion;
 
     if (isOpen) {
-      content.style.display = 'block';
+      accordion.wasOpen = true;
       content.classList.remove('hidden');
+      const scrollHeight = content.scrollHeight;
+      element.classList.add('is-open');
+      content.style.pointerEvents = 'auto';
+      requestAnimationFrame(() => {
+        content.style.height = scrollHeight + 'px';
+        content.style.opacity = '1';
+      });
       if (arrow) {
         const customRotate = arrow.dataset.accordionArrowRotate;
         if (customRotate === '90') {
@@ -692,8 +714,27 @@ class Accordion {
         }
       }
     } else {
-      content.style.display = 'none';
-      content.classList.add('hidden');
+      if (!accordion.wasOpen) {
+        content.classList.add('hidden');
+        content.style.height = '0px';
+        content.style.opacity = '0';
+        content.style.pointerEvents = 'none';
+      } else {
+        const currentHeight = content.scrollHeight;
+        content.style.height = currentHeight + 'px';
+        requestAnimationFrame(() => {
+          content.style.height = '0px';
+          content.style.opacity = '0';
+          content.style.pointerEvents = 'none';
+        });
+        const handleTransitionEnd = (event) => {
+          if (event.propertyName !== 'height') return;
+          content.classList.add('hidden');
+          content.removeEventListener('transitionend', handleTransitionEnd);
+        };
+        content.addEventListener('transitionend', handleTransitionEnd);
+      }
+      element.classList.remove('is-open');
       if (arrow) {
         const customRotate = arrow.dataset.accordionArrowRotate;
         if (customRotate === '90') {
@@ -703,6 +744,13 @@ class Accordion {
           }
         }
       }
+    }
+
+    if (trigger) {
+      const openIcon = trigger.querySelector('[data-accordion-icon-open]');
+      const closeIcon = trigger.querySelector('[data-accordion-icon-close]');
+      if (openIcon) openIcon.classList.toggle('hidden', !isOpen);
+      if (closeIcon) closeIcon.classList.toggle('hidden', isOpen);
     }
   }
 
@@ -1280,11 +1328,15 @@ class FormField {
     const input = element.querySelector('[data-field-input]');
     const label = element.querySelector('[data-field-label]');
     const clearBtn = element.querySelector('[data-field-clear]');
+    const labelBg = element.dataset.fieldLabelBg || '';
 
     if (!container || !input) {
       console.warn('FormField: container o input no encontrado', element);
       return;
     }
+
+    const variantAttr = element.dataset.variant || '';
+    const variants = variantAttr.split(/\s+/).map(v => v.trim()).filter(Boolean);
 
     const field = {
       element,
@@ -1292,6 +1344,8 @@ class FormField {
       input,
       label,
       clearBtn,
+      labelBg,
+      variants,
       isSelect: input.tagName && input.tagName.toLowerCase() === 'select',
       isFocused: false,
       hasValue: (input.value && input.value.length > 0) || false,
@@ -1300,7 +1354,22 @@ class FormField {
 
     this.fields.push(field);
 
-    if (element.dataset.fieldInitial === 'active' || field.isSelect) {
+    if (field.label && field.labelBg) {
+      field.label.style.setProperty('--field-label-bg', field.labelBg);
+    }
+
+    if (variants.includes('preset')) {
+      const defaultValue = element.dataset.fieldDefault || '';
+      if (!field.hasValue && defaultValue) {
+        input.value = defaultValue;
+        field.hasValue = true;
+      } else if (field.hasValue && !defaultValue) {
+        // Mantener estado si ya viene con valor inicial desde HTML
+        field.hasValue = true;
+      }
+    }
+
+    if (element.dataset.fieldInitial === 'active' || field.isSelect || field.hasValue) {
       field.hasValue = true;
     }
 
