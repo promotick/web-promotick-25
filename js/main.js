@@ -648,6 +648,11 @@ class Accordion {
 
     this.accordions.push(accordion);
 
+    const initialState = element.dataset.accordionInitial;
+    if (initialState === 'open' || element.hasAttribute('data-accordion-open')) {
+      accordion.isOpen = true;
+    }
+
     if (content) {
       content.classList.add('accordion-transition');
       content.style.height = '0px';

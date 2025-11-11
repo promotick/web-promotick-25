@@ -357,29 +357,17 @@
     </div>
   </section>
 
-  <section class="pt-[80px] md:hidden">
-    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
-      <div class="flex items-start justify-start flex-col gap-3 py-[32px]">
-        <h3 class="text-[#3C3B3B] text-[24px] font-semibold">¡Canje exitoso!</h3>
-        <p class="text-[#3C3B3B] text-[16px]">La confirmación de tu canje fue enviada a <a href="mailto:nombrecliente@gmail.com" class="font-semibold">nombrecliente@gmail.com</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-[#FFF9FA] lg:pt-[32px] pt-[32px] pb-[48px] bg-[#FFF9FA] md:pt-[100px]">
+  <section class="bg-[#FFF9FA] lg:pt-[32px] pt-[112px] pb-[48px] bg-[#FFF9FA] md:pt-[100px]">
     <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
       <div class="bg-white p-4 rounded-[20px] flex flex-col gap-6">
-        <div class="hidden md:flex items-center justify-center">
+        <div class="flex items-center justify-center">
           <img src="./img/icon/check-green.svg" alt="">
         </div>
-        <div class="hidden md:flex items-center justify-center flex-col gap-3">
+        <div class="flex items-center justify-center flex-col gap-3">
           <h3 class="text-[#3C3B3B] text-[24px] font-semibold">¡Canje exitoso!</h3>
           <p class="text-[#3C3B3B] text-[16px] text-center">La confirmación de tu canje fue enviada a <a href="mailto:nombrecliente@gmail.com" class="font-semibold">nombrecliente@gmail.com</a></p>
         </div>
         <div class="flex-col md:flex-row flex items-center gap-[24px]">
-          <div class="md:hidden">
-            <p class="text-[#3C3B3B]">El tiempo de envío de tu canjes es de <span class="font-semibold">XX días hábiles</span>.</p>
-          </div>
           <div class="bg-[#FEE8EA] w-full h-[136px] flex items-center justify-center rounded-[24px] flex items-center flex-col gap-2">
             <img src="./img/icon/reloj-rojo.svg" alt="">
             <p class="text-[#3C3B3B]">Fecha</p>
@@ -400,17 +388,8 @@
             <p class="text-[#3C3B3B]">Total</p>
             <p class="text-[#3C3B3B] font-semibold text-center">1000 puntos</p>
           </div>
-          <div class="md:hidden">
-            <p class="text-[#3C3B3B]">Para revisar el detalle de tu  canje puedes visitar la sección <span class="font-semibold">“Puntos canjeados”</span> en el módulo <span class="font-semibold">“Mis puntos”</span>.</p>
-          </div>
-          <span class="w-full h-[1px] bg-[#E1E1E1] block md:hidden"></span>
-          <div class="md:hidden w-full">
-            <a href="./catalogo.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
-              <span>Volver al catálogo</span>
-            </a>
-          </div>
         </div>
-        <div class="hidden md:flex items-start gap-[24px] flex-col lg:flex-row">
+        <div class="flex items-start gap-[24px] flex-col lg:flex-row">
           <div class="border border-[#E1E1E1] rounded-[24px] p-6 w-full">
             <div class="flex items-center gap-2">
               <p class="text-[#3C3B3B] font-semibold">Estado de tu pedido</p>
@@ -473,12 +452,12 @@
             </div>
           </div>
         </div>
-        <div class="hidden md:block border border-[#E1E1E1] rounded-[24px] p-6 w-full">
+        <div class="border border-[#E1E1E1] rounded-[24px] p-6 w-full">
           <div class="flex flex-col gap-1">
             <p class="font-semibold">Acciones rápidas</p>
             <p class="text-[14px]">Gestiona tu pedido de manera más fácil y rápida</p>
           </div>
-          <div class="flex items-center gap-[24px] mt-6">
+          <div class="flex flex-col md:flex-row items-center gap-[24px] mt-6">
             <div class="w-full">
               <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full">
                 <span>Descargar comprobante</span>
@@ -496,37 +475,37 @@
             </div>
           </div>
         </div>
-        <div class="hidden md:flex border border-[#E1E1E1] rounded-[24px] p-6 w-full flex-col gap-6">
-          <div class="flex items-start justify-between gap-6">
+        <div class="flex border border-[#E1E1E1] rounded-[24px] p-6 w-full flex-col gap-6">
+          <div class="flex flex-col md:flex-row items-start justify-between gap-6">
             <div class="flex flex-col gap-4">
               <p class="font-semibold">¿Necesitas revisar tus canjes?</p>
               <p class="text-[14px]">Puedes ver el detalle completo de este y otros canjes en la sección <span class="font-semibold">“Puntos canjeados”</span>, en el módulo <span class="font-semibold">“Mis puntos”</span>.</p>
             </div>
-            <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full min-w-[296px]">
+            <a href="./puntos-historial.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full md:min-w-[296px] w-full md:w-auto">
               <span>Ir a mis puntos</span>
-            </button>
+            </a>
           </div>
           <div class="h-[1px] bg-[#E1E1E1] w-full"></div>
           <div class="w-full flex items-center justify-center">
-            <a href="./catalogo.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full px-6">
+            <a href="./catalogo.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full px-6 w-full md:w-auto">
               <span>Volver al catálogo</span>
             </a>
           </div>
         </div>
-        <div class="hidden md:flex border border-[#E1E1E1] rounded-[24px] p-6 w-full flex-col gap-6 bg-[#F8F9FC]">
+        <div class="flex border border-[#E1E1E1] rounded-[24px] p-6 w-full flex-col gap-6 bg-[#F8F9FC]">
           <div class="flex flex-col justify-center items-center text-center gap-4">
             <p class="font-semibold">¿Tienes alguna pregunta?</p>
             <p class="text-[14px]">Nuestro equipo de soporte está disponible para ayudarte</p>
           </div>
-          <div class="flex items-center justify-center gap-6">
-            <a href="./catalogo.html" class="flex items-center text-[#3C3B3B] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-[16px] px-6 bg-white">
+          <div class="flex items-center justify-center gap-6 flex-col md:flex-row">
+            <div class="flex items-center text-[#3C3B3B] justify-center gap-2 border border-[#E1E6EF] md:h-[56px] rounded-[16px] py-4 px-6 bg-white w-full md:w-auto flex-col md:flex-row">
               <img src="./img/icon/telefono.svg" alt="">
               <span>1800-CANJES (226537)</span>
-            </a>
-            <a href="./catalogo.html" class="flex items-center text-[#3C3B3B] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-[16px] px-6 bg-white">
+            </div>
+            <div class="flex items-center text-[#3C3B3B] justify-center gap-2 border border-[#E1E6EF] md:h-[56px] rounded-[16px] py-4 px-6 bg-white w-full md:w-auto flex-col md:flex-row">
               <img src="./img/icon/mensaje.svg" alt="">
               <span>callcenter@promotick.com</span>
-            </a>
+            </div>
           </div>
         </div>
       </div>
