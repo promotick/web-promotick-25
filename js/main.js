@@ -496,6 +496,7 @@ class RadioGroup {
       return;
     }
 
+    const selectableOptions = optionElements.filter(opt => !opt.hasAttribute('data-disabled'));
     const group = {
       element,
       options: optionElements,
@@ -505,15 +506,20 @@ class RadioGroup {
 
     const variant = (element.dataset.radioVariant || '').split(' ').map(v => v.trim()).filter(Boolean);
     const skipInitial = variant.includes('no-initial');
-
-    if (!skipInitial) {
-      const initialOption = optionElements.find(opt => opt.hasAttribute('data-selected')) || optionElements[0];
-      this.setActiveOption(group, initialOption, false);
-    } else {
-      optionElements.forEach((opt, index) => {
+    const resetOptions = () => {
+      let hasFocusable = false;
+      optionElements.forEach(opt => {
+        const isDisabled = opt.hasAttribute('data-disabled');
         opt.setAttribute('aria-checked', 'false');
         opt.setAttribute('role', 'radio');
-        opt.setAttribute('tabindex', index === 0 ? '0' : '-1');
+        if (isDisabled) {
+          opt.setAttribute('aria-disabled', 'true');
+          opt.setAttribute('tabindex', '-1');
+        } else {
+          opt.setAttribute('aria-disabled', 'false');
+          opt.setAttribute('tabindex', hasFocusable ? '-1' : '0');
+          if (!hasFocusable) hasFocusable = true;
+        }
         opt.removeAttribute('data-selected');
         if (group.style === 'swatch') {
           opt.classList.remove('border-[2px]', 'border-[#E4022C]');
@@ -524,10 +530,22 @@ class RadioGroup {
       });
       group.element.setAttribute('role', 'radiogroup');
       group.activeOption = null;
+    };
+
+    if (!skipInitial) {
+      const initialOption = selectableOptions.find(opt => opt.hasAttribute('data-selected')) || selectableOptions[0];
+      if (initialOption) {
+        this.setActiveOption(group, initialOption, false);
+      } else {
+        resetOptions();
+      }
+    } else {
+      resetOptions();
     }
 
     optionElements.forEach(option => {
       option.addEventListener('click', () => {
+        if (option.hasAttribute('data-disabled')) return;
         this.setActiveOption(group, option, true);
       });
     });
@@ -536,10 +554,11 @@ class RadioGroup {
   }
 
   setActiveOption(group, optionToActivate, emitEvent = true) {
-    if (!group || !optionToActivate) return;
+    if (!group || !optionToActivate || optionToActivate.hasAttribute('data-disabled')) return;
 
     group.options.forEach(option => {
       const isActive = option === optionToActivate;
+      const isDisabled = option.hasAttribute('data-disabled');
 
       if (group.style === 'icon') {
       } else if (group.style === 'swatch') {
@@ -587,7 +606,13 @@ class RadioGroup {
         }
       }
       option.setAttribute('role', 'radio');
-      option.setAttribute('tabindex', '0');
+      if (isDisabled) {
+        option.setAttribute('aria-disabled', 'true');
+        option.setAttribute('tabindex', '-1');
+      } else {
+        option.setAttribute('aria-disabled', 'false');
+        option.setAttribute('tabindex', isActive ? '0' : '-1');
+      }
     });
 
     group.element.setAttribute('role', 'radiogroup');

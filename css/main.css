@@ -159,6 +159,23 @@
   height: 100%;
 }
 
+[data-radio-option] [data-radio-indicator] {
+  transition: border-color 0.2s ease;
+}
+
+[data-radio-option] [data-radio-indicator] iconify-icon[data-radio-icon] {
+  display: none;
+}
+
+[data-radio-option][data-selected] [data-radio-indicator] {
+  border-color: #E4022C;
+}
+
+[data-radio-option][data-selected] [data-radio-indicator] iconify-icon[data-radio-icon] {
+  display: block;
+}
+
+
 /* Dropdowns - Solo animaciones complejas que Tailwind no puede manejar */
 [data-dropdown-menu] {
   opacity: 0;
