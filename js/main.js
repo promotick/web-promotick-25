@@ -950,7 +950,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   SearchToggle.init();
 
-  Tabs.init();
+  const tabsController = Tabs.init();
+  Tabs.bindExternalTriggers(tabsController);
+
+  DragList.init();
 
   if (typeof MicroModal !== 'undefined') {
     const sanitizeOverlay = (modalEl) => {
@@ -1548,6 +1551,7 @@ class Tabs {
     this.setActive(instance, initialTrigger.dataset.tabTarget, false);
 
     // Activar tab por URL (?tab=nombre o #tab=nombre o #nombre)
+    let appliedFromUrl = false;
     try {
       const url = new URL(window.location.href);
       let desired = url.searchParams.get('tab');
@@ -1557,9 +1561,31 @@ class Tabs {
       }
       if (desired) {
         const exists = triggers.find(btn => btn.dataset.tabTarget === desired);
-        if (exists) this.setActive(instance, desired, false);
+        if (exists) {
+          this.setActive(instance, desired, false);
+          appliedFromUrl = true;
+        }
       }
     } catch (_) {}
+
+    if (!appliedFromUrl) {
+      try {
+        const storedRaw = sessionStorage.getItem('tabs:next');
+        if (storedRaw) {
+          const stored = JSON.parse(storedRaw);
+          const currentPath = window.location.pathname;
+          const matchesPath = !stored.path || stored.path === currentPath;
+          if (matchesPath) {
+            const exists = triggers.find(btn => btn.dataset.tabTarget === stored.tab);
+            if (exists) {
+              this.setActive(instance, stored.tab, false);
+              appliedFromUrl = true;
+            }
+            sessionStorage.removeItem('tabs:next');
+          }
+        }
+      } catch (_) {}
+    }
 
     triggers.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1619,8 +1645,235 @@ class Tabs {
     }
   }
 
+  getInstanceByName(name) {
+    return this.instances.find(inst => inst.triggers.some(btn => btn.dataset.tabTarget === name));
+  }
+
+  static bindExternalTriggers(tabsManager) {
+    if (!tabsManager) return;
+
+    const externalTriggers = document.querySelectorAll('[data-tab-go]');
+    if (!externalTriggers.length) return;
+
+    externalTriggers.forEach(triggerEl => {
+      const targetName = triggerEl.dataset.tabGo;
+      if (!targetName) return;
+
+      triggerEl.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        // Redirigir si se indica un destino específico
+        const redirectTarget = triggerEl.dataset.tabGoRedirect;
+        if (redirectTarget) {
+          try {
+            const targetURL = new URL(redirectTarget, window.location.href);
+            try {
+              sessionStorage.setItem('tabs:next', JSON.stringify({
+                path: targetURL.pathname,
+                tab: targetName
+              }));
+            } catch (_) {}
+            const cleanHref = targetURL.href.split('#')[0];
+            window.location.href = cleanHref;
+          } catch (_) {
+            try {
+              sessionStorage.setItem('tabs:next', JSON.stringify({
+                path: redirectTarget,
+                tab: targetName
+              }));
+            } catch (_) {}
+            window.location.href = redirectTarget;
+          }
+          return;
+        }
+
+        const instance = tabsManager.getInstanceByName(targetName);
+        if (!instance) return;
+
+        tabsManager.setActive(instance, targetName, true);
+
+        const tabButton = instance.triggers.find(btn => btn.dataset.tabTarget === targetName);
+        if (tabButton) tabButton.focus({ preventScroll: false });
+      });
+    });
+  }
+
   static init() {
     return new Tabs();
+  }
+}
+
+class DragList {
+  constructor() {
+    this.draggingItem = null;
+    this.sourceList = null;
+    this.sourceIndex = null;
+    this.activeList = null;
+    this.lastAfterElement = null;
+
+    this.handleDragEnter = this.handleDragEnter.bind(this);
+    this.handleDragOver = this.handleDragOver.bind(this);
+    this.handleDrop = this.handleDrop.bind(this);
+    this.handleDragLeave = this.handleDragLeave.bind(this);
+
+    this.initialize();
+  }
+
+  initialize() {
+    const lists = document.querySelectorAll('[data-drag-list]');
+    lists.forEach(list => this.registerList(list));
+  }
+
+  registerList(list) {
+    if (!list || list.dataset.dragListBound === 'true') return;
+    list.dataset.dragListBound = 'true';
+    list.dataset.dragLimit = list.querySelectorAll('[data-drag-item]').length.toString();
+
+    list.addEventListener('dragenter', this.handleDragEnter);
+    list.addEventListener('dragover', this.handleDragOver);
+    list.addEventListener('drop', this.handleDrop);
+    list.addEventListener('dragleave', this.handleDragLeave);
+
+    const items = Array.from(list.querySelectorAll('[data-drag-item]'));
+    items.forEach(item => this.registerItem(item));
+  }
+
+  registerItem(item) {
+    if (!item || item.dataset.dragBound === 'true') return;
+    item.dataset.dragBound = 'true';
+    item.setAttribute('draggable', 'true');
+
+    item.addEventListener('dragstart', (event) => {
+      this.draggingItem = item;
+      this.sourceList = item.closest('[data-drag-list]');
+      this.sourceIndex = this.sourceList ? Array.from(this.sourceList.querySelectorAll('[data-drag-item]')).indexOf(item) : null;
+      this.setActiveList(this.sourceList);
+      this.lastAfterElement = null;
+      item.classList.add('is-dragging');
+
+      if (event.dataTransfer) {
+        event.dataTransfer.effectAllowed = 'move';
+        try {
+          event.dataTransfer.setData('text/plain', '');
+        } catch (_) {}
+      }
+    });
+
+    item.addEventListener('dragend', () => {
+      item.classList.remove('is-dragging');
+      this.clearActiveList();
+      this.draggingItem = null;
+      this.sourceList = null;
+      this.sourceIndex = null;
+      this.lastAfterElement = null;
+    });
+  }
+
+  setActiveList(list) {
+    if (!list) return;
+
+    if (this.activeList && this.activeList !== list) {
+      this.activeList.classList.remove('is-dragging-list');
+    }
+
+    this.activeList = list;
+    this.activeList.classList.add('is-dragging-list');
+  }
+
+  clearActiveList() {
+    if (this.activeList) {
+      this.activeList.classList.remove('is-dragging-list');
+    }
+    this.activeList = null;
+    if (this.sourceList) {
+      this.sourceList.classList.remove('is-dragging-list');
+    }
+  }
+
+  handleDragEnter(event) {
+    if (!this.draggingItem) return;
+    const targetList = event.currentTarget;
+    this.setActiveList(targetList);
+  }
+
+  handleDragOver(event) {
+    if (!this.draggingItem) return;
+
+    event.preventDefault();
+
+    const targetList = event.currentTarget;
+    this.setActiveList(targetList);
+
+    const afterElement = this.getDragAfterElement(targetList, event.clientY);
+    this.lastAfterElement = afterElement;
+
+    if (!afterElement) {
+      targetList.appendChild(this.draggingItem);
+    } else if (afterElement !== this.draggingItem) {
+      targetList.insertBefore(this.draggingItem, afterElement);
+    }
+  }
+
+  handleDrop(event) {
+    if (!this.draggingItem) return;
+    event.preventDefault();
+    const targetList = event.currentTarget;
+    this.setActiveList(targetList);
+
+    if (this.sourceList && targetList !== this.sourceList) {
+      const limit = parseInt(targetList.dataset.dragLimit || targetList.childElementCount.toString(), 10);
+      const currentItems = Array.from(targetList.querySelectorAll('[data-drag-item]'));
+      if (currentItems.length > limit) {
+        let swapItem = this.lastAfterElement;
+        if (!swapItem || swapItem === this.draggingItem || !targetList.contains(swapItem)) {
+          const candidates = currentItems.filter(el => el !== this.draggingItem);
+          swapItem = candidates.length ? candidates[candidates.length - 1] : null;
+        }
+
+        if (swapItem && swapItem !== this.draggingItem) {
+          const reference = this.sourceList && this.sourceIndex !== null
+            ? this.sourceList.querySelectorAll('[data-drag-item]')[this.sourceIndex] || null
+            : null;
+
+          this.sourceList.insertBefore(swapItem, reference);
+          this.registerItem(swapItem);
+        }
+      }
+    }
+  }
+
+  handleDragLeave(event) {
+    if (!this.draggingItem) return;
+    const related = event.relatedTarget;
+    const currentList = event.currentTarget;
+
+    if (!related || (currentList !== related && !currentList.contains(related))) {
+      currentList.classList.remove('is-dragging-list');
+      if (this.activeList === currentList) {
+        this.activeList = null;
+      }
+    }
+  }
+
+  getDragAfterElement(list, y) {
+    const items = Array.from(list.querySelectorAll('[data-drag-item]:not(.is-dragging)'));
+    if (!items.length) return null;
+
+    const { element } = items.reduce((closest, child) => {
+      const rect = child.getBoundingClientRect();
+      const offset = y - rect.top - rect.height / 2;
+      if (offset < 0 && offset > closest.offset) {
+        return { offset, element: child };
+      }
+      return closest;
+    }, { offset: Number.NEGATIVE_INFINITY, element: null });
+
+    return element;
+  }
+
+  static init() {
+    if (typeof window === 'undefined') return null;
+    return new DragList();
   }
 }
 

@@ -175,6 +175,26 @@
   display: block;
 }
 
+[data-drag-item] {
+  cursor: grab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+[data-drag-item].is-dragging {
+  cursor: grabbing;
+  opacity: 0.7;
+  box-shadow: 0 16px 32px rgba(23, 41, 72, 0.18);
+  transform: scale(1.01);
+}
+
+[data-drag-list].is-dragging-list [data-drag-item]:not(.is-dragging) {
+  opacity: 0.95;
+}
+
+[data-drag-list] {
+  position: relative;
+}
+
 
 /* Dropdowns - Solo animaciones complejas que Tailwind no puede manejar */
 [data-dropdown-menu] {

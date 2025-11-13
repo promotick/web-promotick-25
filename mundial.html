@@ -457,13 +457,13 @@
                     <p class="text-[#172948]">Tienes 5 preguntas para seguir acumulando puntos y canjearlos por más beneficios.</p>
                   </div>
                 </div>
-                <a class="text-[#E4022C] font-semibold" href="">Empezar</a>
+                <a class="text-[#E4022C] font-semibold" href="#tab=trivias" data-tab-go="trivias">Empezar</a>
               </div>
               <span class="h-[1px] bg-[#E1E6EF] w-full"></span>
               <div class="flex flex-col gap-5">
                 <div class="flex flex-col gap-[2px]">
                   <h3 class="text-[#172948] text-[24px] font-semibold">Da tus pronósticos</h3>
-                  <p class="text-[#172948]">Selecciona el partido que ganará cada equipo y gana puntos por cada acierto.</p>
+                  <p class="text-[#172948]">Dinos tu puntaje 24 horas antes de que comience el partido.</p>
                 </div>
                 <div class="border border-[#E1E1E1] p-6 rounded-[24px] bg-[#FFF9FA] flex flex-col gap-4 shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]">
                   <div class="flex items-center justify-between text-[14px] md:text-[16px]">
@@ -527,12 +527,15 @@
                   </button>
                 </div>
                 <div class="border border-[#E1E1E1] p-6 rounded-[24px] bg-[#FFF9FA] flex flex-col gap-4 shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]">
-                  <div class="flex items-center justify-between">
+                  <div class="flex items-center justify-between text-[14px] md:text-[16px]">
                     <div class="flex items-center gap-4">
                       <p class="text-[#172948] opacity-50">Partido 2</p>
-                      <div class="flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px]">
+                      <div class="hidden md:flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px]">
                         <p class="text-[#3C3B3B]">Grupo A</p>
                       </div>
+                    </div>
+                    <div class="flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px] md:hidden">
+                      <p class="text-[#3C3B3B]">Grupo A</p>
                     </div>
                     <p class="text-[#172948] opacity-50">21 Nov</p>
                   </div>
@@ -584,7 +587,7 @@
                     <span>Guardar pronóstico</span>
                   </button>
                 </div>
-                <button class="text-[#E4022C] font-semibold">Ver más partidos</button>
+                <button class="text-[#E4022C] font-semibold" data-tab-go="promostico">Ver más partidos</button>
                 <span class="h-[1px] bg-[#E1E6EF] w-full"></span>
                 <div class="flex flex-col gap-5">
                   <div class="flex items-center justify-between">
@@ -721,20 +724,20 @@
                   <div class="flex flex-col lg:flex-row gap-8">
                     <div class="w-full flex flex-col gap-4">
                       <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo A</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
+                      <div class="flex flex-col gap-4" data-drag-list>
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-ecuador" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Ecuador</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-qatar" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Qatar</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-netherlands" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Holanda</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-senegal" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Senegal</span>
                         </div>
@@ -742,20 +745,20 @@
                     </div>
                     <div class="w-full flex flex-col gap-4">
                       <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo B</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
+                      <div class="flex flex-col gap-4" data-drag-list>
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-united-kingdom" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Inglaterra</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-united-states" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Estado Unidos</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-iran" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Irán</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="twemoji:flag-wales" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Gales</span>
                         </div>
@@ -763,20 +766,20 @@
                     </div>
                     <div class="w-full flex flex-col gap-4">
                       <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo C</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
+                      <div class="flex flex-col gap-4" data-drag-list>
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-argentina" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Argentina</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-saudi-arabia" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Arabia Saudita</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-mexico" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>México</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-poland" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Polonia</span>
                         </div>
@@ -786,20 +789,20 @@
                   <div class="flex flex-col lg:flex-row gap-8">
                     <div class="w-full flex flex-col gap-4">
                       <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo D</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
+                      <div class="flex flex-col gap-4" data-drag-list>
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-france" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Francia</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-australia" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Australia</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-denmark" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Dinamarca</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-tunisia" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Túnez</span>
                         </div>
@@ -807,20 +810,20 @@
                     </div>
                     <div class="w-full flex flex-col gap-4">
                       <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo E</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
+                      <div class="flex flex-col gap-4" data-drag-list>
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-spain" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>España</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-germany" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Alemania</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-japan" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Japón</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-costa-rica" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Costa Rica</span>
                         </div>
@@ -828,20 +831,20 @@
                     </div>
                     <div class="w-full flex flex-col gap-4">
                       <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo F</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
+                      <div class="flex flex-col gap-4" data-drag-list>
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-belgium" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Bélgica</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-canada" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Canadá</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-morocco" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Marruecos</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-croatia" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Croacia</span>
                         </div>
@@ -851,20 +854,20 @@
                   <div class="flex flex-col lg:flex-row gap-8 justify-center">
                     <div class="w-full lg:w-[33.3%] flex flex-col gap-4">
                       <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo D</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
+                      <div class="flex flex-col gap-4" data-drag-list>
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-switzerland" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Suiza</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-brazil" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Brasil</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-serbia" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Serbia</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-cameroon" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Camerún</span>
                         </div>
@@ -872,30 +875,30 @@
                     </div>
                     <div class="w-full lg:w-[33.3%] flex flex-col gap-4">
                       <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo E</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
+                      <div class="flex flex-col gap-4" data-drag-list>
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-portugal" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Portugal</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-ghana" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Ghana</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-uruguay" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Uruguay</span>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
+                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2" data-drag-item draggable="true">
                           <iconify-icon icon="emojione:flag-for-flag-south-korea" class="text-[#E4022C] text-[40px]"></iconify-icon>
                           <span>Corea del Sur</span>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <a href="./mundial-polla-2.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
+                    <span>Continuar</span>
+                  </a>
                 </div>
-                <a href="./mundial-polla-2.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
-                  <span>Continuar</span>
-                </a>
               </div>
             </div>
           </div>
@@ -1022,12 +1025,15 @@
                   </button>
                 </div>
                 <div class="border border-[#E1E1E1] p-6 rounded-[24px] bg-[#FFF9FA] flex flex-col gap-4 shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]">
-                  <div class="flex items-center justify-between">
+                  <div class="flex items-center justify-between text-[14px] md:text-[16px]">
                     <div class="flex items-center gap-4">
                       <p class="text-[#172948] opacity-50">Partido 2</p>
-                      <div class="flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px]">
+                      <div class="hidden md:flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px]">
                         <p class="text-[#3C3B3B]">Grupo A</p>
                       </div>
+                    </div>
+                    <div class="flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px] md:hidden">
+                      <p class="text-[#3C3B3B]">Grupo A</p>
                     </div>
                     <p class="text-[#172948] opacity-50">21 Nov</p>
                   </div>
@@ -1080,12 +1086,15 @@
                   </button>
                 </div>
                 <div class="border border-[#E1E1E1] p-6 rounded-[24px] bg-[#FFF9FA] flex flex-col gap-4 shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]">
-                  <div class="flex items-center justify-between">
+                  <div class="flex items-center justify-between text-[14px] md:text-[16px]">
                     <div class="flex items-center gap-4">
-                      <p class="text-[#172948] opacity-50">Partido 2</p>
-                      <div class="flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px]">
+                      <p class="text-[#172948] opacity-50">Partido 3</p>
+                      <div class="hidden md:flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px]">
                         <p class="text-[#3C3B3B]">Grupo A</p>
                       </div>
+                    </div>
+                    <div class="flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px] md:hidden">
+                      <p class="text-[#3C3B3B]">Grupo A</p>
                     </div>
                     <p class="text-[#172948] opacity-50">21 Nov</p>
                   </div>
@@ -1138,12 +1147,15 @@
                   </button>
                 </div>
                 <div class="border border-[#E1E1E1] p-6 rounded-[24px] bg-[#FFF9FA] flex flex-col gap-4 shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]">
-                  <div class="flex items-center justify-between">
+                  <div class="flex items-center justify-between text-[14px] md:text-[16px]">
                     <div class="flex items-center gap-4">
-                      <p class="text-[#172948] opacity-50">Partido 2</p>
-                      <div class="flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px]">
+                      <p class="text-[#172948] opacity-50">Partido 4</p>
+                      <div class="hidden md:flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px]">
                         <p class="text-[#3C3B3B]">Grupo A</p>
                       </div>
+                    </div>
+                    <div class="flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px] md:hidden">
+                      <p class="text-[#3C3B3B]">Grupo A</p>
                     </div>
                     <p class="text-[#172948] opacity-50">21 Nov</p>
                   </div>

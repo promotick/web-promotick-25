@@ -430,11 +430,11 @@
       <div class="flex flex-col gap-6 pt-6" data-tabs>
         <div class="flex items-center justify-center flex-wrap gap-4" role="tablist">
           <button class="bg-[#FEE8EA] flex items-center justify-center text-[#3C3B3B] h-[40px] rounded-[12px] px-4 gap-2" data-tab-target="inicio" aria-selected="false" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
-            <iconify-icon icon="solar:star-outline"></iconify-icon>
+            <iconify-icon icon="solar:home-smile-angle-broken"></iconify-icon>
             <span>Inicio</span>
           </button>
           <button class="bg-[#E4022C] flex items-center justify-center text-white h-[40px] rounded-[12px] px-4 gap-2" data-tab-target="trivias" aria-selected="true" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
-            <iconify-icon icon="solar:home-smile-angle-broken"></iconify-icon>
+            <iconify-icon icon="solar:star-outline"></iconify-icon>
             <span>Trivias</span>
           </button>
           <button class="bg-[#FEE8EA] flex items-center justify-center text-[#3C3B3B] h-[40px] rounded-[12px] px-4 gap-2" data-tab-target="polla" aria-selected="false" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
@@ -654,10 +654,10 @@
             <div class="bg-white rounded-[24px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)] p-6 md:p-8 flex flex-col gap-6 md:gap-8">
               <div class="flex flex-col gap-5">
                 <div class="flex items-center justify-start">
-                  <a class="flex items-center gap-2 text-[#3C3B3B]" href="mundial.html">
-                    <img src="./img/icon/arrow-left-outline.svg" alt="">
-                    <span>Salir</span>
-                  </a>
+                <button type="button" class="flex items-center gap-2 text-[#3C3B3B]" data-tab-go="trivias" data-tab-go-redirect="mundial.html">
+                  <img src="./img/icon/arrow-left-outline.svg" alt="">
+                  <span>Salir</span>
+                </button>
                 </div>
                 <p class="text-[#3C3B3B] text-[18px] font-semibold text-center">Pregunta 1/2</p>
                 <div class="flex items-center justify-center flex-col gap-1">

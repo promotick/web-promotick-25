@@ -433,11 +433,11 @@
             <iconify-icon icon="solar:home-smile-angle-broken"></iconify-icon>
             <span>Inicio</span>
           </button>
-          <button class="bg-[#E4022C] flex items-center justify-center text-white h-[40px] rounded-[12px] px-4 gap-2" data-tab-target="trivias" aria-selected="true" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
+          <button class="bg-[#FEE8EA] flex items-center justify-center text-[#3C3B3B] h-[40px] rounded-[12px] px-4 gap-2" data-tab-target="trivias" aria-selected="false" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
             <iconify-icon icon="solar:star-outline"></iconify-icon>
             <span>Trivias</span>
           </button>
-          <button class="bg-[#FEE8EA] flex items-center justify-center text-[#3C3B3B] h-[40px] rounded-[12px] px-4 gap-2" data-tab-target="polla" aria-selected="false" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
+          <button class="bg-[#E4022C] flex items-center justify-center text-white h-[40px] rounded-[12px] px-4 gap-2" data-tab-target="polla" aria-selected="true" role="tab" data-tab-active-classes="bg-[#E4022C] text-white" data-tab-inactive-classes="bg-[#FEE8EA] text-[#3C3B3B]">
             <iconify-icon icon="solar:global-outline"></iconify-icon>
             <span>Polla</span>
           </button>
@@ -650,79 +650,51 @@
               </div>
             </div>
           </div>
-          <div data-tab-panel="trivias" role="tabpanel">
+          <div data-tab-panel="trivias" role="tabpanel" hidden>
             <div class="bg-white rounded-[24px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)] p-6 md:p-8 flex flex-col gap-6 md:gap-8">
               <div class="flex flex-col gap-5">
-                <div class="flex items-center justify-start">
-                  <button type="button" class="flex items-center gap-2 text-[#3C3B3B]" data-tab-go="trivias" data-tab-go-redirect="mundial.html">
-                    <img src="./img/icon/arrow-left-outline.svg" alt="">
-                    <span>Salir</span>
-                  </button>
+                <div class="flex items-center flex-col justify-center gap-2">
+                  <h1 class="text-[#1E1E1E] text-[24px] font-semibold">Tu trivia semanal</h1>
+                  <span class="bg-[#E4022C] h-[4px] w-[196px] rounded-full"></span>
                 </div>
-                <p class="text-[#3C3B3B] text-[18px] font-semibold text-center">Pregunta 2/2</p>
-                <div class="flex items-center justify-center flex-col gap-1">
-                  <div class="bg-[#F1F1FA] h-[12px] rounded-[25px] w-full lg:w-[420px]">
-                    <div class="bg-[#E4022C] h-[12px] rounded-[25px] w-[20%]"></div>
+                <p class="text-[#3C3B3B]">Las trivias iniciarán los días lunes, y se podrán completar hasta el día domingo de la semana en curso.</p>
+                <p class="text-[#3C3B3B]">Responde estas 5 preguntas correctamente y obtendrás 50 puntos y premios.</p>
+                <div class="bg-[#FFF1F0] flex flex-col gap-4 px-4 py-6 rounded-[24px]">
+                  <div class="flex items-center justify-center">
+                    <p class="text-[#3C3B3B] text-[18px] font-semibold">¿Cómo funciona?</p>
                   </div>
-                  <div class="flex items-center justify-between w-full lg:w-[420px]">
-                    <p class="text-[#3C3B3B]">Tiempo</p>
-                    <p class="text-[#3C3B3B]">00:12</p>
+                  <div class="flex items-center gap-4">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-[#E4022C] flex items-center justify-center text-white text-[18px] font-semibold">
+                      <span>1</span>
+                    </div>
+                    <p class="text-[#3C3B3B]">Tendrás 30 segundos para responder cada pregunta.</p>
                   </div>
-                </div>
-                <div class="bg-[#F8F9FC] flex flex-col gap-4 px-4 py-6 rounded-[24px]">
-                  <p class="text-[#3C3B3B] font-semibold text-center">¿Qué selección ganó la primera copa del mundo (1930)?</p>
-                  <div data-radio-group="" data-radio-style="icon" data-radio-variant="no-initial" class="flex flex-col gap-4" role="radiogroup"> 
-                    <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="0">
-                      <div class="flex items-center gap-3">
-                        <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
-                        <p class="text-[#3C3B3B]">Brasil</p>
-                      </div>
+                  <div class="flex items-center gap-4">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-[#E4022C] flex items-center justify-center text-white text-[18px] font-semibold">
+                      <span>2</span>
                     </div>
-                    <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="-1">
-                      <div class="flex items-center gap-3">
-                        <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
-                        <p class="text-[#3C3B3B]">Uruguay</p>
-                      </div>
-                    </div>
-                    <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="-1">
-                      <div class="flex items-center gap-3">
-                        <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
-                        <p class="text-[#3C3B3B]">Italia</p>
-                      </div>
-                    </div>
-                    <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="-1">
-                      <div class="flex items-center gap-3">
-                        <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
-                        <p class="text-[#3C3B3B]">España</p>
-                      </div>
-                    </div>
-                    <div class="cursor-pointer flex lg:items-center justify-between flex-col lg:flex-row" data-radio-option="" aria-checked="false" role="radio" tabindex="-1">
-                      <div class="flex items-center gap-3">
-                        <img data-radio-icon="" data-radio-active-src="./img/icon/radio-active.svg" data-radio-inactive-src="./img/icon/radio.svg" src="./img/icon/radio.svg" alt="">
-                        <p class="text-[#3C3B3B]">Argentina</p>
-                      </div>
-                    </div>
+                    <p class="text-[#3C3B3B]">Al seleccionar la opción "Siguiente pregunta" se mostrará si la respuesta ingresada es correcta o no.</p>
                   </div>
-                  <div class="px-4 py-[14px] bg-[#FDEDED] text-[#5F2120] rounded-[4px]">
-                    <div class="flex items-start gap-3">
-                      <img src="./img/icon/x-rojo.svg" alt="">
-                      <div class="flex flex-col gap-1">
-                        <p class="font-semibold">Incorrecto</p>
-                        <p>Uruguay se consagró como el primer campeón en la historia de los mundiales al vencer 4 a 2 el miércoles 30 de julio de 1930 a la selección de Argentina en el Estadio Centenario de Montevideo en la final de la Copa del Mundo.</p>
-                      </div>
+                  <div class="flex items-center gap-4">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-[#E4022C] flex items-center justify-center text-white text-[18px] font-semibold">
+                      <span>3</span>
                     </div>
+                    <p class="text-[#3C3B3B]">No podrás editar tu respuesta un vez que pases de pregunta.</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-[#E4022C] flex items-center justify-center text-white text-[18px] font-semibold">
+                      <span>4</span>
+                    </div>
+                    <p class="text-[#3C3B3B]">Al finalizar la última pregunta, te mostraremos el resumen semanal y general de todas tus trivias.</p>
                   </div>
                 </div>
-                <a href="" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full">
-                  <span>Validar</span>
-                </a>
-                <a href="./mundial-trivia-resumen.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
-                  <span>Finalizar trivia</span>
+                <a href="./mundial-trivia-1.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
+                  <span>Empezar trivia</span>
                 </a>
               </div>
             </div>
           </div>
-          <div data-tab-panel="polla" role="tabpanel" hidden>
+          <div data-tab-panel="polla" role="tabpanel">
             <div class="bg-white rounded-[24px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)] p-6 md:p-8 flex flex-col gap-6 md:gap-8">
               <div class="flex flex-col gap-5">
                 <div class="flex items-center justify-center py-4">
@@ -730,8 +702,8 @@
                     <div class="flex items-center justify-center w-[56px] h-[56px] rounded-full bg-[#FFF1F0] border border-[#E4022C] text-[#E4022C] font-semibold">
                       <span>1</span>
                     </div>
-                    <span class="h-[1px] w-[24px] bg-[#C6C8CC]"></span>
-                    <div class="flex items-center justify-center w-[56px] h-[56px] rounded-full border border-[#C6C8CC] text-[#C6C8CC] font-semibold">
+                    <span class="h-[1px] w-[24px] bg-[#E4022C]"></span>
+                    <div class="flex items-center justify-center w-[56px] h-[56px] rounded-full bg-[#FFF1F0] border border-[#E4022C] text-[#E4022C] font-semibold">
                       <span>2</span>
                     </div>
                     <span class="h-[1px] w-[24px] bg-[#C6C8CC]"></span>
@@ -745,185 +717,72 @@
                   <span class="bg-[#E4022C] h-[4px] w-[196px] lg:w-[358px] rounded-full"></span>
                 </div>
                 <p class="text-[#172948]">Arrastra y ordena las tablas de posiciones cómo crees que quedarán al finalizar la fase de grupos.</p>
-                <div class="flex flex-col gap-8">
-                  <div class="flex flex-col lg:flex-row gap-8">
-                    <div class="w-full flex flex-col gap-4">
-                      <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo A</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-ecuador" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Ecuador</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-qatar" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Qatar</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-netherlands" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Holanda</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-senegal" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Senegal</span>
-                        </div>
+                <div class="border border-[#E1E1E1] p-6 rounded-[24px] bg-[#FFF9FA] flex flex-col gap-4 shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]">
+                  <div class="flex items-center justify-between text-[14px] md:text-[16px]">
+                    <div class="flex items-center gap-4">
+                      <p class="text-[#172948] opacity-50">Partido 1</p>
+                      <div class="hidden md:flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px]">
+                        <p class="text-[#3C3B3B]">1A vs 2B</p>
                       </div>
                     </div>
-                    <div class="w-full flex flex-col gap-4">
-                      <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo B</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-united-kingdom" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Inglaterra</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-united-states" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Estado Unidos</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-iran" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Irán</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="twemoji:flag-wales" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Gales</span>
-                        </div>
+                    <div class="flex items-center border border-[#E1E1E1] h-[28px] px-[12px] rounded-[30px] md:hidden">
+                      <p class="text-[#3C3B3B]">1A vs 2B</p>
+                    </div>
+                    <p class="text-[#172948] opacity-50">21 Nov</p>
+                  </div>
+                  <div class="hidden md:flex items-center gap-5" data-radio-group data-radio-style="icon" data-radio-variant="no-initial">
+                    <div class="flex items-center justify-between w-full cursor-pointer gap-2" data-radio-option data-radio-value="ecuador">
+                      <div class="flex items-center gap-2">
+                        <iconify-icon icon="emojione:flag-for-flag-ecuador" class="text-[#E4022C] text-[40px]"></iconify-icon>
+                        <span class="text-[#172948] font-semibold">Ecuador</span>
+                      </div>
+                      <div class="w-10 h-10 bg-white rounded-[8px] border border-[#E1E1E1] flex items-center justify-center" data-radio-indicator>
+                        <iconify-icon icon="ph:soccer-ball-fill" class="text-[#E4022C] text-[32px]" data-radio-icon></iconify-icon>
                       </div>
                     </div>
-                    <div class="w-full flex flex-col gap-4">
-                      <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo C</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-argentina" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Argentina</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-saudi-arabia" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Arabia Saudita</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-mexico" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>México</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-poland" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Polonia</span>
-                        </div>
+                    <span class="text-[#3C3B3B]">VS</span>
+                    <div class="flex items-center justify-between w-full cursor-pointer gap-2" data-radio-option data-radio-value="estados-unidos">
+                      <div class="w-10 h-10 bg-white rounded-[8px] border border-[#E1E1E1] flex items-center justify-center" data-radio-indicator>
+                        <iconify-icon icon="ph:soccer-ball-fill" class="text-[#E4022C] text-[32px]" data-radio-icon></iconify-icon>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span class="text-[#172948] font-semibold">Estados Unidos</span>
+                        <iconify-icon icon="emojione:flag-for-flag-united-states" class="text-[#E4022C] text-[40px]"></iconify-icon>
                       </div>
                     </div>
                   </div>
-                  <div class="flex flex-col lg:flex-row gap-8">
-                    <div class="w-full flex flex-col gap-4">
-                      <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo D</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-france" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Francia</span>
+                  <div class="flex flex-col gap-2 md:hidden" data-radio-group data-radio-style="icon" data-radio-variant="no-initial">
+                    <div class="flex items-center gap-2">
+                      <iconify-icon icon="emojione:flag-for-flag-ecuador" class="text-[#E4022C] text-[40px]"></iconify-icon>
+                      <span class="text-[#172948] font-semibold">Ecuador</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-5 w-full">
+                      <div data-radio-option data-radio-value="ecuador">
+                        <div class="w-10 h-10 bg-white rounded-[8px] border border-[#E1E1E1] flex items-center justify-center" data-radio-indicator>
+                          <iconify-icon icon="ph:soccer-ball-fill" class="text-[#E4022C] text-[32px]" data-radio-icon></iconify-icon>
                         </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-australia" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Australia</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-denmark" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Dinamarca</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-tunisia" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Túnez</span>
+                      </div>
+                      <span class="text-[#3C3B3B]">VS</span>
+                      <div data-radio-option data-radio-value="estados-unidos">
+                        <div class="w-10 h-10 bg-white rounded-[8px] border border-[#E1E1E1] flex items-center justify-center" data-radio-indicator>
+                          <iconify-icon icon="ph:soccer-ball-fill" class="text-[#E4022C] text-[32px]" data-radio-icon></iconify-icon>
                         </div>
                       </div>
                     </div>
-                    <div class="w-full flex flex-col gap-4">
-                      <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo E</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-spain" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>España</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-germany" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Alemania</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-japan" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Japón</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-costa-rica" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Costa Rica</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full flex flex-col gap-4">
-                      <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo F</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-belgium" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Bélgica</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-canada" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Canadá</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-morocco" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Marruecos</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-croatia" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Croacia</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex flex-col lg:flex-row gap-8 justify-center">
-                    <div class="w-full lg:w-[33.3%] flex flex-col gap-4">
-                      <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo D</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-switzerland" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Suiza</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-brazil" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Brasil</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-serbia" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Serbia</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-cameroon" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Camerún</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full lg:w-[33.3%] flex flex-col gap-4">
-                      <p class="text-[#172948] text-[18px] font-semibold text-center">Grupo E</p>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#E6F7FF] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-portugal" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Portugal</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#FFF1F0] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-ghana" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Ghana</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-uruguay" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Uruguay</span>
-                        </div>
-                        <div class="flex items-center h-[56px] rounded-[16px] px-4 bg-[#F8F9FC] gap-2">
-                          <iconify-icon icon="emojione:flag-for-flag-south-korea" class="text-[#E4022C] text-[40px]"></iconify-icon>
-                          <span>Corea del Sur</span>
-                        </div>
-                      </div>
+                    <div class="flex items-center gap-2 w-full justify-end">
+                      <span class="text-[#172948] font-semibold">Estados Unidos</span>
+                      <iconify-icon icon="emojione:flag-for-flag-united-states" class="text-[#E4022C] text-[40px]"></iconify-icon>
                     </div>
                   </div>
                 </div>
-                <a href="./mundial-polla-2.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
-                  <span>Continuar</span>
-                </a>
+                <div class="flex items-center justify-center gap-4 lg:gap-8">
+                  <button type="button" data-tab-go="polla" data-tab-go-redirect="mundial.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full">
+                    <span>Volver</span>
+                  </button>
+                  <button type="button" data-micromodal-trigger="modal-polla-save" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
+                    <span>Guardar</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1277,6 +1136,33 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal-polla-save" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center px-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] w-full max-w-[552px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)] p-[24px]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between pb-4">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[20px] font-semibold">Guarda tu polla</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col gap-6">
+          <p class="text-[#3C3B3B] text-[16px]">Una vez que des clic en finalizar, no podrás editar tu polla mundialista.</p>
+          <div class="flex flex-col-reverse md:flex-row items-center gap-[24px]">
+            <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full" data-micromodal-close>
+              <span>No, cancelar</span>
+            </button>
+            <a href="./mundial-polla-3.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
+              <span>Sí, finalizar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
