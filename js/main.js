@@ -1710,6 +1710,7 @@ class DragList {
     this.sourceIndex = null;
     this.activeList = null;
     this.lastAfterElement = null;
+    this.colorClasses = ['bg-[#E6F7FF]', 'bg-[#FFF1F0]', 'bg-[#F8F9FC]'];
 
     this.handleDragEnter = this.handleDragEnter.bind(this);
     this.handleDragOver = this.handleDragOver.bind(this);
@@ -1736,6 +1737,7 @@ class DragList {
 
     const items = Array.from(list.querySelectorAll('[data-drag-item]'));
     items.forEach(item => this.registerItem(item));
+    this.applyColors(list);
   }
 
   registerItem(item) {
@@ -1819,6 +1821,7 @@ class DragList {
     event.preventDefault();
     const targetList = event.currentTarget;
     this.setActiveList(targetList);
+    let shouldApplySource = false;
 
     if (this.sourceList && targetList !== this.sourceList) {
       const limit = parseInt(targetList.dataset.dragLimit || targetList.childElementCount.toString(), 10);
@@ -1837,8 +1840,17 @@ class DragList {
 
           this.sourceList.insertBefore(swapItem, reference);
           this.registerItem(swapItem);
+          shouldApplySource = true;
         }
       }
+    }
+
+    this.applyColors(targetList);
+    if (this.sourceList) {
+      this.applyColors(this.sourceList);
+    }
+    if (shouldApplySource && this.sourceList) {
+      this.applyColors(this.sourceList);
     }
   }
 
@@ -1869,6 +1881,21 @@ class DragList {
     }, { offset: Number.NEGATIVE_INFINITY, element: null });
 
     return element;
+  }
+
+  applyColors(list) {
+    if (!list) return;
+    const items = Array.from(list.querySelectorAll('[data-drag-item]'));
+    items.forEach((item, index) => {
+      this.colorClasses.forEach(cls => item.classList.remove(cls));
+      if (index === 0) {
+        item.classList.add(this.colorClasses[0]);
+      } else if (index === 1) {
+        item.classList.add(this.colorClasses[1]);
+      } else {
+        item.classList.add(this.colorClasses[2]);
+      }
+    });
   }
 
   static init() {
