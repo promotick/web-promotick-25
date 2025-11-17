@@ -1,0 +1,2971 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Promotick - Puntos</title>
+</head>
+<body>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="flex items-center justify-between lg:justify-start gap-[40px] h-[80px]">
+        <div class="flex items-center gap-4">
+          <button class="lg:hidden" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <img src="./img/icon/nav.svg" alt="" data-mobile-nav-icon="open">
+            <img src="./img/icon/x.svg" alt="" class="hidden" data-mobile-nav-icon="close">
+          </button>
+          <div class="flex items-center justify-between h-[74px]">
+            <a href="./index.html">
+              <img src="./img/logo.svg" alt="The Future Forward">
+            </a>
+          </div>
+          <div class="fixed top-[80px] left-0 right-0 bg-white z-20 w-full lg:hidden hidden" id="mobile-nav" data-mobile-nav-panel>
+            <div class="flex flex-col py-2">
+              <div class="flex flex-col gap-3">
+                <div class="px-4 py-2 gap-3 flex flex-col items-start">
+                  <p class="text-[24px] font-semibold">Hola, Eduardo Naranjo</p>
+                  <div class="flex items-center gap-[10px] bg-[#E6F7FF] h-[32px] px-2 rounded-full min-w-[159px]">
+                    <img src="./img/icon/diamante.svg" alt="">
+                    <span class="text-[#096DD9] font-semibold whitespace-nowrap">Nivel Diamante</span>
+                  </div>
+                  <p class="flex items-center gap-2">
+                    <span>Puntos disponibles:</span>
+                    <span class="font-semibold">20,800</span>
+                  </p>
+                </div>
+              </div>
+              <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+              <div class="flex flex-col overflow-y-auto h-[calc(100dvh-305px)]">
+                <ul class="flex flex-col">
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./index.html">Inicio</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./catalogo.html">Catálogo</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="">Historial de puntos</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./comprar-puntos.html">Compra de puntos</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./transferencia-puntos.html">Transferencia de puntos</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./meta.html">Mi meta</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./vuelos.html">Viajes</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./capacitaciones.html">Capacitaciones</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./trivia.html">Quiz & Win</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./codigo.html">Lucky Code</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./ruleta.html">Spin & Win</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./mundial.html">Mundial</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./referido.html">Referidos</a>
+                  </li>
+                </ul>
+                <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+                <div>
+                  <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap flex items-center gap-3" href="">
+                    <img src="./img/icon/audifono.svg" alt="">
+                    <span>¿Necesitas ayuda?</span>
+                  </a>
+                </div>
+                <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+                <ul class="flex flex-col">
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html">Mis datos personales</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html?tab=direcciones">Mis direcciones</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./favorito.html">Mis favoritos</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+              <div>
+                <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap flex items-center gap-3" href="./login.html">
+                  <img src="./img/icon/cerrar-sesion.svg" alt="">
+                  <span>Cerrar sesión</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-full flex items-center gap-[27px]">
+          <!-- <div class="border border-[#E1E6EF] h-[48px] w-full hidden lg:flex items-center gap-4 px-3 rounded-[16px]">
+            <img src="./img/icon/search.svg" alt="">
+            <input class="w-full border-none outline-none" type="text" placeholder="¿Qué estás buscando?">
+          </div> -->
+          <div class="h-[28px] w-[1px] bg-[#E1E6EF] hidden lg:block"></div>
+          <div class="w-full lg:flex items-center justify-start gap-4 hidden">
+            <div>
+              <p>Hola, Eduardo Naranjo</p>
+            </div>
+            <div class="hidden lg:flex items-center gap-[10px] bg-[#E6F7FF] h-[32px] px-2 rounded-full min-w-[159px]">
+              <img src="./img/icon/diamante.svg" alt="">
+              <span class="text-[#096DD9] font-semibold whitespace-nowrap">Nivel Diamante</span>
+            </div>
+          </div>
+          <div class="hidden lg:flex items-end flex-col whitespace-nowrap">
+            <span class="text-[12px]">Mis puntos</span>
+            <span class="font-semibold">20,800</span>
+          </div>
+          <div class="flex items-center gap-5">
+            <div>
+              <button data-search-toggle aria-expanded="false" aria-controls="search-panel" class="relative">
+                <img class="min-w-[24px] h-[24px]" src="./img/icon/search-2.svg" alt="" data-search-icon="open">
+                <img class="min-w-[24px] h-[24px] hidden" src="./img/icon/x.svg" alt="" data-search-icon="close">
+              </button>
+              <div class="px-6 py-4 fixed top-0 left-0 right-0 bg-white z-10 top-[80px] w-full border-b border-[#E1E1E1] hidden" id="search-panel" data-search-panel>
+                <div class="border border-[#E1E6EF] h-[56px] w-full flex items-center gap-4 px-3 rounded-[16px] bg-white hover:border-[#172948] transition-all duration-200 max-w-[1170px] mx-auto">
+                  <img src="./img/icon/search.svg" alt="">
+                  <input class="w-full border-none outline-none" type="text" placeholder="¿Qué estás buscando?" data-search-input/>
+                </div>
+              </div>
+            </div>
+            <a href="./favorito.html" class="hidden lg:block cursor-pointer">
+              <img class="min-w-[24px] h-[24px]" src="./img/icon/heart.svg" alt="">
+            </a>
+            <div class="relative h-[24px]" data-dropdown>
+              <button data-dropdown-trigger>
+                <img class="min-w-[24px] h-[24px]" src="./img/icon/carrito.svg" alt="">
+                <span class="flex items-center justify-center bg-[#E4022C] w-[21px] h-[21px] rounded-full text-white text-[10px] font-semibold absolute top-[-10px] right-[-10px]">
+                  <span>2</span>
+                </span>
+              </button>
+              <div class="absolute top-full right-0 bg-white flex flex-col gap-4 py-[32px] px-[24px] rounded-[16px] shadow-[0_0_10px_0_rgba(0,0,0,0.15)]  z-10 hidden mt-2 min-w-[328px] md:min-w-[360px]" data-dropdown-menu>
+                <div class="flex items-center gap-3">
+                  <img class="min-w-[24px] h-[24px]" src="./img/icon/carrito.svg" alt="">
+                  <p class="text-[#3C3B3B] text-[24px] font-semibold">Mi carrito</p>
+                </div>
+                <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+                <div class="flex flex-col gap-4 overflow-y-auto max-h-[260px]">
+                  <div class="flex flex-col gap-4 items-start">
+                    <div class="flex items-center gap-4">
+                      <div class="w-[56px] h-[56px]">
+                        <img class="w-full h-full object-cover" src="./img/iphone.png" alt="">
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <p class="text-[#172948] font-semibold">iPhone 17 Pro</p>
+                        <p class="text-[#172948]">9,080 Puntos</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter data-min-value="1" data-max-value="10">
+                        <button data-quantity-minus>
+                          <img src="./img/icon/remove.svg" alt="">
+                        </button>
+                        <span class="min-w-[76px] text-center" data-quantity-display>1</span>
+                        <button data-quantity-plus>
+                          <img src="./img/icon/add.svg" alt="">
+                        </button>
+                      </div>
+                      <button class="w-10 h-10 flex items-center justify-center border border-[#E1E6EF] rounded-full">
+                        <img src="./img/icon/tacho.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+                  <div class="flex flex-col gap-4 items-start">
+                    <div class="flex items-center gap-4">
+                      <div class="w-[56px] h-[56px]">
+                        <img class="w-full h-full object-cover" src="./img/iphone.png" alt="">
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <p class="text-[#172948] font-semibold">iPhone 17 Pro</p>
+                        <p class="text-[#172948]">9,080 Puntos</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter data-min-value="1" data-max-value="10">
+                        <button data-quantity-minus>
+                          <img src="./img/icon/remove.svg" alt="">
+                        </button>
+                        <span class="min-w-[76px] text-center" data-quantity-display>1</span>
+                        <button data-quantity-plus>
+                          <img src="./img/icon/add.svg" alt="">
+                        </button>
+                      </div>
+                      <button class="w-10 h-10 flex items-center justify-center border border-[#E1E6EF] rounded-full">
+                        <img src="./img/icon/tacho.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+                  <div class="flex flex-col gap-4 items-start">
+                    <div class="flex items-center gap-4">
+                      <div class="w-[56px] h-[56px]">
+                        <img class="w-full h-full object-cover" src="./img/iphone.png" alt="">
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <p class="text-[#172948] font-semibold">iPhone 17 Pro</p>
+                        <p class="text-[#172948]">9,080 Puntos</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter data-min-value="1" data-max-value="10">
+                        <button data-quantity-minus>
+                          <img src="./img/icon/remove.svg" alt="">
+                        </button>
+                        <span class="min-w-[76px] text-center" data-quantity-display>1</span>
+                        <button data-quantity-plus>
+                          <img src="./img/icon/add.svg" alt="">
+                        </button>
+                      </div>
+                      <button class="w-10 h-10 flex items-center justify-center border border-[#E1E6EF] rounded-full">
+                        <img src="./img/icon/tacho.svg" alt="">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+                <p class="text-[#3C3B3B] font-semibold">Total: 1000 puntos</p>
+                <div class="flex flex-col gap-4">
+                  <a href="./carrito.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full">
+                    <span>Ver mi carrito</span>
+                  </a>
+                  <a href="./canjea.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full">
+                    <span>Canjear ahora</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="relative h-[24px] hidden lg:block" data-dropdown>
+              <button data-dropdown-trigger>
+              <img class="min-w-[24px] h-[24px]" src="./img/icon/user.svg" alt="">
+            </button>
+              <div class="absolute top-full right-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_0_rgba(0,0,0,0.15)]  z-10 hidden mt-2 min-w-[280px]" data-dropdown-menu>
+                <div class="px-4 py-2 gap-3 flex flex-col items-start">
+                  <p class="text-[24px] font-semibold">Hola, Eduardo Naranjo</p>
+                  <div class="flex items-center gap-[10px] bg-[#E6F7FF] h-[32px] px-2 rounded-full min-w-[159px]">
+                    <img src="./img/icon/diamante.svg" alt="">
+                    <span class="text-[#096DD9] font-semibold whitespace-nowrap">Nivel Diamante</span>
+                  </div>
+                  <p class="flex items-center gap-2">
+                    <span>Puntos disponibles:</span>
+                    <span class="font-semibold">20,800</span>
+                  </p>
+                </div>
+                <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+                <ul class="flex flex-col">
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html">Mis datos</a>
+                  </li>
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./perfil.html?tab=direcciones">Mis direcciones</a>
+                  </li>
+                </ul>
+                <div class="bg-[#E1E6EF] w-full h-[1px] my-2"></div>
+                <ul class="flex flex-col">
+                  <li class="w-full">
+                    <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap flex items-center gap-3" href="./login.html">
+                      <img src="./img/icon/cerrar-sesion.svg" alt="">
+                      <span>Cerrar sesión</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-[#E4022C] hidden lg:block pt-[80px]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="w-full flex items-center justify-between h-[56px]">
+        <ul class="flex items-center gap-[30px]">
+          <li>
+            <a class="text-white" href="./index.html">Inicio</a>
+          </li>
+          <li>
+            <a class="text-white" href="./catalogo.html">Catálogo</a>
+          </li>
+          <li class="relative" data-dropdown>
+            <span class="flex items-center gap-2 cursor-pointer" data-dropdown-trigger>
+              <span class="text-white">Puntos</span>
+              <img src="./img/icon/arrow-drop-down.svg" alt="" data-dropdown-arrow class="transition-transform duration-200">
+            </span>
+            <ul class="absolute top-full left-0 bg-white flex flex-col py-2 rounded-[16px] shadow-[0_0_10px_0_rgba(0,0,0,0.15)]  z-10 hidden mt-2" data-dropdown-menu>
+              <li class="w-full">
+                <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./puntos-historial.html">Historial</a>
+              </li>
+              <li class="w-full">
+                <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./comprar-puntos.html">Compra de puntos</a>
+              </li>
+              <li class="w-full">
+                <a class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap" href="./transferencia-puntos.html">Transferencia de puntos</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="text-white" href="./meta.html">Mi meta</a>
+          </li>
+          <li>
+            <a class="text-white" href="./vuelos.html">Viajes</a>
+          </li>
+          <li>
+            <a class="text-white" href="./capacitaciones.html">Capacitaciones</a>
+          </li>
+          <li>
+            <a class="text-white" href="./trivia.html">Quiz & Win</a>
+          </li>
+          <li>
+            <a class="text-white" href="./codigo.html">Lucky Code</a>
+          </li>
+          <li>
+            <a class="text-white" href="./ruleta.html">Spin & Win</a>
+          </li>
+          <li>
+            <a class="text-white" href="./mundial.html">Mundial</a>
+          </li>
+          <li>
+            <a class="text-white" href="./referido.html">Referidos</a>
+          </li>
+        </ul>
+        <!-- <a class="text-white flex items-center gap-2" href="">
+          <img src="./img/icon/headphones.svg" alt="">
+          <span>¿Necesitas ayuda?</span>
+        </a> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white pt-[80px] lg:pt-0">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5">
+      <div data-flight-summary>
+        <div class="flex justify-between items-center lg:hidden py-4" data-flight-search-edit>
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2 text-[#3C3B3B]">
+              <p>Guayaquil</p>
+              <p>></p>
+              <p>Quito</p>
+            </div>
+            <p class="text-[#3C3B3B] opacity-50">Vie, 01 ago. - Sáb, 10 ago.</p>
+          </div>
+          <div class="h-[56px] w-[56px] flex items-center justify-end border-l border-[#E1E6EF] gap-2">
+            <img src="./img/icon/pasajero.svg" alt="">
+            <span>1</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center justify-between items-center h-[68px] w-full">
+          <div class="flex items-center gap-6 w-full">
+            <div class="flex items-center gap-2">
+              <img src="./img/icon/ida.svg" alt="">
+              <span>Guayaquil</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./img/icon/vuelta.svg" alt="">
+              <span>Quito</span>
+            </div>
+          </div>
+          <div class="w-[1px] h-[24px] bg-[#E1E6EF]"></div>
+          <div class="flex items-center justify-center gap-2 w-full">
+            <img src="./img/icon/calendario.svg" alt="">
+            <span>Vie, 01 ago. - Sáb, 10 ago.</span>
+          </div>
+          <div class="w-[1px] h-[24px] bg-[#E1E6EF]"></div>
+          <div class="flex items-center justify-center gap-2 w-full">
+            <img src="./img/icon/pasajero.svg" alt="">
+            <span>1 Pasajero</span>
+          </div>
+          <div class="w-[1px] h-[24px] bg-[#E1E6EF]"></div>
+          <div class="flex items-center justify-center gap-2 w-full">
+            <img src="./img/icon/eco.svg" alt="">
+            <span>Económico</span>
+          </div>
+          <div class="w-[1px] h-[24px] bg-[#E1E6EF]"></div>
+          <div class="ml-10">
+            <button type="button" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] px-6 h-[44px] rounded-full" data-flight-search-edit>
+              <span>Editar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col gap-2 py-6 hidden" data-flight-search-panel>
+        <div class="flex items-center justify-between flex-col-reverse md:flex-row">
+          <div class="flex items-center flex-wrap gap-2 lg:gap-4">
+            <div class="relative" data-dropdown>
+              <button type="button" class="h-14 flex items-center justify-between pr-4 rounded-[10px] bg-white gap-4 w-full transition-all duration-200" data-dropdown-trigger>
+                <span class="text-[#172948] transition-colors duration-200" data-dropdown-selected>Ida y Vuelta</span>
+                <img src="./img/icon/arrow-down.svg" alt="" data-dropdown-arrow class="transition-transform duration-200 hidden md:block">
+                <img src="./img/icon/ordenar.svg" alt="" data-dropdown-arrow class="transition-transform duration-200 md:hidden">
+              </button>
+              <ul class="absolute left-0 md:right-0 mt-2 w-[200px] bg-white py-2 rounded-2xl shadow-[0_16px_32px_0_rgba(105,108,128,0.08)] z-20 flex flex-col" data-dropdown-menu>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="ida">Ida y vuelta</li>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="vuelta">Solo ida</li>
+              </ul>
+            </div>
+            <div class="relative" data-dropdown>
+              <button type="button" class="h-14 flex items-center justify-between pr-4 rounded-[10px] bg-white gap-4 w-full transition-all duration-200" data-dropdown-trigger>
+                <span class="text-[#172948] transition-colors duration-200" data-dropdown-selected>Económico</span>
+                <img src="./img/icon/arrow-down.svg" alt="" data-dropdown-arrow class="transition-transform duration-200 hidden md:block">
+                <img src="./img/icon/ordenar.svg" alt="" data-dropdown-arrow class="transition-transform duration-200 md:hidden">
+              </button>
+              <ul class="absolute left-0 md:right-0 mt-2 w-[200px] bg-white py-2 rounded-2xl shadow-[0_16px_32px_0_rgba(105,108,128,0.08)] z-20 flex flex-col" data-dropdown-menu>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="eco">Económico</li>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="eje">Ejecutivo</li>
+              </ul>
+            </div>
+            <div class="relative" data-dropdown>
+              <button type="button" class="h-14 flex items-center justify-between pr-4 rounded-[10px] bg-white gap-4 w-full transition-all duration-200" data-dropdown-trigger>
+                <span class="text-[#172948] transition-colors duration-200" data-dropdown-selected>1 pasajero</span>
+                <img src="./img/icon/arrow-down.svg" alt="" data-dropdown-arrow class="transition-transform duration-200 hidden md:block">
+                <img src="./img/icon/ordenar.svg" alt="" data-dropdown-arrow class="transition-transform duration-200 md:hidden">
+              </button>
+              <ul class="absolute left-0 md:right-0 mt-2 w-[284px] bg-white py-2 rounded-2xl shadow-[0_16px_32px_0_rgba(105,108,128,0.08)] z-20 flex flex-col" data-dropdown-menu>
+                <span class="flex items-center gap-2 justify-between p-4">
+                  <span class="flex flex-col">
+                    <p class="text-[#3C3B3B]">Adultos</p>
+                    <p class="text-[#3C3B3B] text-[12px]">12 a más años</p>
+                  </span>
+                  <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter="" data-min-value="1" data-max-value="10">
+                    <button data-quantity-minus="" class="opacity-25 cursor-not-allowed pointer-events-none" disabled="">
+                      <img src="./img/icon/remove.svg" alt="">
+                    </button>
+                    <span class="min-w-[40px] text-center" data-quantity-display="">1</span>
+                    <button data-quantity-plus="">
+                      <img src="./img/icon/add.svg" alt="">
+                    </button>
+                  </div>
+                </span>
+                <span class="h-[1px] bg-[#E1E6EF]"></span>
+                <span class="flex items-center gap-2 justify-between p-4">
+                  <span class="flex flex-col">
+                    <p class="text-[#3C3B3B]">Niños</p>
+                    <p class="text-[#3C3B3B] text-[12px]">De 2 a 11 años</p>
+                  </span>
+                  <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter="" data-min-value="1" data-max-value="10">
+                    <button data-quantity-minus="" class="opacity-25 cursor-not-allowed pointer-events-none" disabled="">
+                      <img src="./img/icon/remove.svg" alt="">
+                    </button>
+                    <span class="min-w-[40px] text-center" data-quantity-display="">1</span>
+                    <button data-quantity-plus="">
+                      <img src="./img/icon/add.svg" alt="">
+                    </button>
+                  </div>
+                </span>
+                <span class="h-[1px] bg-[#E1E6EF]"></span>
+                <span class="flex items-center gap-2 justify-between p-4">
+                  <span class="flex flex-col">
+                    <p class="text-[#3C3B3B]">Bebés</p>
+                    <p class="text-[#3C3B3B] text-[12px]">Menores de 2 años</p>
+                  </span>
+                  <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-10" data-quantity-counter="" data-min-value="1" data-max-value="10">
+                    <button data-quantity-minus="" class="opacity-25 cursor-not-allowed pointer-events-none" disabled="">
+                      <img src="./img/icon/remove.svg" alt="">
+                    </button>
+                    <span class="min-w-[40px] text-center" data-quantity-display="">1</span>
+                    <button data-quantity-plus="">
+                      <img src="./img/icon/add.svg" alt="">
+                    </button>
+                  </div>
+                </span>
+              </ul>
+            </div>
+          </div>
+          <div class="flex justify-end w-full md:w-auto">
+            <button type="button" class="flex items-center text-[#E4022C] justify-center gap-2" data-flight-search-close>
+              <span>Cerrar</span>
+              <img src="./img/icon/x-rojo.svg" alt="">
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center flex-col lg:flex-row gap-6">
+          <div class="w-full lg:w-auto">
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="text" id="origen" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="origen" data-field-label="" class="">Origen</label>
+              </div>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="text" id="destino" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="destino" data-field-label="" class="">Destino</label>
+              </div>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="date" id="fecha-ida" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="fecha-ida" data-field-label="" class="">Fecha Ida</label>
+                <button type="button" class="flex items-center justify-center" data-field-date-trigger aria-label="Abrir calendario">
+                  <iconify-icon icon="solar:calendar-outline" class="text-[24px]" data-field-date-icon></iconify-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="relative w-full" data-field="" data-variant="simple">
+              <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                <input type="date" id="fecha-regreso" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                <label for="fecha-regreso" data-field-label="" class="">Fecha Regreso</label>
+                <button type="button" class="flex items-center justify-center" data-field-date-trigger aria-label="Abrir calendario">
+                  <iconify-icon icon="solar:calendar-outline" class="text-[24px]" data-field-date-icon></iconify-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="w-full">
+            <a class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" href="index.html">
+              <span>Buscar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#FFF9FA]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 py-10 flex flex-col gap-[20px]">
+      <div class="flex flex-col gap-5 lg:gap-10">
+        <div class="flex md:items-center justify-between flex-col md:flex-row">
+          <h2 class="text-[#3C3B3B] text-[24px]">Elige un <span class="font-semibold">vuelo de ida</span></h2>
+          <div class="flex items-center gap-4">
+            <p>Ordenado por:</p>
+            <div class="relative" data-dropdown>
+              <button type="button" class="h-14 flex items-center justify-between pr-4 rounded-[10px] gap-4 w-full transition-all duration-200" data-dropdown-trigger>
+                <span class="text-[#172948] transition-colors duration-200" data-dropdown-selected>Recomendado</span>
+                <img src="./img/icon/arrow-down.svg" alt="" data-dropdown-arrow class="transition-transform duration-200 hidden md:block">
+                <img src="./img/icon/ordenar.svg" alt="" data-dropdown-arrow class="transition-transform duration-200 md:hidden">
+              </button>
+              <ul class="absolute right-0 mt-2 w-[200px] bg-white py-2 rounded-2xl shadow-[0_16px_32px_0_rgba(105,108,128,0.08)] z-20 flex flex-col" data-dropdown-menu>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="eco">Recomendado</li>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="eje">Más baratos</li>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="eje">Más rápidos</li>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="eje">Salida más temprano</li>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="eje">Salida más tarde</li>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="eje">Llegada más temprano</li>
+                <li class="block p-3 hover:bg-[#EEECEC] whitespace-nowrap transition-colors duration-200 cursor-pointer" data-value="eje">Llegada más tarde</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5" data-accordion-group>
+          <div class="shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-2xl" data-accordion>
+            <div
+              class="bg-white !p-4 md:!p-6 rounded-2xl flex md:items-center cursor-pointer flex-col lg:flex-row !gap-3 md:!gap-0"
+              data-accordion-trigger
+              role="button"
+              tabindex="0"
+            >
+              <div class="min-w-full lg:min-w-[75%]">
+                <div class="flex flex-col gap-4 md:gap-6">
+                  <div class="flex items-center gap-3 justify-between md:justify-start">
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      5:00 a.m. <span class="text-[#3C3B3B]">GYE</span>
+                    </p>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <div class="text-center text-nowrap">
+                      <p class="text-[#3C3B3B] opacity-50">
+                        Duración
+                      </p>
+                      <p class="text-[#3C3B3B] opacity-50">
+                        1h 20 min
+                      </p>
+                    </div>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      6:20 a.m. <span class="text-[#3C3B3B]">UIO</span>
+                    </p>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                  <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row gap-2">
+                    <button data-micromodal-trigger="modal-directo" class="text-[#E4022C] underline" type="button" data-accordion-stop>Directo</button>
+                    <div class="flex items-center gap-1">
+                      <p class="text-[#3C3B3B]">Operado por</p>
+                      <img src="./img/iso-latam.png" alt="" />
+                      <p class="text-[#3C3B3B]">LATAM Airlines</p>
+                    </div>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                </div>
+              </div>
+              <div class="min-w-full lg:min-w-[25%] flex flex-col items-start md:items-end">
+              <p class="text-[#3C3B3B] opacity-50">Ida y vuelta, desde</p>
+              <p class="text-[#E4022C] text-[20px] font-semibold">
+                16,136 millas
+              </p>
+            </div>
+            </div>
+            <div class="hidden" data-accordion-content>
+              <div class="px-4 py-3 bg-[#FFF9FA] rounded-b-2xl">
+                <div class="hidden md:flex items-center justify-between flex-wrap md:flex-nowrap h-10 pb-2">
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                  <div class="min-w-full md:min-w-fit">
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-2 py-2 md:hidden">
+                  <div class="w-full flex justify-between items-center gap-2">
+                    <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                </div>
+                <div class="flex gap-4 flex-row overflow-x-auto">
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">16,136 millas</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">19 053 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Selección de asiento Estándar
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 16 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Asiento del medio bloqueado
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-2xl" data-accordion>
+            <div
+              class="bg-white !p-4 md:!p-6 rounded-2xl flex md:items-center cursor-pointer flex-col lg:flex-row !gap-3 md:!gap-0"
+              data-accordion-trigger
+              role="button"
+              tabindex="0"
+            >
+              <div class="min-w-full lg:min-w-[75%]">
+                <div class="flex flex-col gap-4 md:gap-6">
+                  <div class="flex items-center gap-3 justify-between md:justify-start">
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      5:00 a.m. <span class="text-[#3C3B3B]">GYE</span>
+                    </p>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <div class="text-center text-nowrap">
+                      <p class="text-[#3C3B3B] opacity-50">
+                        Duración
+                      </p>
+                      <p class="text-[#3C3B3B] opacity-50">
+                        1h 20 min
+                      </p>
+                    </div>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      6:20 a.m. <span class="text-[#3C3B3B]">UIO</span>
+                    </p>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                  <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row gap-2">
+                    <button data-micromodal-trigger="modal-paradas" class="text-[#E4022C] underline" type="button" data-accordion-stop>2 Paradas</button>
+                    <div class="flex items-center gap-1">
+                      <p class="text-[#3C3B3B]">Operado por</p>
+                      <img src="./img/iso-latam.png" alt="" />
+                      <p class="text-[#3C3B3B]">LATAM Airlines</p>
+                    </div>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                </div>
+              </div>
+              <div class="min-w-full lg:min-w-[25%] flex flex-col items-start md:items-end">
+              <p class="text-[#3C3B3B] opacity-50">Ida y vuelta, desde</p>
+              <p class="text-[#E4022C] text-[20px] font-semibold">
+                16,136 millas
+              </p>
+            </div>
+            </div>
+            <div class="hidden" data-accordion-content>
+              <div class="px-4 py-3 bg-[#FFF9FA] rounded-b-2xl">
+                <div class="hidden md:flex items-center justify-between flex-wrap md:flex-nowrap h-10 pb-2">
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                  <div class="min-w-full md:min-w-fit">
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-2 py-2 md:hidden">
+                  <div class="w-full flex justify-between items-center gap-2">
+                    <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                </div>
+                <div class="flex gap-4 flex-row overflow-x-auto">
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">16,136 millas</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">19 053 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Selección de asiento Estándar
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 16 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Asiento del medio bloqueado
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-2xl" data-accordion>
+            <div
+              class="bg-white !p-4 md:!p-6 rounded-2xl flex md:items-center cursor-pointer flex-col lg:flex-row !gap-3 md:!gap-0"
+              data-accordion-trigger
+              role="button"
+              tabindex="0"
+            >
+              <div class="min-w-full lg:min-w-[75%]">
+                <div class="flex flex-col gap-4 md:gap-6">
+                  <div class="flex items-center gap-3 justify-between md:justify-start">
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      5:00 a.m. <span class="text-[#3C3B3B]">GYE</span>
+                    </p>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <div class="text-center text-nowrap">
+                      <p class="text-[#3C3B3B] opacity-50">
+                        Duración
+                      </p>
+                      <p class="text-[#3C3B3B] opacity-50">
+                        1h 20 min
+                      </p>
+                    </div>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      6:20 a.m. <span class="text-[#3C3B3B]">UIO</span>
+                    </p>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                  <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row gap-2">
+                    <button data-micromodal-trigger="modal-directo" class="text-[#E4022C] underline" type="button" data-accordion-stop>Directo</button>
+                    <div class="flex items-center gap-1">
+                      <p class="text-[#3C3B3B]">Operado por</p>
+                      <img src="./img/iso-latam.png" alt="" />
+                      <p class="text-[#3C3B3B]">LATAM Airlines</p>
+                    </div>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                </div>
+              </div>
+              <div class="min-w-full lg:min-w-[25%] flex flex-col items-start md:items-end">
+              <p class="text-[#3C3B3B] opacity-50">Ida y vuelta, desde</p>
+              <p class="text-[#E4022C] text-[20px] font-semibold">
+                16,136 millas
+              </p>
+            </div>
+            </div>
+            <div class="hidden" data-accordion-content>
+              <div class="px-4 py-3 bg-[#FFF9FA] rounded-b-2xl">
+                <div class="hidden md:flex items-center justify-between flex-wrap md:flex-nowrap h-10 pb-2">
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                  <div class="min-w-full md:min-w-fit">
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-2 py-2 md:hidden">
+                  <div class="w-full flex justify-between items-center gap-2">
+                    <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                </div>
+                <div class="flex gap-4 flex-row overflow-x-auto">
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">16,136 millas</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">19 053 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Selección de asiento Estándar
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 16 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Asiento del medio bloqueado
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-2xl" data-accordion>
+            <div
+              class="bg-white !p-4 md:!p-6 rounded-2xl flex md:items-center cursor-pointer flex-col lg:flex-row !gap-3 md:!gap-0"
+              data-accordion-trigger
+              role="button"
+              tabindex="0"
+            >
+              <div class="min-w-full lg:min-w-[75%]">
+                <div class="flex flex-col gap-4 md:gap-6">
+                  <div class="flex items-center gap-3 justify-between md:justify-start">
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      5:00 a.m. <span class="text-[#3C3B3B]">GYE</span>
+                    </p>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <div class="text-center text-nowrap">
+                      <p class="text-[#3C3B3B] opacity-50">
+                        Duración
+                      </p>
+                      <p class="text-[#3C3B3B] opacity-50">
+                        1h 20 min
+                      </p>
+                    </div>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      6:20 a.m. <span class="text-[#3C3B3B]">UIO</span>
+                    </p>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                  <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row gap-2">
+                    <button data-micromodal-trigger="modal-directo" class="text-[#E4022C] underline" type="button" data-accordion-stop>Directo</button>
+                    <div class="flex items-center gap-1">
+                      <p class="text-[#3C3B3B]">Operado por</p>
+                      <img src="./img/iso-latam.png" alt="" />
+                      <p class="text-[#3C3B3B]">LATAM Airlines</p>
+                    </div>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                </div>
+              </div>
+              <div class="min-w-full lg:min-w-[25%] flex flex-col items-start md:items-end">
+              <p class="text-[#3C3B3B] opacity-50">Ida y vuelta, desde</p>
+              <p class="text-[#E4022C] text-[20px] font-semibold">
+                16,136 millas
+              </p>
+            </div>
+            </div>
+            <div class="hidden" data-accordion-content>
+              <div class="px-4 py-3 bg-[#FFF9FA] rounded-b-2xl">
+                <div class="hidden md:flex items-center justify-between flex-wrap md:flex-nowrap h-10 pb-2">
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                  <div class="min-w-full md:min-w-fit">
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-2 py-2 md:hidden">
+                  <div class="w-full flex justify-between items-center gap-2">
+                    <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                </div>
+                <div class="flex gap-4 flex-row overflow-x-auto">
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">16,136 millas</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">19 053 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Selección de asiento Estándar
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 16 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Asiento del medio bloqueado
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-2xl" data-accordion>
+            <div
+              class="bg-white !p-4 md:!p-6 rounded-2xl flex md:items-center cursor-pointer flex-col lg:flex-row !gap-3 md:!gap-0"
+              data-accordion-trigger
+              role="button"
+              tabindex="0"
+            >
+              <div class="min-w-full lg:min-w-[75%]">
+                <div class="flex flex-col gap-4 md:gap-6">
+                  <div class="flex items-center gap-3 justify-between md:justify-start">
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      5:00 a.m. <span class="text-[#3C3B3B]">GYE</span>
+                    </p>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <div class="text-center text-nowrap">
+                      <p class="text-[#3C3B3B] opacity-50">
+                        Duración
+                      </p>
+                      <p class="text-[#3C3B3B] opacity-50">
+                        1h 20 min
+                      </p>
+                    </div>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      6:20 a.m. <span class="text-[#3C3B3B]">UIO</span>
+                    </p>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                  <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row gap-2">
+                    <button data-micromodal-trigger="modal-directo" class="text-[#E4022C] underline" type="button" data-accordion-stop>Directo</button>
+                    <div class="flex items-center gap-1">
+                      <p class="text-[#3C3B3B]">Operado por</p>
+                      <img src="./img/iso-latam.png" alt="" />
+                      <p class="text-[#3C3B3B]">LATAM Airlines</p>
+                    </div>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                </div>
+              </div>
+              <div class="min-w-full lg:min-w-[25%] flex flex-col items-start md:items-end">
+              <p class="text-[#3C3B3B] opacity-50">Ida y vuelta, desde</p>
+              <p class="text-[#E4022C] text-[20px] font-semibold">
+                16,136 millas
+              </p>
+            </div>
+            </div>
+            <div class="hidden" data-accordion-content>
+              <div class="px-4 py-3 bg-[#FFF9FA] rounded-b-2xl">
+                <div class="hidden md:flex items-center justify-between flex-wrap md:flex-nowrap h-10 pb-2">
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                  <div class="min-w-full md:min-w-fit">
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-2 py-2 md:hidden">
+                  <div class="w-full flex justify-between items-center gap-2">
+                    <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                </div>
+                <div class="flex gap-4 flex-row overflow-x-auto">
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">16,136 millas</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">19 053 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Selección de asiento Estándar
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 16 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Asiento del medio bloqueado
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-2xl" data-accordion>
+            <div
+              class="bg-white !p-4 md:!p-6 rounded-2xl flex md:items-center cursor-pointer flex-col lg:flex-row !gap-3 md:!gap-0"
+              data-accordion-trigger
+              role="button"
+              tabindex="0"
+            >
+              <div class="min-w-full lg:min-w-[75%]">
+                <div class="flex flex-col gap-4 md:gap-6">
+                  <div class="flex items-center gap-3 justify-between md:justify-start">
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      5:00 a.m. <span class="text-[#3C3B3B]">GYE</span>
+                    </p>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <div class="text-center text-nowrap">
+                      <p class="text-[#3C3B3B] opacity-50">
+                        Duración
+                      </p>
+                      <p class="text-[#3C3B3B] opacity-50">
+                        1h 20 min
+                      </p>
+                    </div>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      6:20 a.m. <span class="text-[#3C3B3B]">UIO</span>
+                    </p>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                  <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row gap-2">
+                    <button data-micromodal-trigger="modal-directo" class="text-[#E4022C] underline" type="button" data-accordion-stop>Directo</button>
+                    <div class="flex items-center gap-1">
+                      <p class="text-[#3C3B3B]">Operado por</p>
+                      <img src="./img/iso-latam.png" alt="" />
+                      <p class="text-[#3C3B3B]">LATAM Airlines</p>
+                    </div>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                </div>
+              </div>
+              <div class="min-w-full lg:min-w-[25%] flex flex-col items-start md:items-end">
+              <p class="text-[#3C3B3B] opacity-50">Ida y vuelta, desde</p>
+              <p class="text-[#E4022C] text-[20px] font-semibold">
+                16,136 millas
+              </p>
+            </div>
+            </div>
+            <div class="hidden" data-accordion-content>
+              <div class="px-4 py-3 bg-[#FFF9FA] rounded-b-2xl">
+                <div class="hidden md:flex items-center justify-between flex-wrap md:flex-nowrap h-10 pb-2">
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                  <div class="min-w-full md:min-w-fit">
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-2 py-2 md:hidden">
+                  <div class="w-full flex justify-between items-center gap-2">
+                    <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                </div>
+                <div class="flex gap-4 flex-row overflow-x-auto">
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">16,136 millas</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">19 053 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Selección de asiento Estándar
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 16 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Asiento del medio bloqueado
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-2xl" data-accordion>
+            <div
+              class="bg-white !p-4 md:!p-6 rounded-2xl flex md:items-center cursor-pointer flex-col lg:flex-row !gap-3 md:!gap-0"
+              data-accordion-trigger
+              role="button"
+              tabindex="0"
+            >
+              <div class="min-w-full lg:min-w-[75%]">
+                <div class="flex flex-col gap-4 md:gap-6">
+                  <div class="flex items-center gap-3 justify-between md:justify-start">
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      5:00 a.m. <span class="text-[#3C3B3B]">GYE</span>
+                    </p>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <div class="text-center text-nowrap">
+                      <p class="text-[#3C3B3B] opacity-50">
+                        Duración
+                      </p>
+                      <p class="text-[#3C3B3B] opacity-50">
+                        1h 20 min
+                      </p>
+                    </div>
+                    <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                    <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
+                      6:20 a.m. <span class="text-[#3C3B3B]">UIO</span>
+                    </p>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                  <div class="flex items-start md:items-center md:justify-between flex-col md:flex-row gap-2">
+                    <button data-micromodal-trigger="modal-directo" class="text-[#E4022C] underline" type="button" data-accordion-stop>Directo</button>
+                    <div class="flex items-center gap-1">
+                      <p class="text-[#3C3B3B]">Operado por</p>
+                      <img src="./img/iso-latam.png" alt="" />
+                      <p class="text-[#3C3B3B]">LATAM Airlines</p>
+                    </div>
+                  </div>
+                  <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
+                </div>
+              </div>
+              <div class="min-w-full lg:min-w-[25%] flex flex-col items-start md:items-end">
+              <p class="text-[#3C3B3B] opacity-50">Ida y vuelta, desde</p>
+              <p class="text-[#E4022C] text-[20px] font-semibold">
+                16,136 millas
+              </p>
+            </div>
+            </div>
+            <div class="hidden" data-accordion-content>
+              <div class="px-4 py-3 bg-[#FFF9FA] rounded-b-2xl">
+                <div class="hidden md:flex items-center justify-between flex-wrap md:flex-nowrap h-10 pb-2">
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                  <div class="min-w-full md:min-w-fit">
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-2 py-2 md:hidden">
+                  <div class="w-full flex justify-between items-center gap-2">
+                    <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">LATAM - LA 2067</p>
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-[#E4022C] cursor-pointer justify-end"
+                      data-accordion-close
+                    >
+                      <span>Cerrar</span>
+                      <img src="./img/icon/x-rojo.svg" alt="">
+                    </button>
+                  </div>
+                  <p class="text-[#3C3B3B] md:pl-5 min-w-[50%] md:min-w-fit">4 Tarifas disponibles</p>
+                </div>
+                <div class="flex gap-4 flex-row overflow-x-auto">
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">16,136 millas</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">19 053 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 10 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Selección de asiento Estándar
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="min-w-[256px] lg:w-full lg:shadow-[0_0_10px_0_rgba(0,0,0,0.15)] rounded-xl bg-white flex flex-col justify-between">
+                    <div class="flex flex-col">
+                      <div class="border-b px-4 py-[10px] border-[#E1E6EF]">
+                        <p class="text-[#3C3B3B]">Basic</p>
+                      </div>
+                      <div class="p-4 flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Bolso o mochila pequeña
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Equipaje de mano 16 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            1 equipaje de bodega 23 Kg
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Cambio con cargo + Diferencia de precio
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Asiento del medio bloqueado
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <img
+                            src="./img/icon/check-filled.svg"
+                            alt=""
+                          />
+                          <p class="text-[#3C3B3B]">
+                            Devolución antes de la salida del primer vuelo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="p-4 w-full">
+                        <p class="text-[#3C3B3B] font-semibold">25 682 puntos</p>
+                      </div>
+                      <div class="p-4 w-full">
+                        <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[44px] rounded-full">
+                          <span>Elegir</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <a href="./carrito.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] px-6 rounded-full">
+              <span>24 Vuelos más</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-[48px] bg-[#231F20]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="flex flex-col gap-8">
+        <div class="flex items-center justify-center md:justify-start md:items-start flex-col md:flex-row gap-[32px] md:gap-0">
+          <div class="w-full flex items-center justify-center">
+            <img class="h-[50px] md:h-auto" src="./img/logo-white.svg" alt="">
+          </div>
+          <div class="w-full">
+            <div class="flex flex-col gap-4 text-center">
+              <p class="text-white text-[18px] font-semibold">CONTÁCTANOS</p>
+              <ul class="flex flex-col gap-[22px]">
+                <li>
+                  <p class="text-white">callcenter@promotick.com</p>
+                </li>
+                <li>
+                  <p class="text-white">1800-CANJES (226537)</p>
+                </li>
+                <li>
+                  <a class="text-white" href="./contacto.html">Enviar mensaje</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <span class="bg-[#E1E6EF] h-[1px] w-full block md:hidden"></span>
+          <div class="w-full">
+            <div class="flex flex-col gap-4 text-center">
+              <p class="text-white text-[18px] font-semibold">INFORMACIÓN</p>
+              <ul class="flex flex-col gap-[22px]">
+                <li>
+                  <a class="text-white" href="tyc.html">Términos y condiciones</a>
+                </li>
+                <li>
+                  <a class="text-white" href="legal.html">Políticas de privacidad</a>
+                </li>
+                <li>
+                  <a class="text-white" href="./preguntas.html">Preguntas frecuentes</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <span class="bg-[#E1E6EF] h-[1px] w-full"></span>
+        <p class="text-white text-center">© 2025 Promotick. Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal-directo" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-start justify-end p-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] md:rounded-r-[0px] w-full max-w-[470px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[18px] font-semibold">Itinerario de vuelo</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="px-6 py-4 overflow-y-auto max-h-[calc(100dvh-200px)]">
+          <div class="flex gap-6">
+            <div class="w-full">
+              <div class="flex flex-col gap-[50px]">
+                <div class="text-end min-h-[100px]">
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Salida</p>
+                  <p class="text-[#3C3B3B]">GYE <span class="font-semibold">5:00 a.m.</span></p>
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Aeropuerto Internacional José Joaquín de Olmedo</p>
+                </div>
+                <div class="text-end">
+                  <p class="text-[#E4022C] text-[14px]">Duración</p>
+                  <p class="text-[#E4022C] font-semibold">1 h 20 min</p>
+                </div>
+                <div class="text-end min-h-[100px]">
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Salida</p>
+                  <p class="text-[#3C3B3B]">GYE <span class="font-semibold">5:00 a.m.</span></p>
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Aeropuerto Internacional José Joaquín de Olmedo</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center flex-col">
+              <span class="w-5 h-5 border-2 border-[#E4022C] rounded-full"></span>
+              <div class="w-[2px] h-[250px] bg-[#E4022C]"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin text-[#E4022C]"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="w-full">
+              <div class="flex justify-center items-center h-full">
+                <div>
+                  <div class="flex items-center gap-1">
+                    <img src="./img/iso-latam.png" alt="">
+                    <p class="text-sm text-[#3C3B3B]">LATAM Airlines</p>
+                  </div>
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Airbus A319</p>
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Operado por LATAM Airlines Ecuador</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 border-t border-[#E1E6EF]">
+          <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+            <span>Entendido</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-paradas" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-start justify-end p-4 z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white rounded-[24px] md:rounded-r-[0px] w-full max-w-[470px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-[#E1E6EF]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-[#172948] text-[18px] font-semibold">Itinerario de vuelo</h3>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F5F5F5]" aria-label="Cerrar" data-micromodal-close>
+            <img src="./img/icon/x.svg" alt="">
+          </button>
+        </div>
+        <div class="px-6 py-4 overflow-y-auto max-h-[calc(100dvh-200px)]">
+          <div class="flex gap-6">
+            <div class="w-full flex flex-col gap-[200px]">
+              <div class="flex flex-col gap-[50px]">
+                <div class="text-end min-h-[100px]">
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Salida</p>
+                  <p class="text-[#3C3B3B]">GYE <span class="font-semibold">5:00 a.m.</span></p>
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Aeropuerto Internacional José Joaquín de Olmedo</p>
+                </div>
+                <div class="text-end">
+                  <p class="text-[#E4022C] text-[14px]">Duración</p>
+                  <p class="text-[#E4022C] font-semibold">1 h 20 min</p>
+                </div>
+                <div class="text-end min-h-[100px]">
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Salida</p>
+                  <p class="text-[#3C3B3B]">GYE <span class="font-semibold">5:00 a.m.</span></p>
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Aeropuerto Internacional José Joaquín de Olmedo</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-[50px]">
+                <div class="text-end min-h-[100px]">
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Salida</p>
+                  <p class="text-[#3C3B3B]">GYE <span class="font-semibold">5:00 a.m.</span></p>
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Aeropuerto Internacional José Joaquín de Olmedo</p>
+                </div>
+                <div class="text-end">
+                  <p class="text-[#E4022C] text-[14px]">Duración</p>
+                  <p class="text-[#E4022C] font-semibold">1 h 20 min</p>
+                </div>
+                <div class="text-end min-h-[100px]">
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Salida</p>
+                  <p class="text-[#3C3B3B]">GYE <span class="font-semibold">5:00 a.m.</span></p>
+                  <p class="text-sm text-[#3C3B3B] opacity-50">Aeropuerto Internacional José Joaquín de Olmedo</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="flex items-center flex-col">
+                <span class="w-5 h-5 border-2 border-[#E4022C] rounded-full"></span>
+                <div class="w-[2px] h-[250px] bg-[#E4022C]"></div>
+                <i data-lucide="map-pin" class="text-[#E4022C]"></i>
+              </div>
+              <div class="relative flex items-center justify-center">
+                <div class="w-[1px] h-[250px] bg-[#71717A80]"></div>
+                <div class="absolute w-[300px] flex items-center justify-center gap-3 border border-[#E1E1E1] py-2 rounded-[50px] bg-white">
+                  <iconify-icon icon="hugeicons:airplane-mode" class="text-[#E4022C] text-[24px]" data-radio-icon></iconify-icon>
+                  <div class="text-center">
+                    <p class="text-[#3C3B3B] text-sm opacity-50">Cambio de avión en Quito (UIO)</p>
+                    <p class="text-[#E4022C]">1 h 40 min</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center flex-col">
+                <span class="w-5 h-5 border-2 border-[#E4022C] rounded-full"></span>
+                <div class="w-[2px] h-[250px] bg-[#E4022C]"></div>
+                <i data-lucide="map-pin" class="text-[#E4022C]"></i>
+              </div>
+            </div>
+            <div class="w-full">
+              <div class="flex flex-col h-full gap-[200px]">
+                <div class="flex justify-center items-center h-full">
+                  <div>
+                    <div class="flex items-center gap-1">
+                      <img src="./img/iso-latam.png" alt="">
+                      <p class="text-sm text-[#3C3B3B]">LATAM Airlines</p>
+                    </div>
+                    <p class="text-sm text-[#3C3B3B] opacity-50">Airbus A319</p>
+                    <p class="text-sm text-[#3C3B3B] opacity-50">Operado por LATAM Airlines Ecuador</p>
+                  </div>
+                </div>
+                <div class="flex justify-center items-center h-full">
+                  <div>
+                    <div class="flex items-center gap-1">
+                      <img src="./img/iso-latam.png" alt="">
+                      <p class="text-sm text-[#3C3B3B]">LATAM Airlines</p>
+                    </div>
+                    <p class="text-sm text-[#3C3B3B] opacity-50">Airbus A319</p>
+                    <p class="text-sm text-[#3C3B3B] opacity-50">Operado por LATAM Airlines Ecuador</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 border-t border-[#E1E6EF]">
+          <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
+            <span>Entendido</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>

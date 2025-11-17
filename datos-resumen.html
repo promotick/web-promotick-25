@@ -357,31 +357,266 @@
     </div>
   </section>
 
-  <section class="bg-[#FFF9FA] pt-[80px] lg:pt-0 min-h-[calc(100vh-424px)]">
-    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 py-10">
-      <div class="flex items-center justify-center lg:mt-6">
-        <div class="w-full lg:w-[640px] flex flex-col gap-6">
-          <p class="text-[#3C3B3B] text-[24px] font-semibold text-center">¡Gracias por participar en la trivia de esta semana! 🙌</p>
-          <p class="text-[#3C3B3B] text-[16px] font-regular text-center">🌟 Tus resultados de hoy</p>
-          <div class="flex items-center gap-4 w-full">
-            <div class="bg-white rounded-[24px] p-4 flex flex-col gap-2 w-full">
-              <p class="text-[#3C3B3B] text-[24px] font-semibold">1</p>
-              <p class="text-[#3C3B3B] text-[16px] font-regular">Preguntas acertadas</p>
+  <section class="bg-[#FFF9FA] lg:pt-[32px] pt-[112px] pb-[48px] bg-[#FFF9FA] md:pt-[100px]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="bg-white p-4 rounded-[20px] flex flex-col gap-6">
+        <div class="flex items-center justify-center">
+          <img src="./img/icon/check-green.svg" alt="">
+        </div>
+        <div class="flex items-center justify-center flex-col gap-3">
+          <h3 class="text-[#3C3B3B] text-[24px] font-semibold">¡Tu vuelo está confirmado!</h3>
+          <p class="text-[#3C3B3B] text-[16px] text-center">La confirmación de tu canje fue enviada a <a href="mailto:nombrecliente@gmail.com" class="font-semibold">nombrecliente@gmail.com</a></p>
+          <p class="text-[#3C3B3B] text-[16px] text-center">Código de reserva: <span class="text-[#E4022C] font-semibold">ABC123</span></p>
+        </div>
+        <div class="border border-[#096DD9] rounded-[24px] p-6 flex flex-col gap-5 bg-[#E6F7FF]">
+          <div class="flex items-center gap-2">
+            <img src="./img/icon/info.svg" alt="">
+            <p class="text-[#3C3B3B] font-semibold">Recuerda hacer check-in online 24 - 48 horas antes.</p>
+          </div>
+          <p class="text-[#3C3B3B] text-[14px]">Llega al aeropuerto con al menos 2 horas de anticipación en un vuelo nacional, y 3 horas en un vuelo internacional.</p>
+        </div>
+        <div class="flex-col md:flex-row flex items-center gap-[24px]">
+          <div class="bg-[#FEE8EA] w-full h-[136px] flex items-center justify-center rounded-[24px] flex items-center flex-col gap-2">
+            <img src="./img/icon/reloj-rojo.svg" alt="">
+            <p class="text-[#3C3B3B]">Fecha de reserva</p>
+            <p class="text-[#3C3B3B] font-semibold text-center">14/10/2025, 11:35 AM</p>
+          </div>
+          <div class="bg-[#FEE8EA] w-full h-[136px] flex items-center justify-center rounded-[24px] flex items-center flex-col gap-2">
+            <img src="./img/icon/pasajero-rojo.svg" alt="">
+            <p class="text-[#3C3B3B]">Pasajeros</p>
+            <p class="text-[#3C3B3B] font-semibold text-center">1</p>
+          </div>
+          <div class="bg-[#FEE8EA] w-full h-[136px] flex items-center justify-center rounded-[24px] flex items-center flex-col gap-2">
+            <img src="./img/icon/estrella-rojo.svg" alt="">
+            <p class="text-[#3C3B3B]">Puntos utilizados</p>
+            <p class="text-[#3C3B3B] font-semibold text-center">15,000 puntos</p>
+          </div>
+        </div>
+        <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+        <div class="border border-[#E1E6EF] rounded-[24px] flex flex-col">
+          <div class="flex items-center gap-2 px-6 py-4 bg-[#FFF9FA] rounded-t-[24px]">
+            <iconify-icon icon="fluent:airplane-take-off-24-regular" class="text-[#3C3B3B] text-[24px]" data-radio-icon></iconify-icon>
+            <p class="text-[#3C3B3B] text-[18px] font-semibold">Vuelo de ida</p>
+          </div>
+          <div class="flex justify-between items-center gap-4 px-6 py-4">
+            <div class="flex flex-col gap-1">
+              <p class="text-[#3C3B3B] text-[18px] font-semibold">LATAM Airlines</p>
+              <p class="text-[#3C3B3B] text-[14px] opacity-50">Vuelo LA2405 - Clase Económica</p>
             </div>
-            <div class="bg-white rounded-[24px] p-4 flex flex-col gap-2 w-full">
-              <p class="text-[#3C3B3B] text-[24px] font-semibold">1</p>
-              <p class="text-[#3C3B3B] text-[16px] font-regular">Preguntas erradas</p>
+            <div class="border border-[#E1E6EF] rounded-[8px] px-2 py-1 flex items-center justify-center">
+              <p>Directo</p>
             </div>
           </div>
-          <div>
-            <p class="text-[#3C3B3B] text-[16px] font-regular">¡No te preocupes! Prueba de nuevo y sigue aprendiendo.</p>
+          <div class="px-6 w-full flex items-center justify-center">
+            <span class="w-full h-[1px] bg-[#E1E6EF]"></span>
           </div>
-          <a href="./trivia.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
-            <span>Probar de nuevo</span>
-          </a>
-          <a href="./index.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full">
-            <span>Ir a inicio</span>
-          </a>
+          <div class="flex flex-col gap-4 px-6 py-4">
+            <div class="flex flex-col gap-4 md:gap-6">
+              <div class="flex md:items-center gap-3 md:justify-between md:justify-start flex-col md:flex-row">
+                <div class="flex flex-col gap-2">
+                  <p class="text-[#3C3B3B] text-[14px] opacity-50">Salida</p>
+                  <p class="text-[#E4022C] md:text-xl lg:text-[24px] text-nowrap font-semibold">
+                    08:30 a.m.
+                  </p>
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#3C3B3B] text-[18px] font-semibold">LIM</p>
+                    <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">Jorge Chávez International Airport</p>
+                    <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">25 Nov 2025</p>
+                  </div>
+                </div>
+                <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                <div class="text-center text-nowrap">
+                  <iconify-icon icon="fluent:airplane-take-off-24-regular" class="text-[#3C3B3B] text-[24px] opacity-50" data-radio-icon></iconify-icon>
+                  <p class="text-[#3C3B3B] opacity-50">
+                    4h 15 min
+                  </p>
+                </div>
+                <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                <div class="flex flex-col items-end gap-2">
+                  <p class="text-[#3C3B3B] text-[14px] opacity-50">Llegada</p>
+                  <p class="text-[#E4022C] md:text-xl lg:text-[24px] text-nowrap font-semibold">
+                    12:45 p.m.
+                  </p>
+                  <div class="flex flex-col gap-1 items-end">
+                    <p class="text-[#3C3B3B] text-[18px] font-semibold">BOG</p>
+                    <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">El Dorado International Airport</p>
+                    <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">25 Nov 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border border-[#E1E6EF] rounded-[24px] flex flex-col">
+          <div class="flex items-center gap-2 px-6 py-4 bg-[#FFF9FA] rounded-t-[24px]">
+            <iconify-icon icon="fluent:airplane-take-off-24-regular" class="text-[#3C3B3B] text-[24px]" data-radio-icon></iconify-icon>
+            <p class="text-[#3C3B3B] text-[18px] font-semibold">Vuelo de vuelta</p>
+          </div>
+          <div class="flex justify-between items-center gap-4 px-6 py-4">
+            <div class="flex flex-col gap-1">
+              <p class="text-[#3C3B3B] text-[18px] font-semibold">LATAM Airlines</p>
+              <p class="text-[#3C3B3B] text-[14px] opacity-50">Vuelo LA2405 - Clase Económica</p>
+            </div>
+            <div class="border border-[#E1E6EF] rounded-[8px] px-2 py-1 flex items-center justify-center">
+              <p>Directo</p>
+            </div>
+          </div>
+          <div class="px-6 w-full flex items-center justify-center">
+            <span class="w-full h-[1px] bg-[#E1E6EF]"></span>
+          </div>
+          <div class="flex flex-col gap-4 px-6 py-4">
+            <div class="flex flex-col gap-4 md:gap-6">
+              <div class="flex md:items-center gap-3 md:justify-between md:justify-start flex-col md:flex-row">
+                <div class="flex flex-col gap-2">
+                  <p class="text-[#3C3B3B] text-[14px] opacity-50">Salida</p>
+                  <p class="text-[#E4022C] md:text-xl lg:text-[24px] text-nowrap font-semibold">
+                    08:30 a.m.
+                  </p>
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#3C3B3B] text-[18px] font-semibold">LIM</p>
+                    <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">Jorge Chávez International Airport</p>
+                    <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">25 Nov 2025</p>
+                  </div>
+                </div>
+                <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                <div class="text-center text-nowrap">
+                  <iconify-icon icon="fluent:airplane-take-off-24-regular" class="text-[#3C3B3B] text-[24px] opacity-50" data-radio-icon></iconify-icon>
+                  <p class="text-[#3C3B3B] opacity-50">
+                    4h 15 min
+                  </p>
+                </div>
+                <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
+                <div class="flex flex-col items-end gap-2">
+                  <p class="text-[#3C3B3B] text-[14px] opacity-50">Llegada</p>
+                  <p class="text-[#E4022C] md:text-xl lg:text-[24px] text-nowrap font-semibold">
+                    12:45 p.m.
+                  </p>
+                  <div class="flex flex-col gap-1 items-end">
+                    <p class="text-[#3C3B3B] text-[18px] font-semibold">BOG</p>
+                    <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">El Dorado International Airport</p>
+                    <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">25 Nov 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-6 flex-col md:flex-row">
+          <div class="border border-[#E1E6EF] rounded-[24px] p-6 w-full flex flex-col gap-5">
+            <div class="flex items-center gap-2">
+              <iconify-icon icon="solar:users-group-rounded-outline" class="text-[#3C3B3B] text-[24px]" data-radio-icon></iconify-icon>
+              <p class="font-semibold">Información de pasajeros</p>
+            </div>
+            <div class="bg-[#F9FAFB] p-4 rounded-[16px] gap-3 flex flex-col">
+              <div class="flex items-center justify-between">
+                <p class="font-semibold text-[#3C3B3B]">Eduardo Naranjo</p>
+                <div class="border border-[#E1E6EF] rounded-[8px] px-2 py-1 flex items-center justify-center">
+                  <p>Adulto</p>
+                </div>
+              </div>
+              <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">Cédula: 12345678</p>
+              <p class="text-[#3C3B3B] text-[14px] opacity-50 text-nowrap">1 Maleta de 23 Kg incluída</p>
+            </div>
+          </div>
+          <div class="border border-[#E1E6EF] rounded-[24px] p-6 w-full flex flex-col gap-5">
+            <div class="flex items-center gap-2">
+              <iconify-icon icon="solar:star-outline" class="text-[#3C3B3B] text-[24px]" data-radio-icon></iconify-icon>
+              <p class="font-semibold">Resumen de costos</p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <p class="text-[#3C3B3B] text-[14px] opacity-50">Puntos utilizados</p>
+                <p class="text-[#3C3B3B] text-[14px] opacity-50">15,000</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-[#3C3B3B] text-[14px] opacity-50">Tasas e impuestos</p>
+                <p class="text-[#3C3B3B] text-[14px] opacity-50">US$ 85.50</p>
+              </div>
+              <span class="w-full h-[1px] bg-[#E1E6EF]"></span>
+              <div class="flex items-center justify-between">
+                <p class="text-[#3C3B3B] text-[14px] font-semibold">Puntos restantes</p>
+                <p class="text-[#E4022C] text-[14px] font-semibold">5,800</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border border-[#E1E1E1] rounded-[24px] p-6 w-full">
+          <div class="flex flex-col gap-1">
+            <p class="font-semibold">Acciones rápidas</p>
+            <p class="text-[14px]">Gestiona tu reserva de vuelo</p>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-[24px] mt-6">
+            <div class="w-full">
+              <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full">
+                <span>Check-in online</span>
+              </button>
+            </div>
+            <div class="w-full">
+              <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full">
+                <span>Descargar comprobante</span>
+              </button>
+            </div>
+            <div class="w-full">
+              <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full">
+                <span>Agregar a calendario</span>
+              </button>
+            </div>
+            <div class="w-full">
+              <button class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full w-full">
+                <span>Reenviar confirmación</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="border border-[#874D00] rounded-[24px] p-6 flex flex-col gap-5 bg-[#FFF8EB]">
+          <div class="flex items-center gap-2">
+            <iconify-icon icon="solar:info-circle-outline" class="text-[#AD6800] text-[24px]" data-radio-icon></iconify-icon>
+            <p class="text-[#AD6800] font-semibold">Información importante</p>
+          </div>
+          <ul class="list-disc list-inside text-[#AD6800]">
+            <li>
+              <span class="font-semibold"></span>Documentación:</span> Asegúrate de llevar tu pasaporte vigente y Visa (Si aplica)
+            </li>
+            <li>
+              <span class="font-semibold"></span>Equipaje:</span> Verifica las políticas de equipaje de la aerolínea antes de viajar.
+            </li>
+            <li>
+              <span class="font-semibold"></span>Cancelación:</span> Revisa las políticas de cambios y cancelaciones en tu confirmación.
+            </li>
+          </ul>
+        </div>
+        <div class="flex border border-[#E1E1E1] rounded-[24px] p-6 w-full flex-col gap-6">
+          <div class="flex flex-col md:flex-row items-start justify-between gap-6">
+            <div class="flex flex-col gap-4">
+              <p class="font-semibold">¿Necesitas revisar tus canjes?</p>
+              <p class="text-[14px]">Puedes ver el detalle completo de este y otros canjes en la sección <span class="font-semibold">“Puntos canjeados”</span>, en el módulo <span class="font-semibold">“Mis puntos”</span>.</p>
+            </div>
+            <a href="./puntos-historial.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full md:min-w-[296px] w-full md:w-auto">
+              <span>Ir a mis puntos</span>
+            </a>
+          </div>
+          <div class="h-[1px] bg-[#E1E1E1] w-full"></div>
+          <div class="w-full flex items-center justify-center">
+            <a href="./catalogo.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full px-6 w-full md:w-auto">
+              <span>Volver al catálogo</span>
+            </a>
+          </div>
+        </div>
+        <div class="flex border border-[#E1E1E1] rounded-[24px] p-6 w-full flex-col gap-6 bg-[#F8F9FC]">
+          <div class="flex flex-col justify-center items-center text-center gap-4">
+            <p class="font-semibold">¿Tienes alguna pregunta?</p>
+            <p class="text-[14px]">Nuestro equipo de soporte está disponible para ayudarte</p>
+          </div>
+          <div class="flex items-center justify-center gap-6 flex-col md:flex-row">
+            <div class="flex items-center text-[#3C3B3B] justify-center gap-2 border border-[#E1E6EF] md:h-[56px] rounded-[16px] py-4 px-6 bg-white w-full md:w-auto flex-col md:flex-row">
+              <img src="./img/icon/telefono.svg" alt="">
+              <span>1800-CANJES (226537)</span>
+            </div>
+            <div class="flex items-center text-[#3C3B3B] justify-center gap-2 border border-[#E1E6EF] md:h-[56px] rounded-[16px] py-4 px-6 bg-white w-full md:w-auto flex-col md:flex-row">
+              <img src="./img/icon/mensaje.svg" alt="">
+              <span>callcenter@promotick.com</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -434,6 +669,7 @@
     </div>
   </footer>
 
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>

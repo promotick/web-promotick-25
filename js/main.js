@@ -668,7 +668,8 @@ class Accordion {
       arrow,
       isOpen: false,
       groupEl,
-      wasOpen: false
+      wasOpen: false,
+      multiGroup: groupEl && groupEl.dataset.accordionVariant && groupEl.dataset.accordionVariant.split(' ').includes('multi')
     };
 
     this.accordions.push(accordion);
@@ -701,13 +702,38 @@ class Accordion {
       this.toggleAccordion(accordion);
     });
 
+    if (trigger.tagName !== 'BUTTON') {
+      if (!trigger.hasAttribute('role')) trigger.setAttribute('role', 'button');
+      if (!trigger.hasAttribute('tabindex')) trigger.setAttribute('tabindex', '0');
+      trigger.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          this.toggleAccordion(accordion);
+        }
+      });
+    }
+
+    const closeButtons = element.querySelectorAll('[data-accordion-close]');
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        this.closeAccordion(accordion);
+      });
+    });
+
+    const stopElements = element.querySelectorAll('[data-accordion-stop]');
+    stopElements.forEach(el => {
+      el.addEventListener('click', (event) => event.stopPropagation());
+      el.addEventListener('keydown', (event) => event.stopPropagation());
+    });
+
     this.updateState(accordion);
   }
 
   toggleAccordion(accordion) {
     const willOpen = !accordion.isOpen;
 
-    if (willOpen && accordion.groupEl && this.groups.has(accordion.groupEl)) {
+    if (willOpen && accordion.groupEl && this.groups.has(accordion.groupEl) && !accordion.multiGroup) {
       const siblings = this.groups.get(accordion.groupEl);
       siblings.forEach(acc => {
         if (acc !== accordion && acc.isOpen) {
@@ -718,6 +744,12 @@ class Accordion {
     }
 
     accordion.isOpen = willOpen;
+    this.updateState(accordion);
+  }
+
+  closeAccordion(accordion) {
+    if (!accordion || !accordion.isOpen) return;
+    accordion.isOpen = false;
     this.updateState(accordion);
   }
 
@@ -988,6 +1020,10 @@ document.addEventListener('DOMContentLoaded', function() {
   HeartToggle.init();
 
   Popover.init();
+
+  FlightSearchToggle.init();
+
+  SummaryPanelToggle.init();
 });
 
 function initializeSwipers() {
@@ -1454,6 +1490,28 @@ class FormField {
       });
     }
 
+    const dateTrigger = element.querySelector('[data-field-date-trigger]');
+    if (dateTrigger && input.type && input.type.toLowerCase() === 'date') {
+      dateTrigger.addEventListener('mousedown', (event) => {
+        event.preventDefault();
+      });
+
+      dateTrigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (typeof input.showPicker === 'function') {
+          input.showPicker();
+        } else {
+          input.focus();
+          try {
+            input.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
+          } catch (_) {
+            // fallback silencioso
+          }
+        }
+      });
+    }
+
     this.updateState(field);
   }
 
@@ -1700,6 +1758,185 @@ class Tabs {
 
   static init() {
     return new Tabs();
+  }
+}
+
+class FlightSearchToggle {
+  constructor() {
+    this.panel = document.querySelector('[data-flight-search-panel]');
+    this.editButtons = document.querySelectorAll('[data-flight-search-edit]');
+    this.closeButtons = document.querySelectorAll('[data-flight-search-close]');
+    this.summary = document.querySelector('[data-flight-summary]');
+    this.isOpen = false;
+
+    this.bindEvents();
+  }
+
+  bindEvents() {
+    if (!this.panel) return;
+
+    this.panel.classList.add('hidden');
+
+    this.editButtons.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        this.toggle(true);
+      });
+    });
+
+    this.closeButtons.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        this.toggle(false);
+      });
+    });
+  }
+
+  toggle(forceState) {
+    if (!this.panel) return;
+
+    const shouldOpen = typeof forceState === 'boolean' ? forceState : !this.isOpen;
+    this.isOpen = shouldOpen;
+
+    if (shouldOpen) {
+      this.showPanel();
+      if (this.summary) this.summary.classList.add('hidden');
+    } else {
+      this.hidePanel();
+      if (this.summary) this.summary.classList.remove('hidden');
+    }
+  }
+
+  showPanel() {
+    const panel = this.panel;
+    panel.classList.remove('hidden');
+    const startHeight = 0;
+    const endHeight = panel.scrollHeight;
+
+    panel.style.maxHeight = startHeight + 'px';
+    panel.style.opacity = '0';
+    panel.style.transform = 'translateY(-6px)';
+
+    requestAnimationFrame(() => {
+      panel.style.transition = 'max-height 260ms ease, opacity 200ms ease, transform 200ms ease';
+      panel.style.maxHeight = endHeight + 'px';
+      panel.style.opacity = '1';
+      panel.style.transform = 'translateY(0)';
+    });
+
+    const handle = (event) => {
+      if (event.target !== panel || event.propertyName !== 'max-height') return;
+      panel.style.transition = '';
+      panel.style.maxHeight = 'none';
+      panel.removeEventListener('transitionend', handle);
+    };
+    panel.addEventListener('transitionend', handle);
+  }
+
+  hidePanel() {
+    const panel = this.panel;
+    const currentHeight = panel.scrollHeight;
+
+    panel.style.maxHeight = currentHeight + 'px';
+    panel.style.opacity = '1';
+    panel.style.transform = 'translateY(0)';
+
+    requestAnimationFrame(() => {
+      panel.style.transition = 'max-height 220ms ease, opacity 180ms ease, transform 180ms ease';
+      panel.style.maxHeight = '0px';
+      panel.style.opacity = '0';
+      panel.style.transform = 'translateY(-6px)';
+    });
+
+    const handle = (event) => {
+      if (event.target !== panel || event.propertyName !== 'max-height') return;
+      panel.classList.add('hidden');
+      panel.style.transition = '';
+      panel.style.maxHeight = '';
+      panel.style.opacity = '';
+      panel.style.transform = '';
+      panel.removeEventListener('transitionend', handle);
+    };
+    panel.addEventListener('transitionend', handle);
+  }
+
+  static init() {
+    return new FlightSearchToggle();
+  }
+}
+
+class SummaryPanelToggle {
+  constructor() {
+    this.panel = document.querySelector('[data-summary-panel]');
+    this.content = this.panel ? this.panel.querySelector('[data-summary-content]') : null;
+    this.toggleButton = this.panel ? this.panel.querySelector('[data-summary-toggle]') : null;
+    this.closeButton = this.panel ? this.panel.querySelector('[data-summary-close]') : null;
+    this.arrowIcon = this.panel ? this.panel.querySelector('[data-summary-arrow]') : null;
+
+    this.isMobile = window.innerWidth < 768;
+    this.isOpen = !this.isMobile;
+
+    this.bindEvents();
+    this.updateState();
+  }
+
+  bindEvents() {
+    if (!this.panel || !this.content) return;
+
+    window.addEventListener('resize', () => this.handleResize());
+
+    if (this.toggleButton) {
+      this.toggleButton.addEventListener('click', () => this.toggle());
+    }
+
+    if (this.closeButton) {
+      this.closeButton.addEventListener('click', () => {
+        this.isOpen = false;
+        this.updateState();
+      });
+    }
+  }
+
+  handleResize() {
+    const prevIsMobile = this.isMobile;
+    this.isMobile = window.innerWidth < 768;
+
+    if (this.isMobile !== prevIsMobile) {
+      this.isOpen = !this.isMobile;
+      this.resetStyles();
+      this.updateState();
+    }
+  }
+
+  toggle() {
+    if (!this.isMobile) return;
+    this.isOpen = !this.isOpen;
+    this.updateState();
+  }
+
+  resetStyles() {
+    if (!this.content) return;
+    this.content.style.removeProperty('display');
+  }
+
+  updateState() {
+    if (!this.content) return;
+
+    if (this.isMobile) {
+      this.content.style.display = this.isOpen ? 'flex' : 'none';
+    } else {
+      this.content.style.display = '';
+      this.isOpen = true;
+    }
+
+    if (this.arrowIcon) {
+      this.arrowIcon.style.transition = 'transform 180ms ease';
+      this.arrowIcon.style.transform = this.isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+  }
+
+  static init() {
+    return new SummaryPanelToggle();
   }
 }
 

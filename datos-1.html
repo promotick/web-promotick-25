@@ -357,31 +357,252 @@
     </div>
   </section>
 
-  <section class="bg-[#FFF9FA] pt-[80px] lg:pt-0 min-h-[calc(100vh-424px)]">
-    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 py-10">
-      <div class="flex items-center justify-center lg:mt-6">
-        <div class="w-full lg:w-[640px] flex flex-col gap-6">
-          <p class="text-[#3C3B3B] text-[24px] font-semibold text-center">¡Gracias por participar en la trivia de esta semana! 🙌</p>
-          <p class="text-[#3C3B3B] text-[16px] font-regular text-center">🌟 Tus resultados de hoy</p>
-          <div class="flex items-center gap-4 w-full">
-            <div class="bg-white rounded-[24px] p-4 flex flex-col gap-2 w-full">
-              <p class="text-[#3C3B3B] text-[24px] font-semibold">1</p>
-              <p class="text-[#3C3B3B] text-[16px] font-regular">Preguntas acertadas</p>
+  <section class="bg-[#FFF9FA] pt-[80px] lg:pt-0">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 pb-[24px] pt-[32px]">
+      <a class="flex items-center gap-2" href="./vuelo-resumen.html">
+        <img src="./img/icon/arrow-left-outline.svg" alt="">
+        <span class="text-[#3C3B3B]">Volver</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="bg-[#FFF9FA] pb-[24px] min-h-[calc(100dvh-560px)]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <h2 class="text-[24px] font-semibold text-[#3C3B3B] mb-6">Datos de los pasajeros</h2>
+      <div class="flex items-start flex-col md:flex-row gap-[24px]">
+        <div class="flex flex-col gap-6 w-full" data-accordion-group data-accordion-variant="multi">
+          <div class="bg-white rounded-[16px] w-full flex flex-col gap-4 p-6" data-accordion data-accordion-open>
+            <div class="flex items-center justify-between cursor-pointer" data-accordion-trigger role="button" tabindex="0">
+              <p class="text-[#3C3B3B] font-semibold text-[18px]">Adulto 1</p>
+              <img src="./img/icon/arrow-down.svg" alt="" data-accordion-arrow class="transition-transform duration-200">
             </div>
-            <div class="bg-white rounded-[24px] p-4 flex flex-col gap-2 w-full">
-              <p class="text-[#3C3B3B] text-[24px] font-semibold">1</p>
-              <p class="text-[#3C3B3B] text-[16px] font-regular">Preguntas erradas</p>
+            <div class="flex flex-col border-t border-[#E1E6EF] pt-8 gap-6 hidden" data-accordion-content>
+              <div class="flex items-center gap-6 flex-col lg:flex-row">
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                    <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                    <label for="nombre-direccion" data-field-label="" class="">Nombres</label>
+                  </div>
+                </div>
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                    <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                    <label for="nombre-direccion" data-field-label="" class="">Apellido paterno</label>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-6 flex-col lg:flex-row">
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                    <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                    <label for="nombre-direccion" data-field-label="" class="">Apellido materno</label>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <div class="relative w-full" data-field="" data-variant="simple">
+                    <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                      <input type="date" id="fecha-ida" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                      <label for="fecha-ida" data-field-label="" class="">Fecha de nacimiento</label>
+                      <button type="button" class="flex items-center justify-center" data-field-date-trigger="" aria-label="Abrir calendario">
+                        <iconify-icon icon="solar:calendar-outline" class="text-[24px]" data-field-date-icon=""></iconify-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-6 flex-col lg:flex-row">
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200 field-has-value" data-field-container="">
+                    <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input="">
+                      <option selected="" value="cedula">Masculino</option>
+                      <option value="pasaporte">Femenino</option>
+                      <option value="pasaporte">Prefiero no decirlo</option>
+                    </select>
+                    <label for="tipo-documento" data-field-label="" class="">Género</label>
+                    <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4">
+                  </div>
+                </div>
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200 field-has-value" data-field-container="">
+                    <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input="">
+                      <option selected="" value="cedula">Ecuador</option>
+                      <option value="pasaporte">Ecuador</option>
+                    </select>
+                    <label for="tipo-documento" data-field-label="" class="">Ecuador</label>
+                    <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4">
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-6 flex-col lg:flex-row">
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200 field-has-value" data-field-container="">
+                    <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input="">
+                      <option selected="" value="cedula">Cédula</option>
+                      <option value="pasaporte">Cédula</option>
+                      <option value="pasaporte">Cédula</option>
+                    </select>
+                    <label for="tipo-documento" data-field-label="" class="">Tipo de documento</label>
+                    <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4">
+                  </div>
+                </div>
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                    <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                    <label for="nombre-direccion" data-field-label="" class="">Número de documento</label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-            <p class="text-[#3C3B3B] text-[16px] font-regular">¡No te preocupes! Prueba de nuevo y sigue aprendiendo.</p>
+          <div class="bg-white rounded-[16px] w-full flex flex-col gap-4 p-6" data-accordion data-accordion-open>
+            <div class="flex items-center justify-between cursor-pointer" data-accordion-trigger role="button" tabindex="0">
+              <p class="text-[#3C3B3B] font-semibold text-[18px]">Adulto 2</p>
+              <img src="./img/icon/arrow-down.svg" alt="" data-accordion-arrow class="transition-transform duración-200 hidden md:block">
+            </div>
+            <div class="flex flex-col border-t border-[#E1E6EF] pt-8 gap-6 hidden" data-accordion-content>
+              <div class="flex items-center gap-6 flex-col lg:flex-row">
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                    <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                    <label for="nombre-direccion" data-field-label="" class="">Nombres</label>
+                  </div>
+                </div>
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                    <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                    <label for="nombre-direccion" data-field-label="" class="">Apellido paterno</label>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-6 flex-col lg:flex-row">
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                    <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                    <label for="nombre-direccion" data-field-label="" class="">Apellido materno</label>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <div class="relative w-full" data-field="" data-variant="simple">
+                    <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                      <input type="date" id="fecha-ida" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                      <label for="fecha-ida" data-field-label="" class="">Fecha de nacimiento</label>
+                      <button type="button" class="flex items-center justify-center" data-field-date-trigger="" aria-label="Abrir calendario">
+                        <iconify-icon icon="solar:calendar-outline" class="text-[24px]" data-field-date-icon=""></iconify-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-6 flex-col lg:flex-row">
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200 field-has-value" data-field-container="">
+                    <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input="">
+                      <option selected="" value="cedula">Masculino</option>
+                      <option value="pasaporte">Femenino</option>
+                      <option value="pasaporte">Prefiero no decirlo</option>
+                    </select>
+                    <label for="tipo-documento" data-field-label="" class="">Género</label>
+                    <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4">
+                  </div>
+                </div>
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200 field-has-value" data-field-container="">
+                    <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input="">
+                      <option selected="" value="cedula">Ecuador</option>
+                      <option value="pasaporte">Ecuador</option>
+                    </select>
+                    <label for="tipo-documento" data-field-label="" class="">Ecuador</label>
+                    <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4">
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-6 flex-col lg:flex-row">
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200 field-has-value" data-field-container="">
+                    <select id="tipo-documento" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200 appearance-none" data-field-input="">
+                      <option selected="" value="cedula">Cédula</option>
+                      <option value="pasaporte">Cédula</option>
+                      <option value="pasaporte">Cédula</option>
+                    </select>
+                    <label for="tipo-documento" data-field-label="" class="">Tipo de documento</label>
+                    <img src="./img/icon/arrow-down.svg" alt="" aria-hidden="true" class="pointer-events-none absolute right-4 w-4 h-4">
+                  </div>
+                </div>
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                    <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                    <label for="nombre-direccion" data-field-label="" class="">Número de documento</label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <a href="./trivia.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
-            <span>Probar de nuevo</span>
-          </a>
-          <a href="./index.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full">
-            <span>Ir a inicio</span>
-          </a>
+          <div class="flex items-center w-full md:w-auto" data-checkbox="">
+            <input type="checkbox" id="con-mis-puntos" class="sr-only" data-checkbox-input="">
+            <label for="con-mis-puntos" class="flex items-center gap-3 cursor-pointer select-none" data-checkbox-label="">
+              <div class="min-w-5 h-5 border-2 rounded flex items-center justify-center transition-all duration-200 hover:scale-105 border-[#687286] bg-white" data-checkbox-display="">
+                <svg class="w-4 h-4 text-white transition-all duration-200 hidden" data-checkbox-icon="" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-[#3C3B3B] transition-colors duration-200" data-checkbox-text="">He leído y acepto los <a href="" class="text-[#E4022C] font-regular underline">Términos y Condiciones de la aerolínea</a>. y de la <a href="" class="text-[#E4022C] font-regular underline">agencia de viajes.</a></span>
+            </label>
+          </div>
+        </div>
+        <div class="bg-white rounded-[16px] w-full md:top-[100px] md:sticky p-6 gap-6 flex flex-col md:relative fixed bottom-0 left-0 right-0 z-50 shadow-[0_0_10px_0_rgba(0,0,0,0.15)] md:shadow-none" data-summary-panel>
+          <div class="flex flex-col gap-6" data-summary-content>
+            <div class="flex items-center justify-between">
+              <h3 class="text-[#3C3B3B] text-[18px] font-semibold">Resumen de canje</h3>
+              <button type="button" class="md:hidden" data-summary-close>
+                <img src="./img/icon/x.svg" alt="">
+              </button>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="h-[48px] min-w-[48px] flex items-center justify-center bg-[#FEE8EA] rounded-full">
+                <img class="w-[24px] h-[24px] object-cover" src="./img/icon/ida-rojo.svg" alt="">
+              </div>
+              <div class="flex flex-col gap-2 w-full">
+                <div class="flex flex-col">
+                  <p class="text-[#3C3B3B]">Vuelo Ida</p>
+                  <p class="text-[#3C3B3B]">Guayaquil - Quito, Jue 01 Ago, 5:00 a.m.</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B] font-semibold">Basic</p>
+                  <p class="text-[#3C3B3B] font-semibold">16,136 puntos </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="h-[48px] min-w-[48px] flex items-center justify-center bg-[#FEE8EA] rounded-full">
+                <img class="w-[24px] h-[24px] object-cover" src="./img/icon/ida-rojo.svg" alt="">
+              </div>
+              <div class="flex flex-col gap-2 w-full">
+                <div class="flex flex-col">
+                  <p class="text-[#3C3B3B]">Vuelo Ida</p>
+                  <p class="text-[#3C3B3B]">Guayaquil - Quito, Jue 01 Ago, 5:00 a.m.</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B] font-semibold">Basic</p>
+                  <p class="text-[#3C3B3B] font-semibold">16,136 puntos </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+          </div>
+          <div class="flex flex-col gap-6">
+            <div class="flex lg:items-center justify-between">
+              <div class="flex items-center gap-2">
+                <p class="text-[#3C3B3B] font-semibold">TOTAL</p>
+                <button type="button" class="md:hidden" data-summary-toggle>
+                  <img src="./img/icon/arrow-up.svg" alt="" data-summary-arrow>
+                </button>
+              </div>
+              <p class="text-[#3C3B3B] font-semibold flex flex-col items-end md:flex-row lg:gap-2">20,911 Puntos</p>
+            </div>
+            <a href="datos-2.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
+              <span>Continuar</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -434,6 +655,7 @@
     </div>
   </footer>
 
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>

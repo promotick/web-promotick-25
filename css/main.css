@@ -260,12 +260,88 @@
 /* Variante simple: sin icono a la izquierda */
 [data-field][data-variant="simple"] [data-field-label] {
   left: 12px;
+  max-width: calc(100% - 24px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+[data-field-container] [data-field-input]::placeholder {
+  opacity: 0;
+  color: #3C3B3B;
+  transition: opacity 0.2s ease;
+}
+
+.field-focused [data-field-input]::placeholder,
+.field-has-value [data-field-input]::placeholder {
+  opacity: 1;
+}
+
+[data-field-container] [data-field-input][type="date"]::-webkit-datetime-edit {
+  color: transparent;
+  transition: color 0.2s ease;
+}
+
+.field-focused [data-field-input][type="date"]::-webkit-datetime-edit,
+.field-has-value [data-field-input][type="date"]::-webkit-datetime-edit {
+  color: inherit;
+}
+
+[data-field-container] [data-field-input][type="date"]::-webkit-datetime-edit-text,
+[data-field-container] [data-field-input][type="date"]::-webkit-datetime-edit-month-field,
+[data-field-container] [data-field-input][type="date"]::-webkit-datetime-edit-day-field,
+[data-field-container] [data-field-input][type="date"]::-webkit-datetime-edit-year-field {
+  color: inherit;
+}
+
+[data-field-container] [data-field-input][type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+
+[data-field-date-trigger] {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: #3C3B3B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+[data-field-date-trigger]:hover {
+  color: #E4022C;
+  transform: translateY(-50%) scale(1.05);
+}
+
+[data-field-date-trigger]:focus-visible {
+  outline: 2px solid #E4022C;
+  outline-offset: 2px;
+  border-radius: 9999px;
+}
+
+[data-field-date-trigger] iconify-icon[data-field-date-icon] {
+  color: currentColor;
+}
+
 
 /* Estado por defecto del contenedor */
 [data-search-container],
 [data-field-container] {
   border: 1px solid #E1E6EF;
+  position: relative;
+}
+
+[data-field-container] [data-field-input] {
+  padding-right: 48px;
 }
 
 /* Estado flotante del label (Material Design) */

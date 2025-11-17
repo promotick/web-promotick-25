@@ -357,31 +357,129 @@
     </div>
   </section>
 
-  <section class="bg-[#FFF9FA] pt-[80px] lg:pt-0 min-h-[calc(100vh-424px)]">
-    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 py-10">
-      <div class="flex items-center justify-center lg:mt-6">
-        <div class="w-full lg:w-[640px] flex flex-col gap-6">
-          <p class="text-[#3C3B3B] text-[24px] font-semibold text-center">¡Gracias por participar en la trivia de esta semana! 🙌</p>
-          <p class="text-[#3C3B3B] text-[16px] font-regular text-center">🌟 Tus resultados de hoy</p>
-          <div class="flex items-center gap-4 w-full">
-            <div class="bg-white rounded-[24px] p-4 flex flex-col gap-2 w-full">
-              <p class="text-[#3C3B3B] text-[24px] font-semibold">1</p>
-              <p class="text-[#3C3B3B] text-[16px] font-regular">Preguntas acertadas</p>
+  <section class="bg-[#FFF9FA] pt-[80px] lg:pt-0">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0 pb-[24px] pt-[32px]">
+      <a class="flex items-center gap-2" href="./datos-2.html">
+        <img src="./img/icon/arrow-left-outline.svg" alt="">
+        <span class="text-[#3C3B3B]">Volver</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="bg-[#FFF9FA] pb-[24px] min-h-[calc(100dvh-560px)]">
+    <div class="max-w-[1170px] mx-auto px-4 md:px-5 lg:px-0">
+      <div class="flex items-start flex-col md:flex-row gap-[24px]">
+        <div class="flex flex-col gap-6 w-full">
+          <div class="bg-white rounded-[16px] w-full flex flex-col gap-4 p-6">
+            <div class="flex flex-col gap-4">
+              <h3 class="text-[#3C3B3B] text-[18px] font-semibold">¿Tienes un código de descuento?</h3>
             </div>
-            <div class="bg-white rounded-[24px] p-4 flex flex-col gap-2 w-full">
-              <p class="text-[#3C3B3B] text-[24px] font-semibold">1</p>
-              <p class="text-[#3C3B3B] text-[16px] font-regular">Preguntas erradas</p>
+            <div class="flex flex-col border-t border-[#E1E6EF] pt-8 gap-6">
+              <div class="flex items-center gap-6 flex-col lg:flex-row">
+                <div class="relative w-full" data-field="" data-variant="simple">
+                  <div class="relative flex items-center h-14 rounded-2xl transition-all duration-200" data-field-container="">
+                    <input type="text" id="nombre-direccion" class="w-full h-full border-none outline-none px-4 text-base bg-transparent transition-all duration-200" data-field-input="">
+                    <label for="nombre-direccion" data-field-label="" class="">Escribe aquí el código</label>
+                  </div>
+                </div>
+                <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full px-8 disabled:bg-[#E9E7E7] disabled:text-[#A09898] w-full lg:w-auto" disabled>
+                  <span>Aplicar</span>
+                </button>
+              </div>
             </div>
           </div>
-          <div>
-            <p class="text-[#3C3B3B] text-[16px] font-regular">¡No te preocupes! Prueba de nuevo y sigue aprendiendo.</p>
+          <div class="bg-white rounded-[16px] w-full flex flex-col gap-8 p-6">
+            <div class="flex flex-col gap-4">
+              <h3 class="text-[#3C3B3B] text-[18px] font-semibold">¿Cuántos puntos usarás?</h3>
+              <p class="text-[#3C3B3B]">Tienes 32,000 puntos disponibles.</p>
+            </div>
+            <div class="flex flex-col gap-6">
+              <div class="flex items-center py-2 px-3 rounded-[16px] border border-[#E1E6EF] h-[56px]" data-quantity-counter="" data-min-value="1" data-max-value="10">
+                <button data-quantity-minus="" class="opacity-25 cursor-not-allowed pointer-events-none" disabled="">
+                  <img src="./img/icon/remove.svg" alt="">
+                </button>
+                <span class="w-full text-center" data-quantity-display="">1</span>
+                <button data-quantity-plus="">
+                  <img src="./img/icon/add.svg" alt="">
+                </button>
+              </div>
+              <div class="flex items-center gap-3 bg-[#EDF7ED] px-3 h-[52px] rounded-[4px] w-full">
+                <div class="text-[14px] whitespace-nowrap text-[#1B5E20] flex items-center justify-between w-full">
+                  <div class="flex items-center gap-1">
+                    <iconify-icon icon="solar:card-2-outline" class="text-[#3C3B3B] text-[24px]" data-radio-icon></iconify-icon>
+                    <span class="text-[#3C3B3B]">Por cubrir con tarjeta</span>
+                  </div>
+                  <span class="font-semibold">US$ 0.00</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <a href="./trivia.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
-            <span>Probar de nuevo</span>
-          </a>
-          <a href="./index.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] h-[56px] rounded-full">
-            <span>Ir a inicio</span>
-          </a>
+        </div>
+        <div class="bg-white rounded-[16px] w-full md:top-[100px] md:sticky p-6 gap-6 flex flex-col md:relative fixed bottom-0 left-0 right-0 z-50 shadow-[0_0_10px_0_rgba(0,0,0,0.15)] md:shadow-none" data-summary-panel>
+          <div class="flex flex-col gap-6" data-summary-content>
+            <div class="flex items-center justify-between">
+              <h3 class="text-[#3C3B3B] text-[18px] font-semibold">Resumen de canje</h3>
+              <button type="button" class="md:hidden" data-summary-close>
+                <img src="./img/icon/x.svg" alt="">
+              </button>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="h-[48px] min-w-[48px] flex items-center justify-center bg-[#FEE8EA] rounded-full">
+                <img class="w-[24px] h-[24px] object-cover" src="./img/icon/ida-rojo.svg" alt="">
+              </div>
+              <div class="flex flex-col gap-2 w-full">
+                <div class="flex flex-col">
+                  <p class="text-[#3C3B3B]">Vuelo Ida</p>
+                  <p class="text-[#3C3B3B]">Guayaquil - Quito, Jue 01 Ago, 5:00 a.m.</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B] font-semibold">Basic</p>
+                  <p class="text-[#3C3B3B] font-semibold">16,136 puntos </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="h-[48px] min-w-[48px] flex items-center justify-center bg-[#FEE8EA] rounded-full">
+                <img class="w-[24px] h-[24px] object-cover" src="./img/icon/ida-rojo.svg" alt="">
+              </div>
+              <div class="flex flex-col gap-2 w-full">
+                <div class="flex flex-col">
+                  <p class="text-[#3C3B3B]">Vuelo Ida</p>
+                  <p class="text-[#3C3B3B]">Guayaquil - Quito, Jue 01 Ago, 5:00 a.m.</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <p class="text-[#3C3B3B] font-semibold">Basic</p>
+                  <p class="text-[#3C3B3B] font-semibold">16,136 puntos </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+            <div class="flex flex-col gap-4">
+              <div class="flex justify-between items-center">
+                <p class="text-[#3C3B3B]">A pagar con Puntos</p>
+                <p class="text-[#3C3B3B]">10,800 Puntos</p>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="text-[#3C3B3B]">Importe a cubrir</p>
+                <p class="text-[#3C3B3B]">US$ 240.00</p>
+              </div>
+            </div>
+            <div class="w-full h-[1px] bg-[#E1E6EF]"></div>
+          </div>
+          <div class="flex flex-col gap-6">
+            <div class="flex lg:items-center justify-between">
+              <div class="flex items-center gap-2">
+                <p class="text-[#3C3B3B] font-semibold">TOTAL</p>
+                <button type="button" class="md:hidden" data-summary-toggle>
+                  <img src="./img/icon/arrow-up.svg" alt="" data-summary-arrow>
+                </button>
+              </div>
+              <p class="text-[#3C3B3B] font-semibold flex flex-col items-end md:flex-row lg:gap-2">20,911 Puntos</p>
+            </div>
+            <a href="datos-resumen.html" class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full">
+              <span>Continuar</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -434,6 +532,7 @@
     </div>
   </footer>
 
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
