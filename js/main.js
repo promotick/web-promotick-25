@@ -283,6 +283,85 @@ class DropdownManager {
   }
 }
 
+class FlightTypeFilter {
+  constructor() {
+    this.dropdown = document.querySelector('[data-flight-type-selector]');
+    this.sections = Array.from(document.querySelectorAll('[data-flight-section]'));
+    this.defaultValue = this.dropdown ? this.dropdown.dataset.flightDefault || null : null;
+    this.handleSelection = this.handleSelection.bind(this);
+
+    this.initialize();
+  }
+
+  initialize() {
+    if (!this.dropdown || this.sections.length === 0) {
+      return;
+    }
+
+    this.dropdown.addEventListener('dropdownSelect', this.handleSelection);
+
+    const initialValue = this.getInitialValue();
+    this.updateSections(initialValue);
+  }
+
+  getInitialValue() {
+    if (this.defaultValue) {
+      return this.defaultValue;
+    }
+
+    const selected = this.dropdown.querySelector('[data-dropdown-selected]');
+    const selectedText = selected ? selected.textContent.trim() : null;
+    const menuItems = this.dropdown.querySelectorAll('[data-dropdown-menu] [data-value]');
+
+    if (selectedText) {
+      for (const item of menuItems) {
+        if (item.textContent.trim() === selectedText) {
+          return item.dataset.value;
+        }
+      }
+    }
+
+    return this.sections[0] ? this.sections[0].dataset.flightSection : null;
+  }
+
+  handleSelection(event) {
+    if (!event || !event.detail) return;
+    this.updateSections(event.detail.value);
+  }
+
+  updateSections(activeValue) {
+    let hasMatch = false;
+
+    this.sections.forEach(section => {
+      const shouldShow = section.dataset.flightSection === activeValue;
+      this.toggleSection(section, shouldShow);
+      if (shouldShow) {
+        hasMatch = true;
+      }
+    });
+
+    if (!hasMatch && this.sections.length) {
+      this.toggleSection(this.sections[0], true);
+    }
+  }
+
+  toggleSection(section, shouldShow) {
+    if (shouldShow) {
+      section.removeAttribute('hidden');
+      section.classList.remove('hidden');
+      section.setAttribute('aria-hidden', 'false');
+    } else {
+      section.setAttribute('hidden', 'true');
+      section.classList.add('hidden');
+      section.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  static init() {
+    return new FlightTypeFilter();
+  }
+}
+
 class QuantityCounter {
   constructor() {
     this.counters = [];
@@ -301,22 +380,45 @@ class QuantityCounter {
     const minusBtn = element.querySelector('[data-quantity-minus]');
     const plusBtn = element.querySelector('[data-quantity-plus]');
     const display = element.querySelector('[data-quantity-display]');
-    const minValue = parseInt(element.dataset.minValue) || 1;
-    const maxValue = parseInt(element.dataset.maxValue) || 999;
+    const inputField = element.querySelector('[data-quantity-input]');
+    const variant = element.dataset.quantityVariant || 'default';
+    const inputVariants = ['input', 'input-large'];
+    const isInputVariant = inputVariants.includes(variant);
+    const minFallback = variant === 'allow-zero' ? 0 : 1;
+    const maxFallback = variant === 'input-large' ? 32000 : 999;
+    const minValue = this.getNumericValue(element.dataset.minValue, minFallback);
+    const maxValue = this.getNumericValue(element.dataset.maxValue, maxFallback);
 
-    if (!minusBtn || !plusBtn || !display) {
+    if (!minusBtn || !plusBtn || (!display && !isInputVariant)) {
       console.warn('QuantityCounter: elementos no encontrados', element);
       return;
     }
+
+    const defaultValueAttr = element.dataset.defaultValue;
+    let currentValue;
+
+    if (defaultValueAttr !== undefined) {
+      currentValue = this.getNumericValue(defaultValueAttr, minValue);
+    } else if (!isInputVariant) {
+      currentValue = this.getNumericValue(display.textContent, minValue);
+    } else if (inputField) {
+      currentValue = this.getNumericValue(inputField.value, minValue);
+    } else {
+      currentValue = minValue;
+    }
+
+    currentValue = Math.min(Math.max(currentValue, minValue), maxValue);
 
     const counter = {
       element,
       minusBtn,
       plusBtn,
-      display,
+      display: display || null,
+      inputField: inputField || null,
+      variant,
       minValue,
       maxValue,
-      currentValue: parseInt(display.textContent) || minValue
+      currentValue
     };
 
     this.counters.push(counter);
@@ -330,6 +432,43 @@ class QuantityCounter {
     plusBtn.addEventListener('click', () => {
       this.increment(counter);
     });
+
+    if (isInputVariant && counter.inputField) {
+      counter.inputField.setAttribute('min', counter.minValue);
+      counter.inputField.setAttribute('max', counter.maxValue);
+
+      counter.inputField.addEventListener('input', (event) => {
+        const rawValue = event.target.value;
+        const numericValue = this.getNumericValue(rawValue, counter.currentValue);
+
+        if (Number.isNaN(numericValue)) {
+          return;
+        }
+
+        const clampedValue = Math.min(Math.max(numericValue, counter.minValue), counter.maxValue);
+
+        counter.currentValue = clampedValue;
+        this.updateDisplay(counter);
+        this.triggerChangeEvent(counter);
+      });
+      counter.inputField.addEventListener('blur', (event) => {
+        if (event.target.value === '') {
+          counter.currentValue = counter.minValue;
+          this.updateDisplay(counter);
+          this.triggerChangeEvent(counter);
+        }
+      });
+    }
+  }
+
+  getNumericValue(value, fallback) {
+    if (value === undefined || value === null) {
+      return fallback;
+    }
+
+    const parsed = parseInt(String(value).trim(), 10);
+
+    return Number.isNaN(parsed) ? fallback : parsed;
   }
 
   decrement(counter) {
@@ -349,7 +488,13 @@ class QuantityCounter {
   }
 
   updateDisplay(counter) {
-    counter.display.textContent = counter.currentValue;
+    if (counter.display) {
+      counter.display.textContent = counter.currentValue;
+    }
+
+    if (counter.inputField) {
+      counter.inputField.value = counter.currentValue;
+    }
     
     if (counter.currentValue <= counter.minValue) {
       counter.minusBtn.classList.add('opacity-25', 'cursor-not-allowed', 'pointer-events-none');
@@ -965,6 +1110,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeSwipers();
 
   DropdownManager.init();
+  FlightTypeFilter.init();
   
   QuantityCounter.init();
   
@@ -1000,6 +1146,7 @@ document.addEventListener('DOMContentLoaded', function() {
       openClass: 'is-open',
       onShow: (modalEl) => {
         sanitizeOverlay(modalEl);
+        modalEl.classList.remove('is-leaving');
       }
     });
 
@@ -1016,6 +1163,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   ModalChain.init();
+  ModalAnimator.init();
 
   HeartToggle.init();
 
@@ -1574,6 +1722,59 @@ class ModalChain {
 
   static init() {
     return new ModalChain();
+  }
+}
+
+class ModalAnimator {
+  constructor() {
+    this.activeModals = new WeakSet();
+    this.handleClose = this.handleClose.bind(this);
+    document.addEventListener('click', this.handleClose, true);
+  }
+
+  handleClose(event) {
+    const trigger = event.target.closest('[data-micromodal-close]');
+    if (!trigger || typeof MicroModal === 'undefined') {
+      return;
+    }
+
+    const modal = trigger.closest('.modal');
+
+    if (!modal || !modal.id || !modal.classList.contains('modal--slide-right')) {
+      return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (this.activeModals.has(modal)) {
+      return;
+    }
+
+    this.activeModals.add(modal);
+    modal.classList.add('is-leaving');
+
+    const duration = 240;
+
+    setTimeout(() => {
+      try {
+        MicroModal.close(modal.id);
+      } catch (_) {}
+      modal.classList.remove('is-leaving');
+      this.activeModals.delete(modal);
+    }, duration);
+  }
+
+  static init() {
+    if (typeof MicroModal === 'undefined') {
+      return null;
+    }
+
+    if (!this.instance) {
+      this.instance = new ModalAnimator();
+    }
+
+    return this.instance;
   }
 }
 

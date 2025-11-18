@@ -1,5 +1,5 @@
 .accordion-transition {
-  overflow: hidden;
+  overflow: visible;
   transition: height 0.25s ease, opacity 0.25s ease;
 }
 
@@ -12,21 +12,92 @@
   display: block;
 }
 
-/* Animaciones suaves para contenido del modal */
-.modal [role="dialog"] {
+.modal:not(.modal--slide-right) [role="dialog"] {
   transform: scale(0.98);
   opacity: 0;
   transition: transform 180ms ease, opacity 180ms ease;
 }
 
-.modal.is-open [role="dialog"] {
+.modal:not(.modal--slide-right).is-open [role="dialog"] {
   transform: scale(1);
   opacity: 1;
 }
 
-.modal.is-open.is-leaving [role="dialog"] {
+.modal:not(.modal--slide-right).is-open.is-leaving [role="dialog"] {
   transform: scale(0.98);
   opacity: 0;
+}
+
+.modal--slide-right [role="dialog"] {
+  transform: translateX(100%);
+  opacity: 0;
+  animation: none;
+}
+
+.modal--slide-right.is-open [role="dialog"] {
+  animation: modal-slide-in-right 240ms ease forwards;
+}
+
+.modal--slide-right.is-open.is-leaving [role="dialog"] {
+  animation: modal-slide-out-right 200ms ease forwards;
+}
+
+@keyframes modal-slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-slide-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+}
+
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+}
+
+input.hide-number-spinners::-webkit-outer-spin-button,
+input.hide-number-spinners::-webkit-inner-spin-button,
+input.hide-number-spinners[type="number"]::-webkit-outer-spin-button,
+input.hide-number-spinners[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.hide-number-spinners {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+[data-flight-section][hidden] {
+  display: none !important;
 }
 
 * {
@@ -260,7 +331,7 @@
 /* Variante simple: sin icono a la izquierda */
 [data-field][data-variant="simple"] [data-field-label] {
   left: 12px;
-  max-width: calc(100% - 24px);
+  max-width: calc(100% - 60px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

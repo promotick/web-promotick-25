@@ -565,8 +565,8 @@
             <div class="min-w-full lg:min-w-[75%]">
               <div class="flex flex-col gap-4 md:gap-6">
                 <div class="flex items-center gap-3 justify-between md:justify-start">
-                  <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
-                    5:00 a.m. <span class="text-[#3C3B3B]">GYE</span>
+                  <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap flex md:items-center md:gap-1 flex-col md:flex-row">
+                    <span>5:00 a.m.</span> <span class="text-[#3C3B3B]">GYE</span>
                   </p>
                   <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
                   <div class="text-center text-nowrap">
@@ -578,8 +578,11 @@
                     </p>
                   </div>
                   <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
-                  <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
-                    6:20 a.m. <span class="text-[#3C3B3B]">UIO</span>
+                  <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap flex md:items-center md:gap-1 flex-col md:flex-row">
+                    <span class="relative pr-2">
+                      <span>6:20 a.m.</span> <span class="absolute -top-2 right-0 text-[#3C3B3B] text-[10px]">+1</span>
+                    </span>
+                    <span class="text-[#3C3B3B]">UIO</span>
                   </p>
                 </div>
                 <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
@@ -597,7 +600,7 @@
             <div class="min-w-full lg:min-w-[25%] flex flex-col items-start md:items-end">
               <p class="text-[#3C3B3B] opacity-50">Ida y vuelta, desde</p>
               <p class="text-[#E4022C] text-[20px] font-semibold">
-                16,136 millas
+                16,136 puntos
               </p>
               <a href="./vuelo-ida.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] px-4 h-[36px] rounded-full mt-4">
                 <span>Editar</span>
@@ -619,8 +622,8 @@
             <div class="min-w-full lg:min-w-[75%]">
               <div class="flex flex-col gap-4 md:gap-6">
                 <div class="flex items-center gap-3 justify-between md:justify-start">
-                  <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
-                    5:00 a.m. <span class="text-[#3C3B3B]">GYE</span>
+                  <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap flex md:items-center md:gap-1 flex-col md:flex-row">
+                    <span>5:00 a.m.</span> <span class="text-[#3C3B3B]">UIO</span>
                   </p>
                   <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
                   <div class="text-center text-nowrap">
@@ -632,8 +635,11 @@
                     </p>
                   </div>
                   <span class="w-full border-t border-[#C5C5D2] hidden md:block"></span>
-                  <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap">
-                    6:20 a.m. <span class="text-[#3C3B3B]">UIO</span>
+                  <p class="text-[#3C3B3B] md:text-xl lg:text-[24px] text-nowrap flex md:items-center md:gap-1 flex-col md:flex-row">
+                    <span class="relative pr-2">
+                      <span>6:20 a.m.</span> <span class="absolute -top-2 right-0 text-[#3C3B3B] text-[10px]">+1</span>
+                    </span>
+                    <span class="text-[#3C3B3B]">GYE</span>
                   </p>
                 </div>
                 <span class="w-full h-[1px] bg-[#E1E6EF] md:hidden"></span>
@@ -651,7 +657,7 @@
             <div class="min-w-full lg:min-w-[25%] flex flex-col items-start md:items-end">
               <p class="text-[#3C3B3B] opacity-50">Ida y vuelta, desde</p>
               <p class="text-[#E4022C] text-[20px] font-semibold">
-                16,136 millas
+                16,136 puntos
               </p>
               <a href="./vuelo-vuelta.html" class="flex items-center text-[#E4022C] justify-center gap-2 border border-[#E1E6EF] px-4 h-[36px] rounded-full mt-4">
                 <span>Editar</span>
@@ -721,9 +727,9 @@
   </footer>
 
   <!-- Modal -->
-  <div class="modal" id="modal-directo" aria-hidden="true">
-    <div class="fixed inset-0 bg-black/50 flex items-start justify-end p-4 z-50 tabindex="-1" data-micromodal-close>
-      <div class="bg-white rounded-[24px] md:rounded-r-[0px] w-full max-w-[470px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+  <div class="modal modal--slide-right" id="modal-directo" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-start justify-end z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white md:rounded-[24px] md:rounded-r-[0px] w-full max-w-[470px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
         <div class="flex items-center justify-between px-6 py-4 border-b border-[#E1E6EF]">
           <div class="flex items-center gap-2">
             <h3 class="text-[#172948] text-[18px] font-semibold">Itinerario de vuelo</h3>
@@ -732,7 +738,7 @@
             <img src="./img/icon/x.svg" alt="">
           </button>
         </div>
-        <div class="px-6 py-4 overflow-y-auto max-h-[calc(100dvh-200px)]">
+        <div class="px-6 py-4 overflow-y-auto h-[calc(100dvh-65px)] md:h-[calc(100dvh-170px)]">
           <div class="flex gap-6">
             <div class="w-full">
               <div class="flex flex-col gap-[50px]">
@@ -771,7 +777,7 @@
             </div>
           </div>
         </div>
-        <div class="p-6 border-t border-[#E1E6EF]">
+        <div class="p-6 border-t border-[#E1E6EF] hidden md:block">
           <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
             <span>Entendido</span>
           </button>
@@ -780,9 +786,9 @@
     </div>
   </div>
 
-  <div class="modal" id="modal-paradas" aria-hidden="true">
-    <div class="fixed inset-0 bg-black/50 flex items-start justify-end p-4 z-50 tabindex="-1" data-micromodal-close>
-      <div class="bg-white rounded-[24px] md:rounded-r-[0px] w-full max-w-[470px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
+  <div class="modal modal--slide-right" id="modal-paradas" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 flex items-start justify-end z-50 tabindex="-1" data-micromodal-close>
+      <div class="bg-white md:rounded-[24px] md:rounded-r-[0px] w-full max-w-[470px] shadow-[0_16px_32px_0_rgba(105,108,128,0.08)]" role="dialog" aria-modal="true" aria-labelledby="modal-add-cart-title">
         <div class="flex items-center justify-between px-6 py-4 border-b border-[#E1E6EF]">
           <div class="flex items-center gap-2">
             <h3 class="text-[#172948] text-[18px] font-semibold">Itinerario de vuelo</h3>
@@ -791,7 +797,7 @@
             <img src="./img/icon/x.svg" alt="">
           </button>
         </div>
-        <div class="px-6 py-4 overflow-y-auto max-h-[calc(100dvh-200px)]">
+        <div class="px-6 py-4 overflow-y-auto h-[calc(100dvh-65px)] md:h-[calc(100dvh-170px)]">
           <div class="flex gap-6">
             <div class="w-full flex flex-col gap-[200px]">
               <div class="flex flex-col gap-[50px]">
@@ -875,7 +881,7 @@
             </div>
           </div>
         </div>
-        <div class="p-6 border-t border-[#E1E6EF]">
+        <div class="p-6 border-t border-[#E1E6EF] hidden md:block">
           <button class="flex items-center text-white justify-center gap-2 bg-[#E4022C] h-[56px] rounded-full w-full" data-micromodal-close>
             <span>Entendido</span>
           </button>
